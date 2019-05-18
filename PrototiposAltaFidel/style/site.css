@@ -12,3 +12,16 @@ h2{
     text-align: center;
     size: 10px;
 }
+
+.btn{
+    
+    width: 20%;    
+}
+
+p{
+    font-size: 12px;
+}
+
+.recupSenha{
+    float: right;
+}
