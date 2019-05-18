@@ -1,0 +1,14 @@
+h2{
+    text-align: center;
+    padding-top: 8%;
+}
+
+.panel{
+    width: 30%;
+    margin: 0 auto;
+}
+
+.panel-heading{
+    text-align: center;
+    size: 10px;
+}
