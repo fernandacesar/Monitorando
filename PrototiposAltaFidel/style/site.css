@@ -14,14 +14,12 @@ h2{
 }
 
 .btn{
-    
-    width: 20%;    
+    margin-left: 35%;
+    width: 30%;    
 }
 
-p{
-    font-size: 12px;
-}
+p{font-size: 12px;}
 
-.recupSenha{
-    float: right;
-}
+#recupSenha{float: right;}
+
+#cadasUsu{text-align: center;}
