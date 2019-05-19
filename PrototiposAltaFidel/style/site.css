@@ -23,3 +23,9 @@ p{font-size: 12px;}
 #recupSenha{float: right;}
 
 #cadasUsu{text-align: center;}
+
+#logo{
+    height: 250px;
+    padding-top: 8%;
+    margin-left: 46%;
+}
