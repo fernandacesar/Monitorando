@@ -7,7 +7,7 @@
     <title>Monitorando - Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style/site.css" />
-    <script src="main.js"></script>
+    <script src="scripts/main.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -15,40 +15,47 @@
 
 </head>
 
-<body>
-    <img id="logo" src="images/logoTransp.png" alt="Logo"><br><br>
+<body onload="foco('email')">
+    <div>
+        <img id="logo" src="images/logoTransp.png" alt="Logo">
+        <br>
+        <br>
 
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4>Login</h4>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Login</h4>
+            </div>
+            <div class="panel-body">
+                <form method="post" action="" id="frmLogin">
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="form-group">
+                        <p id="recupSenha">
+                            <a href="">Esqueceu sua senha?</a>
+                        </p>
+                        <br>
+                        <input type="submit" value="Entrar" class="btn btn-default">
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="panel-body">
-            <form method="post" action="" id="frmLogin">
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="senha">Senha:</label>
-                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required>
-                </div>
-
-                <div class="form-group">
-                    <p id="recupSenha">
-                        <a href="recupSenha.html">Esqueceu sua senha?</a>
-                    </p>
-                    <br>
-                    <input type="submit" value="Entrar" class="btn btn-default">
-                </div>
-
-                <div class="form-group">
-                    <p id="cadasUsu">Não tem uma conta?
-                        <a href="cadasUsu.html">Cadastre-se!</a>
-                    </p>
-                </div>
-            </form>
+        <div class="panel panel-default">
+            <div class="form-group">
+                <br>
+                <p id="cadasUsu">Não tem uma conta?
+                    <a href="">Cadastre-se!</a>
+                </p>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
