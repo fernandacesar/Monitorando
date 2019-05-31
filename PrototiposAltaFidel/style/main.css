@@ -1,0 +1,28 @@
+.panel{
+    width: 30%;
+    margin: 0 auto;
+}
+
+.panel-heading{
+    text-align: center;
+    size: 10px;
+}
+
+.btn{
+    margin-left: 35%;
+    width: 30%;    
+}
+
+p{font-size: 12px;}
+
+#recupSenha{float: right;}
+
+#cadasUsu{text-align: center;}
+
+#logo{
+    height: 200px;
+    padding-top: 5%;
+    margin-left: 46%;
+}
+
+.footer-copyright{font-size: 10px;}
