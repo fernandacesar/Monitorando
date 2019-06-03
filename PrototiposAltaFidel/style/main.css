@@ -25,4 +25,11 @@ p{font-size: 12px;}
     margin-left: 46%;
 }
 
+#perfilUsuario {
+    width: 80px;
+    height: 80px;
+    background: -91px 0;
+    
+}
+
 .footer-copyright{font-size: 10px;}
