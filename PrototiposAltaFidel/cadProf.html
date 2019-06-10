@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Monitorando &bull; Cadastre-se</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    <script src="scripts/main.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body onload="foco('nome')">
+    <div>
+        <div class="logoCad">
+            <img id="logoCad" src="images/logoTransp.png" alt="Logo">
+        </div><br>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Professor, cadastre-se</h4>
+            </div>
+            <div class="panel-body">
+                <form method="post" action="" id="frmCadUsuario">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail institucional</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Confirme a senha</label>
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" id="termos" name="termos"> Aceito os <a href="">termos</a>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Cadastrar-se" class="btn btn-default btn-success">
+                    </div>                    
+                </form>
+            </div>            
+        </div>
+        <div class="panel panel-default">
+            <div class="form-group">
+                <br>
+                <p id="cadasUsu">Já possui uma conta?
+                    <a href="login.html">Faça login!</a>
+                </p>
+            </div>
+        </div>
+        <footer class="page-footer font-small">
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a href="">Monitorando &bull;</a>
+                <a href="">Termos</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
