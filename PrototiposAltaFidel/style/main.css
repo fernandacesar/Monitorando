@@ -1,3 +1,17 @@
+.logo{
+    height: 200px;
+    padding-top: 5%;
+    margin-left: 46%;
+}
+
+#logoCad{
+    width: 100%;
+    padding-top: 2%;
+    margin-left: 46%;
+}
+
+#logoCad{width: 8%;}
+
 .panel{
     width: 30%;
     margin: 0 auto;
@@ -19,11 +33,41 @@ p{font-size: 12px;}
 
 #cadasUsu{text-align: center;}
 
-#logo{
-    height: 200px;
-    padding-top: 5%;
-    margin-left: 46%;
+.footer-copyright{font-size: 10px;}
+
+.footer-posi{margin-left: 46%;}
+
+/* Tela para escolher se é professor ou aluno */
+.profAluno{
+    margin-left: 38%;
+    padding-top: 12%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
 }
+
+.container-tipoUser{
+    margin-left: 43%;
+    width: 7%;
+}
+
+.tipoUsuario{
+    border-radius: 50%;
+    display: inline-block;
+    height: 100px;
+    width: 100%;
+    border: 1px solid #000000;
+}
+
+.corAluno{
+    background-color: rgb(253, 253, 0);
+    border-color: #FFFF00;
+}
+.corProf{
+    background-color: rgb(0, 211, 0);
+    border-color: rgb(0, 211, 0);
+}
+
+/* Fim */
 
 #perfilUsuario {
     width: 80px;
@@ -32,11 +76,6 @@ p{font-size: 12px;}
     
 }
 
-.footer-copyright{font-size: 10px;}
-
-label{
+label, input{
     display: block;
-}
-input{
-    display:block;
 }
