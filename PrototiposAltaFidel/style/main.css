@@ -33,3 +33,10 @@ p{font-size: 12px;}
 }
 
 .footer-copyright{font-size: 10px;}
+
+label{
+    display: block;
+}
+input{
+    display:block;
+}
