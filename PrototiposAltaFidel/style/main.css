@@ -79,3 +79,20 @@ p{font-size: 12px;}
 label, input{
     display: block;
 }
+
+
+/* Inicio monitoriasUsuarios  */ 
+
+#BarraLateral{
+    position: relative;
+    float: left;
+    width: 300px;
+    padding: 1px;
+    
+}
+
+#logoL{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
