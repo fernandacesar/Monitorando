@@ -1,3 +1,6 @@
+body{
+    background: #f5ffd8fb;
+}
 .logo{
     height: 200px;
     padding-top: 5%;
@@ -83,3 +86,42 @@ p{font-size: 12px;}
 label, input{
     display: block;
 }
+
+
+.corpo {
+    width: 960px;
+    margin: auto; 
+}
+
+.conteudo {
+    margin-left: 200px;
+    margin-top: 2px;
+    display: table;
+
+}
+.imagemUsuario {
+    display: table-cell;
+    float: left;
+}
+.conteudoTornarMonitor {
+    display: table-cell;
+    width: 300px; 
+}
+
+
+/* Inicio monitoriasUsuarios  */ 
+
+#BarraLateral{
+    position: relative;
+    float: left;
+    width: 300px;
+    padding: 1px;
+    
+}
+
+#logoL{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+

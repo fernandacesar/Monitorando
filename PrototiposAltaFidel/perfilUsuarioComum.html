@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <title>Meu Perfil</title>
+         <title>MeuPerfil</title>
          <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
 
     </head>
 
     <body>
-        <h1>Meu Perfil</h1>
-        <div>
-             <img id="perfilUsuario" src="images/perfilUsuario.png" alt="perfilUsuario">
-        </div>
-        <br> 
-        </br>
-        <div >
-            <label for="nome">Nome:</label>
-            <input type="text">
-            <br></br>
-            <label for="email">Email:</label>
-            <input type="text">
-            <h4>Status: Aluno</h4>
-            <label for="esquceuasenha">Esqueceu a senha?</label>
-            <label for="esquceuasenha">Salvar</label>
-            <br></br>
-            <br></br>
-        </div>
-        <div>
-            <h2>Tornar-se monitor</h2>
-            <label for="codigo">Insira o código enviado para seu e-mail:</label>
-            <input type="text">
-        </div>
-
+        <section class = "corpo">
+                <h1>MeuPerfil</h1>
+                <div class= "imagemUsuario">
+                     <img id="perfilUsuario" src="images/perfilUsuario.png" alt="perfilUsuario">
+                </div>
+                <br></br>
+                <div class = "conteudo">
+                    <label for="nome">Nome:</label>
+                    <input type="text">
+                    <br></br>
+                    <label for="email">Email:</label>
+                    <input type="text">
+                    <h4> Status: Aluno</h4>
+                    <button> Alterar senha </button>
+                    <button> Salvar </button>
+                    <br></br>
+                    <br></br>
+                </div>
+            
+            <div class  = "conteudoTornarMonitor">
+                <h2>Tornar-se monitor</h2>
+                <label for="codigo">Insira o código enviado para seu e-mail:</label>
+                <input type="text">
+                <a href="">Ainda não solicitou seu código?</a>
+                <p><button> Tornar-se monitor </button></p>
+            </div>
+        </section>
+        
     </body>
 </html>
