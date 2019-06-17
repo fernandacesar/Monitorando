@@ -1,6 +1,7 @@
 body{
     background: #f5ffd8fb;
 }
+/* Tela para cadastro e login de usuarios  */
 .logo{
     height: 200px;
     padding-top: 5%;
@@ -40,7 +41,6 @@ p{font-size: 12px;}
 
 .footer-posi{margin-left: 46%;}
 
-/* Tela para cadastro de usuarios  */
 .esconder{
     display: none;
 }
