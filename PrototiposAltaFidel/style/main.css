@@ -69,6 +69,10 @@ p{font-size: 12px;}
 
 /* Fim */
 
+.esconder{
+    display: none;
+}
+
 #perfilUsuario {
     width: 80px;
     height: 80px;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,11 +13,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
+
 <body onload="foco('nome')">
     <div>
         <div class="logoCad">
             <img id="logoCad" src="images/logoTransp.png" alt="Logo">
-        </div><br>
+        </div>
+        <br>
 
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -30,8 +33,26 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="email">E-mail institucional</label>
+                        <label for="alunProf">Você é aluno ou professor?</label>
+                        <input type="radio" id="aluno" name="aluProf" value="aluno" onclick="exibirAluno('dadosAluno')"> Aluno
+                        <input type="radio" id="prof" name="aluProf" value="prof" onclick="exibirProf('dadosProf')"> Professor
+                    </div>
+                    
+                    <div class="form-group" id="dadosAluno">
+                        <label for="email">E-mail</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="esconder" id="dadosProf">
+                        <div class="form-group">
+                            <label for="email">E-mail institucional</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="disciplina">Disciplina</label>
+                            <input type="text" class="form-control" id="disciplina" name="disciplina" placeholder="Digite a disciplina exercida" required>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -41,18 +62,19 @@
 
                     <div class="form-group">
                         <label for="senha">Confirme a senha</label>
-                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required>
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha novamente" required>
                     </div>
 
                     <div class="form-group">
-                        <input type="checkbox" id="termos" name="termos"> Aceito os <a href="">termos</a>
+                        <input type="checkbox" id="termos" name="termos"> Aceito os
+                        <a href="">termos</a>
                     </div>
 
                     <div class="form-group">
                         <input type="submit" value="Cadastrar-se" class="btn btn-default btn-success">
-                    </div>                    
+                    </div>
                 </form>
-            </div>            
+            </div>
         </div>
         <div class="panel panel-default">
             <div class="form-group">
@@ -69,5 +91,13 @@
             </div>
         </footer>
     </div>
+
+    <input type="radio" name="FlgPontua" value="Sim" checked>
+    <input type="radio" name="FlgPontua" value="Nao">
+
+    <div class="camposExtras">
+        Aqui vem os dados que é para esconder ou aparecer
+    </div>
 </body>
+
 </html>
