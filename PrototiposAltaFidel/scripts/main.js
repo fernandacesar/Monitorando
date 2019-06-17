@@ -47,5 +47,5 @@ function exibirProf(){
 
 function exibirAluno(){
     document.getElementById("dadosAluno").style.display = "inline";
-    document.getElementById("dadosProf").style.display = "none";
+    document.getElementById("dadosProf").style.display = "inline";
 }
