@@ -9,30 +9,40 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <form action=""></form>
-    <h2>Cadastre sua monitoria:</h2>
-    <label for="Sala/Local:">Sala/Local:</label>
-    <input type="text">
-    
-    <label for="Disciplina/Conteúdo:">Disciplina/Conteúdo:</label>
-    <input type="Disciplina/Conteúdo">
-    
-    <label for="Data e Horário:">Data e Horário:</label>
-    <input type="Data e Horário">
-    
-    <label for="N° de vagas:">N° de vagas:</label>
-    <input type="N° de vagas">
-   
-    <label for="Arquivos:">Arquivos:</label>
-    <input for="Aquivo">
-  
-    <label for="Descrição:">Descrição:</label>
-    <input for="Descricao">
+    <div class="tudo">
+        <form method="post" action="" id="FrmMonitorias">
+            <div class="Titulocad">
+                <h2>Cadastre sua monitoria:</h2>
+            </div>
+            
+            <br><br>
+            
+            <label class="Salalocal" for="Sala/Local:">Sala/Local:</label>
+            <input class="Salalocal" type="">
+            <br><br>
+            <label class="DisciplinaCont" for="Disciplina/Conteúdo:">Disciplina/Conteúdo:</label>
+            <input class="DisciplinaCont" mtype="text">
+            <br><br>
 
- 
-
-    
-    
+            <label class="Datetime" for="Data e Horário:">Data e Horário:</label>
+            <input class="Datetime" type="date">
+            <input class="Datetime" type="time">
+            <br><br>
+            
+            <label class="Numero" for="N° de vagas:">N° de vagas:</label>
+            <input class="Numero" type="number">
+            <br><br>
+        
+            <label class="Arquivos" for="Arquivos:">Arquivos:</label>
+            <input class="Arquivos" type="file">
+            <br><br>
+            <label for="Descrição:">Descrição:</label>
+            <textarea id= "msg"></textarea>
+            <div class="btn">
+                 <button>Cadastrar</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
 
