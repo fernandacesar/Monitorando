@@ -86,7 +86,6 @@ label, input{
     float: left;
     width: 300px;
     padding: 1px;
-    
 }
 
 #logoL{
@@ -95,16 +94,28 @@ label, input{
     margin-right: auto;
 }
 .Salalocal{
-    display: inline !important; 
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
 }
 .Datetime{
     display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
 }
 .DisciplinaCont{
     display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
 }
 .Numero{
-    display: inline !important;   
+    display: inline !important; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;  
 }
 textarea{
     vertical-align: 5em; 
@@ -116,6 +127,22 @@ textarea{
     padding-top: 5%;
     margin-left: 46%;
 }
+.Titulocad{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.Arquivos{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+}
+.Descrição{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight:bold;
+}
+.footer-copyrightCadM{font-size: 34px;
+                }
 
 
 

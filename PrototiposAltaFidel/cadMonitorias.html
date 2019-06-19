@@ -1,48 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Monitorando &bull; Cadastre sua monitorando</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
-    <script src="main.js"></script>
-</head>
-<body>
-    <div class="tudo">
-        <form method="post" action="" id="FrmMonitorias">
-            <div class="Titulocad">
-                <h2>Cadastre sua monitoria:</h2>
-            </div>
-            
-            <br><br>
-            
-            <label class="Salalocal" for="Sala/Local:">Sala/Local:</label>
-            <input class="Salalocal" type="">
-            <br><br>
-            <label class="DisciplinaCont" for="Disciplina/Conteúdo:">Disciplina/Conteúdo:</label>
-            <input class="DisciplinaCont" mtype="text">
-            <br><br>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Monitorando &bull; Cadastre sua monitorando</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="tudo">
+            <form method="post" action="" id="FrmMonitorias" autocomplete="off">
 
-            <label class="Datetime" for="Data e Horário:">Data e Horário:</label>
-            <input class="Datetime" type="date">
-            <input class="Datetime" type="time">
-            <br><br>
+                <div class="Titulocad">
+                    <h1>Cadastre sua monitoria:</h1>
+                </div>
+                <br><br>
+
+                <div>
+                    <label class="Salalocal" for="Sala/Local:">Sala/Local:</label>
+                    <input class="Salalocal" type="">
+                </div>
+                <br><br>
+                <div>
+                    <label class="DisciplinaCont" for="Disciplina/Conteúdo:">Disciplina/Conteúdo:</label>
+                    <input class="DisciplinaCont" mtype="text">
+                </div>
+                <br><br>
+                <div>
+                    <label class="Datetime" for="Data e Horário:">Data e Horário:</label>
+                    <input class="Datetime" type="date">
+                    <input class="Datetime" type="time">
+                </div>
+                <br><br>
+                
+                <div>
+                    <label class="Numero" for="N° de vagas:">N° de vagas:</label>
+                    <input class="Numero" type="number">
+                </div>
+                <br><br>
             
-            <label class="Numero" for="N° de vagas:">N° de vagas:</label>
-            <input class="Numero" type="number">
-            <br><br>
-        
-            <label class="Arquivos" for="Arquivos:">Arquivos:</label>
-            <input class="Arquivos" type="file">
-            <br><br>
-            <label for="Descrição:">Descrição:</label>
-            <textarea id= "msg"></textarea>
-            <div class="btn">
-                 <button>Cadastrar</button>
-            </div>
-        </form>
-    </div>
-</body>
+                <div>
+                    <label class="Arquivos" for="Arquivos:">Arquivos:</label>
+                    <input class="Arquivos" type="file">
+                </div>
+                <br><br>
+                <div>
+                    <label  class= "Descrição" for="Descrição:">Descrição:</label>
+                </div>
+                <div>
+                <textarea id= "msg"></textarea>
+                </div>
+                <div>
+                    <button class="btn-success btn">Cadastrar</button>
+                 </div>
+            </form>
+                <footer class="page-footerCadM">
+                    <div class="footer-copyrightCadM text-center py-3">© 2019 Copyright:
+                        <a href="">Monitorando &bull;</a>
+                        <a href="">Termos</a>
+                    </div>
+                </footer>
+        </div>
+    </body>
 </html>
 
