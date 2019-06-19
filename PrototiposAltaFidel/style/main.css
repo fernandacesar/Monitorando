@@ -1,5 +1,5 @@
 body{
-    background:#f5ffd8fb;
+    background: #ffffff;
 }
 /* Tela para cadastro e login de usuarios  */
 .logo{
@@ -59,8 +59,7 @@ label, input{
 
 
 .corpo {
-    
-        height: 300px;
+        height: 600px;
         padding-top: 5%;
         margin-left: 40%;
 }
@@ -93,6 +92,15 @@ label, input{
 }
 .Email{
     display: inline !important;  
+}
+.codigo{
+    display: inline !important;  
+}
+
+P.blocktext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em; 
 }
 
 /* Inicio monitoriasUsuarios  */ 
