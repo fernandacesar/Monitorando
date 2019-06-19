@@ -1,5 +1,5 @@
 body{
-    background:#f5ffd8fb;
+    background: #ffffff;
 }
 /* Tela para cadastro e login de usuarios  */
 .logo{
@@ -59,10 +59,9 @@ label, input{
 
 
 .corpo {
-    
-        height: 200px;
+        height: 600px;
         padding-top: 5%;
-        margin-left: 46%;
+        margin-left: 40%;
 }
 
 .conteudo {
@@ -75,16 +74,34 @@ label, input{
     display: table-cell;
     float: left;
 }
-.conteudoTornarMonitor {
-    display: table;
-    
-}
-
 .dados {
-    display: table;
+    display: table-cell;
+    float: left;
+    width: 300px; 
+    margin-top: 10 px;
+    margin-left: 20px; 
+}
+.tornarMonitor{
+    display: table-cell;
+    float: left; 
+    margin-top: 10 px;
+    margin-left: -10px; 
+}
+.Nome{
+    display: inline !important;  
+}
+.Email{
+    display: inline !important;  
+}
+.codigo{
+    display: inline !important;  
 }
 
-
+P.blocktext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em; 
+}
 
 /* Inicio monitoriasUsuarios  */ 
 
