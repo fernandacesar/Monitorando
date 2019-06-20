@@ -189,13 +189,33 @@ textarea{
     margin-left: 60%;
     width: 30%;
 }
-.dados {
-    display: table-cell;
-    float: left;
-    width: 300px; 
-    margin-top: 10 px;
-    margin-left: 20px; 
+.Avaliacoes {
+    margin-left: 0%;
+    width: 30%;
 }
+.tituloAvaliacoes{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight:bold;
+
+}
+.Status{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+}
+.tMonitorias{
+    margin-left: 0%;
+    width: 30%;
+}
+.tituloMonitorias{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight:bold;
+
+}
+
+
 
 
 /*Solicitar Licenca*/
@@ -214,4 +234,9 @@ textarea{
 .Pergunta{
     font-family: Arial, Helvetica, sans-serif;
     font-weight:normal;
+}
+.TituloUM{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight:bold;
 }
