@@ -1,38 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Monitorando &bull; Cadastre sua monitorando</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
-    <script src="main.js"></script>
-</head>
-<body>
-    <form action=""></form>
-    <h2>Cadastre sua monitoria:</h2>
-    <label for="Sala/Local:">Sala/Local:</label>
-    <input type="text">
-    
-    <label for="Disciplina/Conteúdo:">Disciplina/Conteúdo:</label>
-    <input type="Disciplina/Conteúdo">
-    
-    <label for="Data e Horário:">Data e Horário:</label>
-    <input type="Data e Horário">
-    
-    <label for="N° de vagas:">N° de vagas:</label>
-    <input type="N° de vagas">
-   
-    <label for="Arquivos:">Arquivos:</label>
-    <input for="Aquivo">
-  
-    <label for="Descrição:">Descrição:</label>
-    <input for="Descricao">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Monitorando &bull; Cadastre sua monitorando</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="tudo">
+            <form method="post" action="" id="FrmMonitorias" autocomplete="off">
 
- 
+                <div class="Titulo">
+                    <h1>Cadastre sua monitoria:</h1>
+                </div>
+                <br><br>
 
-    
-    
-</body>
+                <div class="form-group">
+                    <label class="Salalocal" for="Sala/Local:">Sala/Local:</label>
+                    <input class="Salalocal" type="">
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <label class="DisciplinaCont" for="Disciplina/Conteúdo:">Disciplina/Conteúdo:</label>
+                    <input class="DisciplinaCont" mtype="text">
+                </div>
+                <br><br>
+                <div class= "form-group">
+                    <label class="Datetime" for="Data e Horário:">Data e Horário:</label>
+                    <input class="Datetime" type="date">
+                    <input class="Datetime" type="time">
+                </div>
+                <br><br>
+                
+                <div class="form-group">
+                    <label class="Numero" for="N° de vagas:">N° de vagas:</label>
+                    <input class="Numero" type="number">
+                </div>
+                <br><br>
+            
+                <div class= "form-group">
+                    <label class="Arquivos" for="Arquivos:">Arquivos:</label>
+                    <input class="Arquivos" type="file">
+                </div>
+                <br><br>
+                <div class= "form-group">
+                    <label class= "Descrição" for="Descrição:">Descrição:</label>
+                    <textarea class="Descrição" id= "msg">Digite o motivo...</textarea>
+                </div>
+                <div class= "form-group">
+                    <button class="btn-success btn">Cadastrar</button>
+                 </div>
+            </form>
+        </div>
+    </body>
 </html>
 

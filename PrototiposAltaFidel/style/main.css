@@ -1,5 +1,5 @@
 body{
-    background: #f5ffd8fb;
+    
 }
 /* Tela para cadastro e login de usuarios  */
 .logo{
@@ -50,6 +50,7 @@ p{font-size: 12px;}
 /* Fim */
 
 #perfilUsuario {
+    font-family: Arial, Helvetica, sans-serif;
     width: 80px;
     height: 80px;
     background: -91px 0;
@@ -62,11 +63,14 @@ label, input{
 
 
 .corpo {
-    width: 960px;
-    margin: auto; 
+    font-family: Arial, Helvetica, sans-serif;
+        height: 600px;
+        padding-top: 5%;
+        margin-left: 40%;
 }
 
 .conteudo {
+    font-family: Arial, Helvetica, sans-serif;
     margin-left: 200px;
     margin-top: 2px;
     display: table;
@@ -76,11 +80,39 @@ label, input{
     display: table-cell;
     float: left;
 }
-.conteudoTornarMonitor {
+.dados {
     display: table-cell;
+    float: left;
     width: 300px; 
+    margin-top: 10 px;
+    margin-left: 20px; 
+}
+.tornarMonitor{
+    font-family: Arial, Helvetica, sans-serif;
+    display: table-cell;
+    float: left; 
+    margin-top: 10 px;
+    margin-left: -10px; 
+}
+.Nome{
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline !important;  
+}
+.Email{
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline !important;  
+}
+.codigo{
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline !important;  
 }
 
+P.blocktext {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em; 
+}
 
 /* Inicio monitoriasUsuarios  */ 
 
@@ -89,7 +121,6 @@ label, input{
     float: left;
     width: 300px;
     padding: 1px;
-    
 }
 
 #logoL{
@@ -97,4 +128,181 @@ label, input{
     margin-left: auto;
     margin-right: auto;
 }
+.Salalocal{
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+}
+.Datetime{
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+}
+.DisciplinaCont{
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+}
+.Numero{
+    display: inline !important; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;  
+}
+textarea{
+    vertical-align: 5em; 
+    height: 5em;
+    resize: horizontal;
+}
+.tudo{
+    height: 200px;
+    padding-top: 5%;
+    margin-left: 46%;
+}
+.Titulocad ,.TituloUM{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.Arquivos{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+}
+.Descrição{
+    Display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+}
+.NomepUM{
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+}
+.E-mailpUM{
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+}
+.btnlado{
+    margin-left: 60%;
+    width: 20%;
+}
+.botõesLado{
+    display: inline !important;
+    margin-top:-2%;
+}
+.Avaliacoes {
+    margin-left: 0%;
+    width: 40%;
+    margin-top: 1%
+}
+.tituloAvaliacoes{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
 
+}
+.Status{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+}
+.tMonitorias{
+    margin-left:40%;
+    width: 40%;
+    margin-top: -22%; 
+}
+.tituloMonitorias{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+}
+.tComentário{
+    margin-left:40%;
+    width: 40%;
+    margin-top: 3%; 
+
+}
+.tituloComentários{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+
+}
+.estrelas input[type=radio] {
+    display: none;
+  }
+  .estrelas label i.fa:before {
+    content:'\f005';
+    color: #FC0;
+  }
+  .estrelas input[type=radio]:checked ~ label i.fa:before {
+    color: #CCC;
+  }
+
+  .linha-vertical {
+    height: 200px;
+    border-left: 1px solid;
+    margin-top: -24% ;
+    margin-left: 29%;
+  }
+  .btnlado2{
+    margin-top: -45%;
+    margin-left: 60%;
+    width: 20%;
+}
+.botõesAbaixo{
+    margin-top: 15%;
+}
+
+
+
+
+/*Solicitar Licenca*/
+.Curso {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline !important;
+}
+.Serie {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline !important;
+}
+.Disciplina {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline !important;
+}
+.Pergunta{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:normal;
+}
+
+.btn{
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold;
+
+}
+.corpo1 {
+    font-family: Arial, Helvetica, sans-serif;
+    /*font-weight:bold;*/
+    height: 500px;
+    padding-top: 2%;
+    margin-left: 40%;
+    margin-right: 40%; 
+    background: #ffffff; 
+}
+.TituloUM{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight:bold;
+
+}
+.Pergunta {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+}

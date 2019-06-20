@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <title>MeuPerfil</title>
-         <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Monitorando &bull; Meu Perfil</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
+        
 
     </head>
 
     <body>
         <section class = "corpo">
-                <h1>MeuPerfil</h1>
+                
+            <P class="blocktext">
+                   <h1>Meu Perfil</h1> 
+            </P>
                 <div class= "imagemUsuario">
                      <img id="perfilUsuario" src="images/perfilUsuario.png" alt="perfilUsuario">
                 </div>
-                <br></br>
-                <div class = "conteudo">
-                    <label for="nome">Nome:</label>
-                    <input type="text">
+                
+                <div class = "dados">
+                    <label class="Nome" for = "Nome:"> Nome:</label>
+                    <input class="Nome" type="">
                     <br></br>
-                    <label for="email">Email:</label>
-                    <input type="text">
-                    <h4> Status: Aluno</h4>
+                    <label class="Email"for = "Email"> Email:</label>
+                    <input class = "Email" type="text">
+                    <h5> Status: Aluno</h5>
                     <button> Alterar senha </button>
                     <button> Salvar </button>
+                    
+                <div class = "tornarMonitor">
                     <br></br>
-                    <br></br>
+                    <h3>Tornar-se monitor</h3>
+                    <label for="codigo">Insira o código enviado para seu e-mail:</label>
+                    <input type="text">
+                    <a href="">Ainda não solicitou seu código?</a>
+                    <p><button> Tornar-se monitor </button></p>
                 </div>
-            
-            <div class  = "conteudoTornarMonitor">
-                <h2>Tornar-se monitor</h2>
-                <label for="codigo">Insira o código enviado para seu e-mail:</label>
-                <input type="text">
-                <a href="">Ainda não solicitou seu código?</a>
-                <p><button> Tornar-se monitor </button></p>
-            </div>
+                </div>   
         </section>
-        
     </body>
+
 </html>
