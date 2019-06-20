@@ -165,8 +165,30 @@ textarea{
     font-size: 14px;
     font-weight:bold;
 }
-.footer-copyrightCadM{font-size: 34px;
-                }
+.NomepUM{
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+}
+.E-mailpUM{
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+}
+.btnlado{
+    margin-left: 60%;
+    width: 30%;
+}
+.dados {
+    display: table-cell;
+    float: left;
+    width: 300px; 
+    margin-top: 10 px;
+    margin-left: 20px; 
+}
+
 
 
 
