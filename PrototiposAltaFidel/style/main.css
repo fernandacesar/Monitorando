@@ -187,15 +187,16 @@ textarea{
 }
 .btnlado{
     margin-left: 60%;
-    width: 30%;
+    width: 20%;
 }
 .Avaliacoes {
     margin-left: 0%;
-    width: 30%;
+    width: 40%;
+    margin-top: 1%
 }
 .tituloAvaliacoes{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight:bold;
 
 }
@@ -205,15 +206,43 @@ textarea{
     font-weight:bold;
 }
 .tMonitorias{
-    margin-left: 0%;
-    width: 30%;
+    margin-left:40%;
+    width: 40%;
+    margin-top: -22%; 
 }
 .tituloMonitorias{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
+    font-size: 16px;
+    font-weight:bold;
+}
+.tComentário{
+    margin-left:40%;
+    width: 40%;
+    margin-top: 3%; 
+
+}
+.tituloComentários{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
     font-weight:bold;
 
 }
+.estrelas input[type=radio] {
+    display: none;
+  }
+  .estrelas label i.fa:before {
+    content:'\f005';
+    color: #FC0;
+  }
+  .estrelas input[type=radio]:checked ~ label i.fa:before {
+    color: #CCC;
+  }
+  .linha-vertical {
+    height: 195px;
+    border-left: 1px solid;
+    margin-top: -24% ;
+    margin-left: 30%;
+  }
 
 
 
