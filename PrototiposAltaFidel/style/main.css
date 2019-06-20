@@ -173,8 +173,50 @@ textarea{
     font-size: 14px;
     font-weight:bold;
 }
-.footer-copyrightCadM{font-size: 34px;
-                }
+.NomepUM{
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+}
+.E-mailpUM{
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+}
+.btnlado{
+    margin-left: 60%;
+    width: 30%;
+}
+.Avaliacoes {
+    margin-left: 0%;
+    width: 30%;
+}
+.tituloAvaliacoes{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight:bold;
+
+}
+.Status{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+}
+.tMonitorias{
+    margin-left: 0%;
+    width: 30%;
+}
+.tituloMonitorias{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight:bold;
+
+}
+
+
+
 
 /*Solicitar Licenca*/
 .Curso {
@@ -193,6 +235,7 @@ textarea{
     font-family: Arial, Helvetica, sans-serif;
     font-weight:normal;
 }
+<<<<<<< HEAD
 .btn{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #006400; 
@@ -206,4 +249,10 @@ textarea{
     margin-left: 40%;
     margin-right: 40%; 
     background: #ffffff; 
+=======
+.TituloUM{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight:bold;
+>>>>>>> 4fd70fd52e117f2d067a6e0950428a3f1520435b
 }
