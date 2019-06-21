@@ -1,60 +1,132 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Monitorando &bull; Cadastre sua monitorando</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
-        <script src="main.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    </head>
-    <body>
-        <div class="tudo">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Monitorando &bull; Cadastrar monitoria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    <script src="scripts/main.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="foco('local')">
+    <div class="nav-side-menu">
+        <div class="brand">Monitorando</div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+        <div class="menu-list">
+
+            <ul id="menu-content" class="menu-content collapse out">
+                <li class="collapsed">
+                    <a href="#">
+                        <i class="fas fa-lg"></i>
+                        <span class="glyphicon glyphicon-home"></span> Início
+                    </a>
+                </li>
+
+                <li data-toggle="collapse" data-target="#products" class="collapsed active">
+                    <a href="#">
+                        <a href="#">
+                            <i class="fas fa-lg"></i>
+                            <span class="glyphicon glyphicon-user"></span> Perfil
+                        </a>
+                    </a>
+                </li><br>
+
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                    <a href="#">
+                        <i class="fab fa-lg"></i>
+                        <span class="glyphicon glyphicon-book"></span> Monitorias inscritas
+                    </a>
+                </li>
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                    <a href="#">
+                        <i class="fab fa-lg"></i>
+                        <span class="glyphicon glyphicon-list-alt"></span> Monitorias cadastradas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-lg"></i>
+                        <span class="glyphicon glyphicon-map-marker"></span> Mapa das minhas monitorias
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-lg"></i>
+                        <span class="glyphicon glyphicon-comment"></span> Fóruns de dúvidas
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <nav class="navbar-inverse posiMenu">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-out"></span> Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="tudo">
+        <div class="frmMonitorias panel panel-default">
             <form method="post" action="" id="FrmMonitorias" autocomplete="off">
 
                 <div class="Titulo">
-                    <h1>Cadastre sua monitoria:</h1>
+                    <h3>Cadastre sua monitoria</h3>
+                    <br>
                 </div>
-                <br><br>
 
-                <div class="form-group">
-                    <label class="Salalocal" for="Sala/Local:">Sala/Local:</label>
-                    <input class="Salalocal" type="">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label class="Salalocal" for="Sala/Local:">Sala/Local:</label>
+                        <input class="Salalocal form-control" id="local" type="text">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="DisciplinaCont" for="Disciplina/Conteúdo:">Disciplina/Conteúdo:</label>
+                        <input class="DisciplinaCont form-control" type="text">
+                    </div>
                 </div>
-                <br><br>
-                <div class="form-group">
-                    <label class="DisciplinaCont" for="Disciplina/Conteúdo:">Disciplina/Conteúdo:</label>
-                    <input class="DisciplinaCont" mtype="text">
-                </div>
-                <br><br>
-                <div class= "form-group">
+
+                <div class="form-group col-md-4">
                     <label class="Datetime" for="Data e Horário:">Data e Horário:</label>
-                    <input class="Datetime" type="date">
-                    <input class="Datetime" type="time">
+                    <input class="form-control" type="date">
                 </div>
-                <br><br>
-                
-                <div class="form-group">
+                <div class="form-group col-md-4">
+                    <label></label>
+                    <input class="form-control" type="time">
+                </div>
+                <div class="form-group col-md-4">
                     <label class="Numero" for="N° de vagas:">N° de vagas:</label>
-                    <input class="Numero" type="number">
+                    <input class="Numero form-control" type="number">
                 </div>
-                <br><br>
-            
-                <div class= "form-group">
+                <div class="form-group col-md-12">
                     <label class="Arquivos" for="Arquivos:">Arquivos:</label>
                     <input class="Arquivos" type="file">
                 </div>
-                <br><br>
-                <div class= "form-group">
-                    <label class= "Descrição" for="Descrição:">Descrição:</label>
-                    <textarea class="Descrição" id= "msg">Digite o motivo...</textarea>
+                <div class="form-group col-md-6">
+                    <label class="Descrição" for="Descrição:">Descrição:</label>
+                    <textarea class="Descrição form-control" id="msg">Digite o motivo...</textarea>
                 </div>
-                <div class= "form-group">
+                <div class="form-group">
                     <button class="btn-success btn">Cadastrar</button>
-                 </div>
+                </div>
             </form>
         </div>
-    </body>
-</html>
 
+    </div>
+</html>
