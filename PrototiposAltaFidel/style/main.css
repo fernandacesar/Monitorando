@@ -233,18 +233,23 @@ P.blocktext {
 
 /* Inicio monitoriasUsuarios  */ 
 
-#BarraLateral{
-    position: relative;
-    float: left;
-    width: 300px;
-    padding: 1px;
+.quadroArredondado{
+    background: #ffffff;
+    border:2px solid #bbb;
+    text-align: center;
+    display: block;
+    border-radius: 10px;
+    width: 400px;
+
 }
 
-#logoL{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+
+
+
+
+
+
+/* Fim monotiriasUsuarios*/
 .Salalocal{
     display: inline !important;
     font-family: Arial, Helvetica, sans-serif;
