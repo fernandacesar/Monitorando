@@ -263,7 +263,10 @@ textarea{
 .Forum{
     max-width: 500 !important;
     margin: auto;
-    margin-top:4%;
+    margin-top:7%;
+    margin-left: 40%;
+    margin-right: 10%;
+
     font-family:sans-serif;
     letter-spacing: 0.5px;    
 }
@@ -281,10 +284,10 @@ img{
     background-color: #007bff;
 }
 .msg-header-img{
-    border-radius:50%;
-    with:40px;
+    border-radius:24%;
+    width:5px;
     margin-left: 5%;
-    margin-top: 12px;
+    margin-top: 10px;
     float: left;
 }
 .active
@@ -317,6 +320,25 @@ img{
     cursor:pointer;
     margin: 10px;
 }
+.chat-page
+{
+    padding:  0 0 50px 0 ;
+}
+.msg-inbox
+{
+    border: 1px solid #ccc;
+    overflow:hidden;
+    padding-bottom:30px;
+}
+.chats
+{
+    padding: 20px 20px 0 20px; 
+}
+.msg-page{
+    height: 500px ;
+    overflow-y: auto; 
+}
+
      
 
 
