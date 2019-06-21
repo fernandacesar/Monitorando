@@ -236,9 +236,19 @@ P.blocktext {
 #alinharDireita{
     padding-left: 200px;
 }
-
+#alinharInput1{
+    padding-left: 110px;
+}
+#alinharInput2{
+    padding-left: 80px;
+}
+#alinharInput3{
+    padding-left: 195px;
+}
+#alinharInput4{
+    padding-left: 105px;
+}
 .quadroArredondado{
-
     
     background: #ffffff;
     border:2px solid #bbb;
@@ -257,11 +267,21 @@ P.blocktext {
     
 }
 
-.inputDados{
+.inputDados1{
+    display: inline-block;
+    width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+}
+
+.inputDados2{
     display: inline !important;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight:bold;
+    
+    
 }
 
 
