@@ -1,48 +1,121 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Monitorando &bull; Meu Perfil</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
-        <script src="main.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
-        
 
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Monitorando &bull; Meu perfil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    <script src="scripts/main.js"></script>
 
-    <body>
-        <section class = "corpo">
-                
-            <P class="blocktext">
-                   <h1>Meu Perfil</h1> 
-            </P>
-                <div class= "imagemUsuario">
-                     <img id="perfilUsuario" src="images/perfilUsuario.png" alt="perfilUsuario">
-                </div>
-                
-                <div class = "dados">
-                    <label class="Nome" for = "Nome:"> Nome:</label>
-                    <input class="Nome" type="">
-                    <br></br>
-                    <label class="Email"for = "Email"> Email:</label>
-                    <input class = "Email" type="text">
-                    <h5> Status: Aluno</h5>
-                    <button> Alterar senha </button>
-                    <button> Salvar </button>
-                    
-                <div class = "tornarMonitor">
-                    <br></br>
-                    <h3>Tornar-se monitor</h3>
-                    <label for="codigo">Insira o código enviado para seu e-mail:</label>
-                    <input type="text">
-                    <a href="">Ainda não solicitou seu código?</a>
-                    <p><button> Tornar-se monitor </button></p>
-                </div>
-                </div>   
-        </section>
-    </body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="foco('local')">
+    <div class="nav-side-menu">
+        <div class="brand">Monitorando</div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+        <div class="menu-list">
+
+            <ul id="menu-content" class="menu-content collapse out">
+                <li class="active">
+                    <a href="#">
+                        <i class="fas fa-lg"></i>
+                        <span class="glyphicon glyphicon-home"></span> Início
+                    </a>
+                </li>
+                <br>
+
+                <li data-toggle="collapse" data-target="#products" class="collapsed">
+                    <a href="#">
+                        <a href="#">
+                            <i class="fas fa-lg"></i>
+                            <span class="glyphicon glyphicon-user"></span> Perfil
+                        </a>
+                    </a>
+                </li>
+
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                    <a href="#">
+                        <i class="fab fa-lg"></i>
+                        <span class="glyphicon glyphicon-book"></span> Monitorias inscritas
+                    </a>
+                </li>
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                    <a href="#">
+                        <i class="fab fa-lg"></i>
+                        <span class="glyphicon glyphicon-list-alt"></span> Monitorias cadastradas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-lg"></i>
+                        <span class="glyphicon glyphicon-map-marker"></span> Mapa das minhas monitorias
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-lg"></i>
+                        <span class="glyphicon glyphicon-comment"></span> Fóruns de dúvidas
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <nav class="navbar-inverse posiMenu">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-out"></span> Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <section class="corpo">
+
+        <P class="blocktext">
+            <h3>Meu Perfil</h3>
+        </P>
+        <div class="imagemUsuario">
+            <img id="perfilUsuario" src="images/perfilUsuario.png" alt="perfilUsuario">
+        </div>
+
+        <div class="dados">
+            <label class="Nome" for="Nome:"> Nome:</label>
+            <input class="Nome form-control" type="">
+            <label class="Email" for="Email"> Email:</label>
+            <input class="Email form-control" type="text">
+            <h5> Status: Aluno</h5>
+            <div class="col-md-6">
+                <button class="btn btn-default btn-perfilcomum"> Alterar senha </button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-default btn-perfilcomum"> Salvar </button>
+            </div>
+
+            <div class="tornarMonitor">
+                <br></br>
+                <h3>Tornar-se monitor</h3>
+                <label for="codigo">Insira o código enviado para seu e-mail:</label>
+                <input type="text" class="form-control">
+                <a href="">Ainda não solicitou seu código?</a>
+                <p>
+                    <button class="btn btn-success btn-monitor"> Tornar-se monitor </button>
+                </p>
+            </div>
+        </div>
+    </section>
 
 </html>
