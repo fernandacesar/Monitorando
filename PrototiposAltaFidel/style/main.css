@@ -246,7 +246,15 @@ P.blocktext {
     padding-left: 195px;
 }
 #alinharInput4{
-    padding-left: 105px;
+    padding-left: 99px;
+}
+
+#alinharInput5{
+    padding-left: 129px;
+}
+
+#alinharInput6{
+    padding-left: 54px;
 }
 .quadroArredondado{
     
@@ -280,7 +288,6 @@ P.blocktext {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight:bold;
-    
     
 }
 
