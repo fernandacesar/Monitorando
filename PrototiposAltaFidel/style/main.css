@@ -254,7 +254,7 @@ P.blocktext {
 }
 
 #alinharInput6{
-    padding-left: 54px;
+    padding-left: 537px;
 }
 
 #alinharInput7{
@@ -272,16 +272,18 @@ P.blocktext {
     padding-left: 215px;
 }
 
-.quadroArredondado{
+.materia{
     
-    background: #ffffff;
-    border:2px solid #bbb;
+ 
     text-align: center;
     display: block;
-    border-radius: 10px;
     width: 400px;
 
 
+}
+
+.descri{
+    padding-left: 200px;
 }
 
 .espeMU{
