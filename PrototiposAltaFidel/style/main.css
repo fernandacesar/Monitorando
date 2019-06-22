@@ -274,12 +274,15 @@ P.blocktext {
 
 .materia{
     
- 
     text-align: center;
     display: block;
     width: 400px;
 
+}
 
+#alinhar{
+    display: block;
+    padding-left: 275px;
 }
 
 .descri{
@@ -321,9 +324,57 @@ P.blocktext {
 
 
 
+/* Fim monitoriasUsuarios*/
 
 
-/* Fim monotiriasUsuarios*/
+
+
+/* Comeco encontrarMonitorias */
+
+.encontrar{
+    
+ 
+    text-align: center;
+    display: block;
+    width: 400px;
+
+
+}
+
+#alinharTabela{
+  padding-left: 175px;
+}
+
+#recemCadastradas{
+    padding-left: 175px;
+    width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+
+}
+
+table.bordas {
+    border-collapse: collapse; /* CSS2 */
+    background: #FFFFF0;
+    font-size: 14px;
+    
+}
+ 
+table.bordas td {
+    border: 1px solid black;
+    padding: 10px;
+}
+ 
+table.bordas th {
+    border: 1px solid black;
+    background: rgb(211, 218, 211);
+    padding: 10px;
+}
+
+
+/* Fim encontrarMonitorias */
+
 .Salalocal{
     display: inline !important;
     font-family: Arial, Helvetica, sans-serif;
@@ -408,6 +459,8 @@ textarea{
     font-weight:bold;
 
 }
+
+
 .Status{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
