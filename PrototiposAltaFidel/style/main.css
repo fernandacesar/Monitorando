@@ -171,6 +171,7 @@ label, input{
 
 .corpo {
     font-family: Arial, Helvetica, sans-serif;
+<<<<<<< HEAD
     height: 600px;
     padding-top: 5%;
     margin-left: 25%;
@@ -180,6 +181,12 @@ label, input{
     margin-left: 25%;
     width: 70%;
     height: 10%;
+=======
+        height: 600px;
+        padding-top: 5%;
+        margin-left: 40%;
+        display: table;
+>>>>>>> 0a8b8b96eee168fc822bcf5c9c408b7c3cf308f5
 }
 
 .conteudo {
@@ -234,8 +241,13 @@ label, input{
 
 .blocktext {
     font-family: Arial, Helvetica, sans-serif;
+<<<<<<< HEAD
     margin-left: 25%;
     margin-right: auto;
+=======
+    margin-left: auto;
+    margin-right: auto; 
+>>>>>>> 0a8b8b96eee168fc822bcf5c9c408b7c3cf308f5
     width: 6em; 
 }
 
@@ -243,18 +255,148 @@ label, input{
 
 /* Inicio monitoriasUsuarios  */ 
 
-#BarraLateral{
-    position: relative;
-    float: left;
-    width: 300px;
-    padding: 1px;
+#alinharDireita{
+    padding-left: 200px;
+}
+#alinharInput1{
+    padding-left: 110px;
+}
+#alinharInput2{
+    padding-left: 80px;
+}
+#alinharInput3{
+    padding-left: 195px;
+}
+#alinharInput4{
+    padding-left: 99px;
 }
 
-#logoL{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#alinharInput5{
+    padding-left: 129px;
 }
+
+#alinharInput6{
+    padding-left: 537px;
+}
+
+#alinharInput7{
+    box-sizing: border-box;
+    padding-left: 113px;
+}
+
+#alinharInput8{
+    box-sizing: border-box;
+    padding-left: 200px;
+}
+
+#alinharInput9{
+    box-sizing: border-box;
+    padding-left: 215px;
+}
+
+.materia{
+    
+    text-align: center;
+    display: block;
+    width: 400px;
+
+}
+
+#alinhar{
+    display: block;
+    padding-left: 275px;
+}
+
+.descri{
+    padding-left: 200px;
+}
+
+.espeMU{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+    
+}
+
+.inputDados1{
+    display: inline-block;
+    width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+}
+
+.inputDados2{
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+    
+}
+
+.inputDados3{
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+    width: 400px;
+}
+
+
+
+
+
+/* Fim monitoriasUsuarios*/
+
+
+
+
+/* Comeco encontrarMonitorias */
+
+.encontrar{
+    
+ 
+    text-align: center;
+    display: block;
+    width: 400px;
+
+
+}
+
+#alinharTabela{
+  padding-left: 175px;
+}
+
+#recemCadastradas{
+    padding-left: 175px;
+    width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+
+}
+
+table.bordas {
+    border-collapse: collapse; /* CSS2 */
+    background: #FFFFF0;
+    font-size: 14px;
+    
+}
+ 
+table.bordas td {
+    border: 1px solid black;
+    padding: 10px;
+}
+ 
+table.bordas th {
+    border: 1px solid black;
+    background: rgb(211, 218, 211);
+    padding: 10px;
+}
+
+
+/* Fim encontrarMonitorias */
+
 .Salalocal{
     display: inline !important;
     font-family: Arial, Helvetica, sans-serif;
@@ -282,9 +424,7 @@ label, input{
     font-size: 15px;
 }
 textarea{
-    vertical-align: 5em; 
-    height: 5em;
-    resize: horizontal;
+    
 }
 .tudo{
     height: 200px;
@@ -339,6 +479,8 @@ textarea{
     font-weight:bold;
 
 }
+
+
 .Status{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
@@ -438,37 +580,42 @@ img{
     line-height: 2px;
     color: #fff;
 }
-.header-icons
-{
-    width: 120px;
-    float: right;
-    margin-top:12px;
-    margin-right:10px 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: tahoma ,sans-serif;
+    box-sizing: border-box;
 }
-.header-icons .fa
-{
-    color: #fff;
-    cursor:pointer;
-    margin: 10px;
+.Hi{
+    background: #1ddded;
 }
-.chat-page
-{
-    padding:  0 0 50px 0 ;
+.chatbox{
+    width: 500px;
+    min-width: 390px;
+    height: 600px;
+    background: #fff;
+    padding: 25px;
+    margin: 20px auto;
+    box-shadow: 0 3px #ccc;  
 }
-.msg-inbox
-{
-    border: 1px solid #ccc;
-    overflow:hidden;
-    padding-bottom:30px;
+.chatlogs{
+    padding: 10px;
+    width: 100%;
 }
-.chats
-{
-    padding: 20px 20px 0 20px; 
+.chat{
+    display:flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin-bottom: 10px;
 }
-.msg-page{
-    height: 500px ;
-    overflow-y: auto; 
+.chat .user-photo{
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    border-radius: 50%;
 }
+
+
 
      
 
@@ -516,4 +663,18 @@ img{
 .Pergunta {
     font-family: Arial, Helvetica, sans-serif;
     font-weight:bold;
+}
+/*FÓRUM PUBLICO E PROVADO - OPÇÕES*/
+.linha-vertical2 {
+    height: 80px;
+    border-left: 1px solid;
+    margin-top: 2% ;
+    margin-left: 35%;
+    
+}
+.aaa{
+    height: 80px;
+    margin-top: -20% ;
+    margin-right: -38%;
+    margin-left: 36%;
 }
