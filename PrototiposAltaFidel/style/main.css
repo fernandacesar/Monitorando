@@ -443,7 +443,7 @@ textarea{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
-.Descrição{
+.Descricao{
     Display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
@@ -587,16 +587,19 @@ img{
     box-sizing: border-box;
 }
 .Hi{
-    background: #1ddded;
+    background: #808080;
 }
 .chatbox{
-    width: 500px;
-    min-width: 390px;
+    width: 1200px;
+    min-width: 400px;
     height: 600px;
     background: #fff;
     padding: 25px;
     margin: 20px auto;
+    margin-left: 30%;
+    margin-top:1%;
     box-shadow: 0 3px #ccc;  
+    border-radius:5px;
 }
 .chatlogs{
     padding: 10px;
@@ -604,6 +607,7 @@ img{
     height:450px;
     overflow-x: hidden;
     overflow-y: scroll;
+    background: #CCC ;
 }
 .chatlogs::-webkit-scrollbar{
     width: 10px;
@@ -622,11 +626,11 @@ img{
 .chat .user-photo{
     width: 60px;
     height: 60px;
-    background: #ccc;
+    background: #4f5b69;
     border-radius: 50%;
 }
 .chat .chat-message{
-    width: 80%;
+    width: 90%;
     padding: 15px;
     margin: 5px 10px 0;
     border-radius:10px;
@@ -649,14 +653,14 @@ img{
 
 .chat-form textarea{
     background: #fbfbfb;
-    width:75%;
+    width:90%;
     height: 50px ;
     border: 2px solid #eee;
     border-radius: 3px;
     resize: none;
     padding:10 px;
     font-size: 18px;
-    color: #333;
+    color: #808080;
 }
 .chat-form textarea:focus {
     background: #fff;
@@ -690,15 +694,22 @@ img{
 .chat-form button:hover{
     background: #13c8d9;
 }
-
-
-
-
-
-
-
-     
-
+.Informacoes{
+    width: 1200px;
+    min-width: 400px;
+    height: 130px;
+    background: #fff;
+    padding: 25px;
+    margin: 20px auto;
+    margin-left: 30%;
+    margin-top:5%;
+    box-shadow: 0 3px #ccc;  
+    border-radius:5px;
+}
+.formatoInformacoes{
+    Display: block;
+    font-size: 15px;
+}
 
 
 
