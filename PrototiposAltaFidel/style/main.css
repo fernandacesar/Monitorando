@@ -403,9 +403,7 @@ table.bordas th {
     font-size: 15px;
 }
 textarea{
-    vertical-align: 5em; 
-    height: 5em;
-    resize: horizontal;
+    
 }
 .tudo{
     height: 200px;
@@ -561,37 +559,42 @@ img{
     line-height: 2px;
     color: #fff;
 }
-.header-icons
-{
-    width: 120px;
-    float: right;
-    margin-top:12px;
-    margin-right:10px 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: tahoma ,sans-serif;
+    box-sizing: border-box;
 }
-.header-icons .fa
-{
-    color: #fff;
-    cursor:pointer;
-    margin: 10px;
+.Hi{
+    background: #1ddded;
 }
-.chat-page
-{
-    padding:  0 0 50px 0 ;
+.chatbox{
+    width: 500px;
+    min-width: 390px;
+    height: 600px;
+    background: #fff;
+    padding: 25px;
+    margin: 20px auto;
+    box-shadow: 0 3px #ccc;  
 }
-.msg-inbox
-{
-    border: 1px solid #ccc;
-    overflow:hidden;
-    padding-bottom:30px;
+.chatlogs{
+    padding: 10px;
+    width: 100%;
 }
-.chats
-{
-    padding: 20px 20px 0 20px; 
+.chat{
+    display:flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin-bottom: 10px;
 }
-.msg-page{
-    height: 500px ;
-    overflow-y: auto; 
+.chat .user-photo{
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    border-radius: 50%;
 }
+
+
 
      
 
