@@ -611,9 +611,7 @@ img{
 .chatlogs::-webkit-scrollbar-thumb{
     border-radius: 5px;
     background: rgba(0,0,0,.1);
-
 }
-
 
 .chat{
     display:flex;
@@ -660,7 +658,39 @@ img{
     font-size: 18px;
     color: #333;
 }
-.chat-form textarea: focus
+.chat-form textarea:focus {
+    background: #fff;
+}
+.chat-form textarea::-webkit-scrollbar{
+    width: 10px;
+}
+.chat-form textarea::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: rgba(0,0,0,.1);
+}
+
+
+
+.chat-form button{
+    background: #1ddced;
+    padding: 5px 15px;
+    font-size: 30px;
+    color: #fff;
+    border:none;
+    margin: 0 10px;
+    border-radius: 3px;
+    box-shadow: 0 3px 0 #ceb2c1;
+
+    -webkit-transition: .2s ease;
+    -moz-transition: .2s ease;
+    -o-transition: .2s ease;
+
+}
+
+.chat-form button:hover{
+    background: #13c8d9;
+}
+
 
 
 
