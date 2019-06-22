@@ -769,3 +769,28 @@ img{
     margin-right: -38%;
     margin-left: 36%;
 }
+
+/*MEUS FÓRUNS*/
+.DadosF{
+    margin-top: 2%;
+    margin-left: 2%; 
+}
+.Membros, .Date {
+    margin-left: 4%; 
+    display: inline ;
+}
+.Bobao{
+    margin-top: -4%; 
+    margin-left: 83%;
+}
+.btnMf1{
+    height: 25px;
+    weight: 40px;
+    
+}
+.TituloO{
+    margin-top: 4%;
+}
+.buttonF {
+    margin-top: 200;
+}
