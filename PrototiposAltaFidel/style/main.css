@@ -161,7 +161,7 @@ p{font-size: 12px;}
     width: 80px;
     height: 80px;
     background: -91px 0;
-    
+    margin-left: 0%;
 }
 
 label, input{
@@ -171,9 +171,22 @@ label, input{
 
 .corpo {
     font-family: Arial, Helvetica, sans-serif;
+<<<<<<< HEAD
+    height: 600px;
+    padding-top: 5%;
+    margin-left: 25%;
+}
+.panel-perfilComum{
+    margin-top: 3%;
+    margin-left: 25%;
+    width: 70%;
+    height: 10%;
+=======
         height: 600px;
         padding-top: 5%;
         margin-left: 40%;
+        display: table;
+>>>>>>> 0a8b8b96eee168fc822bcf5c9c408b7c3cf308f5
 }
 
 .conteudo {
@@ -201,9 +214,13 @@ label, input{
     margin-top: 10 px;
     margin-left: -10px; 
 }
+.solicitar{
+    font-size: 10px;
+    margin-left: 47%;
+}
 .btn-perfilcomum{
     width: 85%;
-    margin-left: 15%;
+    margin-left: 30%;
 }
 .btn-monitor{
     width: 50%;
@@ -222,10 +239,15 @@ label, input{
     display: inline !important;  
 }
 
-P.blocktext {
+.blocktext {
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: auto;
+<<<<<<< HEAD
+    margin-left: 25%;
     margin-right: auto;
+=======
+    margin-left: auto;
+    margin-right: auto; 
+>>>>>>> 0a8b8b96eee168fc822bcf5c9c408b7c3cf308f5
     width: 6em; 
 }
 
@@ -691,4 +713,18 @@ img{
 .Pergunta {
     font-family: Arial, Helvetica, sans-serif;
     font-weight:bold;
+}
+/*FÓRUM PUBLICO E PROVADO - OPÇÕES*/
+.linha-vertical2 {
+    height: 80px;
+    border-left: 1px solid;
+    margin-top: 2% ;
+    margin-left: 35%;
+    
+}
+.aaa{
+    height: 80px;
+    margin-top: -20% ;
+    margin-right: -38%;
+    margin-left: 36%;
 }
