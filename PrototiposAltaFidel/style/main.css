@@ -201,6 +201,14 @@ label, input{
     margin-top: 10 px;
     margin-left: -10px; 
 }
+.btn-perfilcomum{
+    width: 85%;
+    margin-left: 15%;
+}
+.btn-monitor{
+    width: 50%;
+    margin-left: 20%;
+}
 .Nome{
     font-family: Arial, Helvetica, sans-serif;
     display: inline !important;  
@@ -221,20 +229,152 @@ P.blocktext {
     width: 6em; 
 }
 
+.h3{text-align: center;}
+
 /* Inicio monitoriasUsuarios  */ 
 
-#BarraLateral{
-    position: relative;
-    float: left;
-    width: 300px;
-    padding: 1px;
+#alinharDireita{
+    padding-left: 200px;
+}
+#alinharInput1{
+    padding-left: 110px;
+}
+#alinharInput2{
+    padding-left: 80px;
+}
+#alinharInput3{
+    padding-left: 195px;
+}
+#alinharInput4{
+    padding-left: 99px;
 }
 
-#logoL{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#alinharInput5{
+    padding-left: 129px;
 }
+
+#alinharInput6{
+    padding-left: 537px;
+}
+
+#alinharInput7{
+    box-sizing: border-box;
+    padding-left: 113px;
+}
+
+#alinharInput8{
+    box-sizing: border-box;
+    padding-left: 200px;
+}
+
+#alinharInput9{
+    box-sizing: border-box;
+    padding-left: 215px;
+}
+
+.materia{
+    
+    text-align: center;
+    display: block;
+    width: 400px;
+
+}
+
+#alinhar{
+    display: block;
+    padding-left: 275px;
+}
+
+.descri{
+    padding-left: 200px;
+}
+
+.espeMU{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+    
+}
+
+.inputDados1{
+    display: inline-block;
+    width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+}
+
+.inputDados2{
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+    
+}
+
+.inputDados3{
+    display: inline !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+    width: 400px;
+}
+
+
+
+
+
+/* Fim monitoriasUsuarios*/
+
+
+
+
+/* Comeco encontrarMonitorias */
+
+.encontrar{
+    
+ 
+    text-align: center;
+    display: block;
+    width: 400px;
+
+
+}
+
+#alinharTabela{
+  padding-left: 175px;
+}
+
+#recemCadastradas{
+    padding-left: 175px;
+    width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+
+}
+
+table.bordas {
+    border-collapse: collapse; /* CSS2 */
+    background: #FFFFF0;
+    font-size: 14px;
+    
+}
+ 
+table.bordas td {
+    border: 1px solid black;
+    padding: 10px;
+}
+ 
+table.bordas th {
+    border: 1px solid black;
+    background: rgb(211, 218, 211);
+    padding: 10px;
+}
+
+
+/* Fim encontrarMonitorias */
+
 .Salalocal{
     display: inline !important;
     font-family: Arial, Helvetica, sans-serif;
@@ -317,6 +457,8 @@ textarea{
     font-weight:bold;
 
 }
+
+
 .Status{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
@@ -498,51 +640,5 @@ img{
 }
 .Pergunta {
     font-family: Arial, Helvetica, sans-serif;
-   
-}
-
-.Titulo{
-    font-family: Arial, Helvetica, sans-serif;
     font-weight:bold;
-    font-size: 20px;
-}
-.Administrador {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-}
-.DT {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px; 
-}
-
-.corpo2 {
-    font-family: Arial, Helvetica, sans-serif;
-    /*font-weight:bold;*/
-    height: 500px;
-    padding-top: 2%;
-    margin-left: 40%;
-    margin-right: 40%; 
-    background: #ffffff; 
-}
-.Menssagem{
-    Display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    
-}
-.Menssagem2{
-    Display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-   
-}
-
-.perguntas {
-    font-family: Arial, Helvetica, sans-serif;
-    
-    height: 500px;
-    padding-top: 2%;
-    margin-left: 40%;
-    margin-right: 40%; 
-   
 }
