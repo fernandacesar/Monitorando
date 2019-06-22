@@ -174,6 +174,7 @@ label, input{
         height: 600px;
         padding-top: 5%;
         margin-left: 40%;
+        display: table;
 }
 
 .conteudo {
@@ -225,7 +226,7 @@ label, input{
 P.blocktext {
     font-family: Arial, Helvetica, sans-serif;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
     width: 6em; 
 }
 
@@ -638,4 +639,18 @@ img{
 .Pergunta {
     font-family: Arial, Helvetica, sans-serif;
     font-weight:bold;
+}
+/*FÓRUM PUBLICO E PROVADO - OPÇÕES*/
+.linha-vertical2 {
+    height: 80px;
+    border-left: 1px solid;
+    margin-top: 2% ;
+    margin-left: 35%;
+    
+}
+.aaa{
+    height: 80px;
+    margin-top: -20% ;
+    margin-right: -38%;
+    margin-left: 36%;
 }
