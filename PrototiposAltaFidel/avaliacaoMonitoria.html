@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Monitorando &bull;MeuPerfil</title>
+    <title>Monitorando &bull;Avaliar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
     <script src="main.js"></script>
@@ -68,70 +68,62 @@
                 </ul>
             </div>
         </div>
-        <div class="corpo">
-            <div>
-                <h1 class="TituloUM">Meu perfil</h1>
+    </div>
+    <div>
+        <nav class="navbar-inverse posiMenu">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-out"></span> Sair</a>
+                    </li>
+                </ul>
             </div>
-            <br><br>
+        </nav>
+    </div>
 
-            <div class="imagemUsuario">
-                <img id="perfilUsuario" src="images/perfilUsuario.png" alt="perfilUsuario">
-            </div>
+    <div class="corpo">
+        <section class="corpo3">
+            <form method="post" action="" id="FrmLicenca" autocomplete="off">
+                <div>
+                    <h1 class="TituloUM">Avaliar</h1>
+                </div>
+                <div class="dados3">
+                    <label class="Monitoria" for="Monitoria:"></label>Monitoria: </label>
+                    <br></br>
+                    <label class="Monitor" for="Monitor:">Monitor:</label>
+                </div>
+                <br></br>
+                <P class="blocktext3">
+                    <h5 class="Avalie">Avalie de 0 A 5:</h5>
+                </P>
 
-            <div class="dados">
-                <label class="NomepUM" for="Nome:">Nome:</label>
-                <input class="NomepUM" type="">
+                <div class="estrelas">
+                    <input type="radio" id="cm_star-empty" name="fb" value="" checked />
+                    <label for="cm_star-1"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-1" name="fb" value="1" />
+                    <label for="cm_star-2"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-2" name="fb" value="2" />
+                    <label for="cm_star-3"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-3" name="fb" value="3" />
+                    <label for="cm_star-4"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-4" name="fb" value="4" />
+                    <label for="cm_star-5"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-5" name="fb" value="5" />
+                </div>
 
-                <br><br>
-
-                <label class="E-mailpUM" for="E-mail:">E-mail:</label>
-                <input class="E-mailpUM" type="">
-
-                <br><br>
-
-                <h5 class="Status"> Status: Aluno/Monitor</h5>
-
-            </div>
-            <div class="botõesLado">
-                <button class="btn-basic btnlado">Alterar Senha</button>
-                <button class="btn-basic btnlado">Salvar alterações</button>
-            </div>
-            <br><br>
-            <div>
-                <h2 class="Avaliacoes tituloAvaliacoes">Avaliações:</h2>
-            </div>
-            <br><br>
-
-            <div class="estrelas">
-                <input type="radio" id="cm_star-empty" name="fb" value="" checked />
-                <label for="cm_star-1"><i class="fa"></i></label>
-                <input type="radio" id="cm_star-1" name="fb" value="1" />
-                <label for="cm_star-2"><i class="fa"></i></label>
-                <input type="radio" id="cm_star-2" name="fb" value="2" />
-                <label for="cm_star-3"><i class="fa"></i></label>
-                <input type="radio" id="cm_star-3" name="fb" value="3" />
-                <label for="cm_star-4"><i class="fa"></i></label>
-                <input type="radio" id="cm_star-4" name="fb" value="4" />
-                <label for="cm_star-5"><i class="fa"></i></label>
-                <input type="radio" id="cm_star-5" name="fb" value="5" />
-            </div>
-            <br><br>
-            <div>
-                <h2 class="Comentário tituloComentários">Comentários:</h2>
-            </div>
-            <div class="linha-vertical"></div>
-
-            <div>
-                <h2 class="tMonitorias tituloMonitorias">Minhas Monitorias:</h2>
-            </div>
-
-
-            <div class="botõesAbaixo">
-                <button class="btn-basic btnlado2">Cancelar Monitoria</button>
-                <button class="btn-basic btnlado2">Ver mais</button>
-            </div>
-            
-        </div>
+                <div class="form-group">
+                    <h5 class="Coment">Digite um comentário:</h5>
+                </div>
+                <div>
+                    <textarea id="msg">...</textarea>
+                </div>
+                <br></br>
+                <div>
+                    <button>Concluir</button>
+                </div>
+            </form>
+        </section>
     </div>
 </body>
 
