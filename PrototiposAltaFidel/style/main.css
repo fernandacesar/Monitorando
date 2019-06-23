@@ -719,6 +719,10 @@ img{
     box-shadow: 0 3px #ccc;  
     border-radius:5px;
 }
+.bordaUsuarioMonitor{
+    border-radius: 80px #80808080;
+
+}
 
 
 /*Solicitar Licenca*/
