@@ -515,7 +515,6 @@ textarea{
   .estrelas input[type=radio]:checked ~ label i.fa:before {
     color: #CCC;
   }
-
   .linha-vertical {
     height: 200px;
     border-left: 1px solid;
@@ -723,6 +722,28 @@ img{
     border-radius: 80px #80808080;
 
 }
+.corpo-foruns{
+    font-family: Arial, Helvetica, sans-serif;
+
+    height: 600px;
+    padding-top: 5%;
+    margin-left: 25%;
+}
+.Tituloforum{
+    margin-left: 25%;
+}
+.nomeMonitoria{
+    margin-left:10%;
+    font-size: 20px;
+}
+.Utilizados{
+    margin-left:13%;
+    font-size:15px;   
+}
+.borda{
+    border-radius:5px;
+}
+
 
 
 /*Solicitar Licenca*/
