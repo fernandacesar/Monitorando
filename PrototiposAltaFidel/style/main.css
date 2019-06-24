@@ -746,10 +746,42 @@ img{
 
     box-shadow: 1px 1px #ccc;  
     border-radius: 4px;
-    
 
 }
+.painel-pesquisaMonitorias{
+    margin-left: 45%;
+    width: 1200px;
+    background: #fff;
+    padding: 25px;
+    margin: 20px auto;
+    margin-top:2%;
+}
+.tabela{
+    margin-left: 23%;
+    margin-top:5%;
+}
 
+.margem{
+    margin-top: 3%;
+    margin-left: 20%;
+}
+
+.btn-lado{
+    margin-left: 5%;
+    border-radius: 4px;
+}
+table {
+    border-collapse: collapse;
+    width: 60em;
+    border: 1px solid #666;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+thead {
+    background: #ccc url(https://www.devfuria.com.br/html-css/tabelas/bar.gif) repeat-x left center;
+    border-top: 1px solid #a5a5a5;
+    border-bottom: 1px solid #a5a5a5;
+  }
+ 
 
 
 /*Solicitar Licenca*/
