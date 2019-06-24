@@ -420,10 +420,14 @@ textarea{
     padding-top: 5%;
     margin-left: 15%;
 }
-.frmMonitorias{
-    width: 50%;
+.panel-monitorias{
+    width: 60%;
+    height: 500px;
 }
-.Titulo{text-align: center;}
+.Titulo{
+    text-align: center;
+    margin-top: 7%;
+}
 .Titulocad ,.TituloUM{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
@@ -487,6 +491,10 @@ textarea{
     width: 40%;
     margin-top: -21%; 
 }
+.btn-minhasMonitorias{
+    width: 15%;
+    margin-left: 80%;
+}
 .tituloMonitorias{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -518,13 +526,8 @@ textarea{
     height: 200px;
     border-left: 1px solid;
     margin-top: -18% ;
-    margin-left: 40%;
+    margin-left: 45%;
   }
-  .btnlado2{
-    margin-top: -45%;
-    margin-left: 60%;
-    width: 20%;
-}
 .botõesAbaixo{
     margin-top: 15%;
 }
