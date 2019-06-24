@@ -1,66 +1,107 @@
 <!DOCTYPE html>
-<html>
+    <html>
     <head>
-        <title>EncontrarMonitorias</title>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Monitorando &bull; Encontrar monitorias</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+        <script src="scripts/main.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     </head>
-
     <body>
+        <div class="nav-side-menu">
+            <div class="brand">Monitorando</div>
+            <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
+            <div class="menu-list">
+
+                <ul id="menu-content" class="menu-content collapse out">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-lg"></i>
+                            <span class="glyphicon glyphicon-home"></span> Início
+                        </a>
+                    </li>
+
+                    <li data-toggle="collapse" data-target="#products" class="collapsed">
+                        <a href="perfilUsuarioMonitor.html">
+                            <a href="perfilUsuarioMonitor.html">
+                                <i class="fas fa-lg"></i>
+                                <span class="glyphicon glyphicon-user"></span> Perfil
+                            </a>
+                        </a>
+                    </li>
+
+                    <li data-toggle="collapse" data-target="#service" class="collapsed">
+                        <a href="">
+                            <i class="fab fa-lg"></i>
+                            <span class="glyphicon glyphicon-book"></span> Monitorias inscritas
+                        </a>
+                    </li>
+
+                    <li data-toggle="collapse" data-target="#new" class="collapsed active">
+                        <a href="encontrarMonit.html">
+                            <i class="fab fa-lg"></i>
+                            <span class="glyphicon glyphicon-list-alt"></span> Monitorias
+                        </a>
+                    </li><br>
+
+                    <li>
+                        <a href="forunsPubliPriva.html">
+                            <i class="fa fa-lg"></i>
+                            <span class="glyphicon glyphicon-comment"></span> Fóruns de dúvidas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <nav class="navbar-inverse posiMenu">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-log-out"></span> Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
         <div class="corpo">
             <div id="alinharDireita">
-                <h1 class="encontrar">Encontrando Monitorias</h1>
-            </div>
-
-            <br>
-            <br>
-            <br>
-            <br>
-            
+                <h3 class="encontrar">Encontrando Monitorias</h3>
+            </div><br><br>
 
             <div id="alinhar">
-                
-                    <input class="inputDados2" type="text" placeholder="Palavra-chave"/>
-                    <input class="inputDados2" type="submit" value="Pesquisar">
-            
-            </div>
+                <input class="inputDados2 form-control" id="input-pesquisa" type="text" placeholder="Palavra-chave" />
+                <input class="inputDados2 btn-link" type="submit" value="Pesquisar">
+            </div><br><br>
 
-<br>
-<br>
-<br>
-
-<h2 id="recemCadastradas">Recém-cadastradas:</h2>
+            <h2 id="recemCadastradas">Recém-cadastradas:</h2>
             <div id="alinharTabela">
 
-                <table class="bordas" >
-
+                <table class="bordas">
                     <tr>
-                    
                         <th>Programação - Matéria</th>
                         <th>Monitor</th>
                         <th>Data</th>
                         <th>Vagas</th>
                         <th>Mais</th>
-
                     </tr>
-
                     <tr>
-                        <td>Trigonometria</td>
-                        <td>Fellipe</td>
-                        <td>08/05/2019</td>
-                        <td>02/40</td>
-                        <td>Detalhes</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
-
                 </table>
-
             </div>
-
-
-
         </div>
-
-
     </body>
 </html>
