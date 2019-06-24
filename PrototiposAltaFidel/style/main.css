@@ -591,11 +591,11 @@ img{
 .chatbox{
     width: 1200px;
     min-width: 400px;
-    height: 600px;
+    height: 520px;
     background: #fff;
     padding: 25px;
     margin: 20px auto;
-    margin-left: 30%;
+    margin-left: 20%;
     margin-top:1%;
     box-shadow: 0 3px #ccc;  
     border-radius:5px;
@@ -603,7 +603,7 @@ img{
 .chatlogs{
     padding: 10px;
     width: 100%;
-    height:450px;
+    height:400px;
     overflow-x: hidden;
     overflow-y: scroll;
     background: #CCC ;
@@ -710,14 +710,14 @@ img{
     font-size: 15px;
 }
 .Informacoes-privado{
-    width: 1200px;
+    width: 1000px;
     min-width: 400px;
     height: 130px;
     background: #fff;
     padding: 25px;
     margin: 20px auto;
     margin-left: 30%;
-    margin-top:5%;
+    margin-top:2%;
     box-shadow: 0 3px #ccc;  
     border-radius:5px;
 }
