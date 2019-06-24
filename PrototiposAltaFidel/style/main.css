@@ -245,7 +245,7 @@ label, input{
 /* Inicio monitoriasUsuarios  */ 
 
 #alinharDireita{
-    padding-left: 200px;
+    padding-left: 290px;
 }
 #alinharInput1{
     padding-left: 110px;
@@ -292,8 +292,7 @@ label, input{
 }
 
 #alinhar{
-    display: block;
-    padding-left: 275px;
+    padding-left: 300px;
 }
 
 .descri{
@@ -319,9 +318,11 @@ label, input{
     display: inline !important;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    font-weight:bold;
-    
+    font-weight:bold;  
+    /* width: 20%;   */
 }
+
+#input-pesquisa{width: 50%;}
 
 .inputDados3{
     display: inline !important;
@@ -353,11 +354,11 @@ label, input{
 }
 
 #alinharTabela{
-  padding-left: 175px;
+  padding-left: 80px;
 }
 
 #recemCadastradas{
-    padding-left: 175px;
+    padding-left: 80px;
     width: 40%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
