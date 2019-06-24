@@ -5,88 +5,141 @@
         <head>
                 <meta charset="utf-8" />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <title>Monitorando &bull; Login</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
                 <script src="scripts/main.js"></script>
-            
+                <title>Monitorias Cadastradas</title>
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
             
-            </head>
-  <head>
-    <div>
-      <title>Monitorias Cadastradas</title>
-    </div>
-  </head>
-  
-  <div class="pesq">
-    <label for="pesquisa"></label>
-    <input type="pesquisa" class="pesq" id="pesq" name="pesquisa" placeholder="Palavra - chave" required>
+              </head>
+      <body onload="foco('local')">
+                  <div class="nav-side-menu">
+                      <div class="brand">Monitorando</div>
+                      <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+              
+                      <div class="menu-list">
+              
+                          <ul id="menu-content" class="menu-content collapse out">
+                              <li class="collapsed">
+                                  <a href="#">
+                                      <i class="fas fa-lg"></i>
+                                      <span class="glyphicon glyphicon-home"></span> Início
+                                  </a>
+                              </li>
+              
+                              <li data-toggle="collapse" data-target="#products" class="collapsed active">
+                                  <a href="#">
+                                      <a href="#">
+                                          <i class="fas fa-lg"></i>
+                                          <span class="glyphicon glyphicon-user"></span> Perfil
+                                      </a>
+                                  </a>
+                              </li><br>
+              
+                              <li data-toggle="collapse" data-target="#service" class="collapsed">
+                                  <a href="#">
+                                      <i class="fab fa-lg"></i>
+                                      <span class="glyphicon glyphicon-book"></span> Monitorias inscritas
+                                  </a>
+                              </li>
+              
+                              <li data-toggle="collapse" data-target="#new" class="collapsed">
+                                  <a href="#">
+                                      <i class="fab fa-lg"></i>
+                                      <span class="glyphicon glyphicon-list-alt"></span> Monitorias cadastradas
+                                  </a>
+                              </li>
+              
+                              <li>
+                                  <a href="#">
+                                      <i class="fas fa-lg"></i>
+                                      <span class="glyphicon glyphicon-map-marker"></span> Mapa das minhas monitorias
+                                  </a>
+                              </li>
+              
+                              <li>
+                                  <a href="#">
+                                      <i class="fa fa-lg"></i>
+                                      <span class="glyphicon glyphicon-comment"></span> Fóruns de dúvidas
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                <div class="painel-pesquisaMonitorias">
+                  <div class="Titulo margem">
+                    <h3 class="Descrição">---Encontrando Monitorias---</h3>
+                  </div>
+                  
+                    <div class="Titulo margem">
+                    <input type="" class="Nome" id="pesq" name="pesquisa" placeholder="Palavra - chave" required>
+                    <button class="Nome" type="submit" >Pesquisar</button>
+                    </div>
+                <div class="tabela">
+                  <table id="MonitoriasTable">
+                  <thead>
+                    <div>
+                      <tr>
+                        <table border = "10" bordercolor = "black" cellspacing = "0">
+                          <th></th>
+                          <th>Matéria</th>
+                          <th>Assunto</th>
+                          <th>Data/Horário</th>
+                          <th>Sala/Local</th>
+                          <th>Monitor(a)</th>
+                          <th>Descrição</th>
+                          <th>Nº de vagas</th>
+                      </tr>
+                    </div>
+                  </thead>
 
-    <div id="botao">
-    <button class="button" type="submit" >Pesquisar</button>
-    </div>
-  </div>
-  
-  <table id="MonitoriasTable">
-  <thead>
-    <div>
-      <tr>
-        <table border = "1" bordercolor = "black" cellspacing = "0">
-          <th></th>
-          <th>Matéria</th>
-          <th>Assunto</th>
-          <th>Data/Horário</th>
-          <th>Sala/Local</th>
-          <th>Monitor(a)</th>
-          <th>Descrição</th>
-          <th>Nº de vagas</th>
-      </tr>
-    </div>
-  </thead>
+                  <tbody>
+                    <div>
+                      <tr>
+                        <td>-1-</td>
+                        <td>Matemática</td>
+                        <td>Trigonometria</td>
+                        <td>09/05/2019 - 13h15</td>
+                        <td>Sala 323 - Bloco A</td>
+                        <td>Fellipe Costa Reis</td>
+                        <td>Introdução em trigonometria</td>
+                        <td>20/40</td>
+                        <td><button class="btn-info btn-lado">Ver mais</button></td>
+                      </tr>
+                    </div>
 
-  <tbody>
-    <div>
-      <tr>
-        <td>1</td>
-        <td>Matemática</td>
-        <td>Trigonometria</td>
-        <td>09/05/2019 - 13h15</td>
-        <td>Sala 323 - Bloco A</td>
-        <td>Fellipe Costa Reis</td>
-        <td>Introdução em trigonometria</td>
-        <td>20/40</td>
-      </tr>
-    </div>
+                    <div>
+                      <tr>
+                        <td>-2-</td>
+                        <td>Lógica de Programação 2</td>
+                        <td>Array List</td>
+                        <td>21/06/2019 - 14h00</td>
+                        <td>Lab. 11 - Bloco C</td>
+                        <td>Jean Vitor Ribas Hass</td>
+                        <td>Introdução em array</td>
+                        <td>12/20</td>
+                        <td><button class="btn-info btn-lado">Ver mais</button></td>
+                      </tr>
+                    </div>
 
-    <div>
-      <tr>
-        <td>2</td>
-        <td>Lógica de Programação 2</td>
-        <td>Array List</td>
-        <td>21/06/2019 - 14h00</td>
-        <td>Lab. 11 - Bloco C</td>
-        <td>Jean Vitor Ribas Hass</td>
-        <td>Introdução em array</td>
-        <td>12/20</td>
-      </tr>
-    </div>
-
-    <div>
-      <tr>
-        <td>3</td>
-        <td>Biologia</td>
-        <td>Citologia</td>
-        <td>19/05/2019 - 14h45</td>
-        <td>Sala 315 - Bloco A</td>
-        <td>Maria Eduarda Castro</td>
-        <td>Introdução em citologia</td>
-        <td>17/30</td>
-      </tr>
-    </div>
-
-</tbody>
-</table>
+                    <div>
+                      <tr>
+                        <td>-3-</td>
+                        <td>Biologia</td>
+                        <td>Citologia</td>
+                        <td>19/05/2019 - 14h45</td>
+                        <td>Sala 315 - Bloco A</td>
+                        <td>Maria Eduarda Castro</td>
+                        <td>Introdução em citologia</td>
+                        <td>17/30</td>
+                        <td><button class="btn-info btn-lado">Ver mais</button></td>
+                      </tr>
+                    </div>
+                    </div>
+                </tbody>
+             </tbody>
+          </table>
+      </body>
 </html>
