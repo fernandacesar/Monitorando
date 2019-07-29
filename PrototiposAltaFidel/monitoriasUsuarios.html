@@ -1,26 +1,96 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>DetalhesMonitorias</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Monitorando &bull;Avaliar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
 
-        <div class="corpo">
-            <div id="alinharDireita">
-                <h1 class="materia">Matéria</h1>
+<body onload="foco('local')">
+    <div class="bordaUsuarioMonitor">
+        <div class="nav-side-menu">
+            <div class="brand">Monitorando</div>
+            <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+            <div class="menu-list">
+
+                <ul id="menu-content" class="menu-content collapse out">
+                    <li class="active">
+                        <a href="#">
+                            <i class="fas fa-lg"></i>
+                            <span class="glyphicon glyphicon-home"></span> Início
+                        </a>
+                    </li>
+                    <br>
+
+                    <li data-toggle="collapse" data-target="#products" class="collapsed">
+                        <a href="#">
+                            <a href="#">
+                                <i class="fas fa-lg"></i>
+                                <span class="glyphicon glyphicon-user"></span> Perfil
+                            </a>
+                        </a>
+                    </li>
+
+                    <li data-toggle="collapse" data-target="#service" class="collapsed">
+                        <a href="#">
+                            <i class="fab fa-lg"></i>
+                            <span class="glyphicon glyphicon-book"></span> Monitorias inscritas
+                        </a>
+                    </li>
+
+                    <li data-toggle="collapse" data-target="#new" class="collapsed">
+                        <a href="#">
+                            <i class="fab fa-lg"></i>
+                            <span class="glyphicon glyphicon-list-alt"></span> Monitorias cadastradas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-lg"></i>
+                            <span class="glyphicon glyphicon-map-marker"></span> Mapa das minhas monitorias
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-lg"></i>
+                            <span class="glyphicon glyphicon-comment"></span> Fóruns de dúvidas
+                        </a>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </div>
+    <div>
+        <nav class="navbar-inverse posiMenu">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-out"></span> Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+         
             
 
-            <div>
+            <div class="panel panel-default panel-perfilComum">
+                <section class="corpo">
+                 <h2 class="blocktext" class="Titulo">*Matéria*</h2>
+                <br>
+            
+
                 <span class="espeMU">Sala/Local: </span>
                 <span id="alinharInput1"> </span>
                 <input class="inputDados1" type="">
@@ -69,13 +139,8 @@
                 <span id="alinharInput9"> </span>
                 <input class="inputDados2" type="submit" value="Salvar Alterações">
 
-            
+                </section>
             </div>
-
-
-
-        </div>
-
 
     </body>
 </html>
