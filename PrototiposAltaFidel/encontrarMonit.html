@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Monitorando &bull; Encontrar monitorias</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
-        <script src="scripts/main.js"></script>
+<html>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Monitorando &bull;Avaliar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+</head>
+
+<body onload="foco('local')">
+    <div class="bordaUsuarioMonitor">
         <div class="nav-side-menu">
             <div class="brand">Monitorando</div>
             <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
@@ -20,16 +26,17 @@
             <div class="menu-list">
 
                 <ul id="menu-content" class="menu-content collapse out">
-                    <li>
+                    <li class="active">
                         <a href="#">
                             <i class="fas fa-lg"></i>
                             <span class="glyphicon glyphicon-home"></span> Início
                         </a>
                     </li>
+                    <br>
 
                     <li data-toggle="collapse" data-target="#products" class="collapsed">
-                        <a href="perfilUsuarioMonitor.html">
-                            <a href="perfilUsuarioMonitor.html">
+                        <a href="#">
+                            <a href="#">
                                 <i class="fas fa-lg"></i>
                                 <span class="glyphicon glyphicon-user"></span> Perfil
                             </a>
@@ -37,21 +44,28 @@
                     </li>
 
                     <li data-toggle="collapse" data-target="#service" class="collapsed">
-                        <a href="">
+                        <a href="#">
                             <i class="fab fa-lg"></i>
                             <span class="glyphicon glyphicon-book"></span> Monitorias inscritas
                         </a>
                     </li>
 
-                    <li data-toggle="collapse" data-target="#new" class="collapsed active">
-                        <a href="encontrarMonit.html">
+                    <li data-toggle="collapse" data-target="#new" class="collapsed">
+                        <a href="#">
                             <i class="fab fa-lg"></i>
-                            <span class="glyphicon glyphicon-list-alt"></span> Monitorias
+                            <span class="glyphicon glyphicon-list-alt"></span> Monitorias cadastradas
                         </a>
-                    </li><br>
+                    </li>
 
                     <li>
-                        <a href="forunsPubliPriva.html">
+                        <a href="#">
+                            <i class="fas fa-lg"></i>
+                            <span class="glyphicon glyphicon-map-marker"></span> Mapa das minhas monitorias
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
                             <i class="fa fa-lg"></i>
                             <span class="glyphicon glyphicon-comment"></span> Fóruns de dúvidas
                         </a>
@@ -59,19 +73,20 @@
                 </ul>
             </div>
         </div>
+    </div>
+    <div>
+        <nav class="navbar-inverse posiMenu">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-out"></span> Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
-        <div>
-            <nav class="navbar-inverse posiMenu">
-                <div class="container-fluid">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#">
-                                <span class="glyphicon glyphicon-log-out"></span> Sair</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
         <div class="corpo">
             <div id="alinharDireita">
                 <h3 class="encontrar">Encontrando Monitorias</h3>

@@ -1,69 +1,95 @@
-<!DOCTYPE html>
-<html>
 
-
-        <head>
-                <meta charset="utf-8" />
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-                <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
-                <script src="scripts/main.js"></script>
-                <title>Monitorias Cadastradas</title>
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-            
-              </head>
-      <body onload="foco('local')">
-                  <div class="nav-side-menu">
-                      <div class="brand">Monitorando</div>
-                      <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-              
-                      <div class="menu-list">
-              
-                          <ul id="menu-content" class="menu-content collapse out">
-                              <li class="collapsed">
-                                  <a href="#">
-                                      <i class="fas fa-lg"></i>
-                                      <span class="glyphicon glyphicon-home"></span> Início
-                                  </a>
-                              </li>
-              
-                              <li data-toggle="collapse" data-target="#products" class="collapsed">
-                                  <a href="#">
-                                      <a href="perfilUsuarioMonitor.html">
-                                          <i class="fas fa-lg"></i>
-                                          <span class="glyphicon glyphicon-user"></span> Perfil
-                                      </a>
-                                  </a>
-                              </li>
-              
-                              <li data-toggle="collapse" data-target="#service" class="collapsed">
-                                  <a href="#">
-                                      <i class="fab fa-lg"></i>
-                                      <span class="glyphicon glyphicon-book"></span> Monitorias inscritas
-                                  </a>
-                              </li>
-              
-                              <li data-toggle="collapse" data-target="#new" class="collapsed active">
-                                  <a href="ListaMonitCad.html">
-                                      <i class="fab fa-lg"></i>
-                                      <span class="glyphicon glyphicon-list-alt"></span> Monitorias
-                                  </a>
-                              </li><br>
-
-                              <li>
-                                  <a href="forunsPubliPriva.html">
-                                      <i class="fa fa-lg"></i>
-                                      <span class="glyphicon glyphicon-comment"></span> Fóruns de dúvidas
-                                  </a>
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
-                <div class="painel-pesquisaMonitorias">
+ <!DOCTYPE html>
+ <html>
+ 
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    <script src="scripts/main.js"></script>
+    <title>Monitorias Cadastradas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+ </head>
+ 
+ <body onload="foco('local')">
+     <div class="bordaUsuarioMonitor">
+         <div class="nav-side-menu">
+             <div class="brand">Monitorando</div>
+             <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+ 
+             <div class="menu-list">
+ 
+                 <ul id="menu-content" class="menu-content collapse out">
+                     <li class="active">
+                         <a href="#">
+                             <i class="fas fa-lg"></i>
+                             <span class="glyphicon glyphicon-home"></span> Início
+                         </a>
+                     </li>
+                     <br>
+ 
+                     <li data-toggle="collapse" data-target="#products" class="collapsed">
+                         <a href="#">
+                             <a href="#">
+                                 <i class="fas fa-lg"></i>
+                                 <span class="glyphicon glyphicon-user"></span> Perfil
+                             </a>
+                         </a>
+                     </li>
+ 
+                     <li data-toggle="collapse" data-target="#service" class="collapsed">
+                         <a href="#">
+                             <i class="fab fa-lg"></i>
+                             <span class="glyphicon glyphicon-book"></span> Monitorias inscritas
+                         </a>
+                     </li>
+ 
+                     <li data-toggle="collapse" data-target="#new" class="collapsed">
+                         <a href="#">
+                             <i class="fab fa-lg"></i>
+                             <span class="glyphicon glyphicon-list-alt"></span> Monitorias cadastradas
+                         </a>
+                     </li>
+ 
+                     <li>
+                         <a href="#">
+                             <i class="fas fa-lg"></i>
+                             <span class="glyphicon glyphicon-map-marker"></span> Mapa das minhas monitorias
+                         </a>
+                     </li>
+ 
+                     <li>
+                         <a href="#">
+                             <i class="fa fa-lg"></i>
+                             <span class="glyphicon glyphicon-comment"></span> Fóruns de dúvidas
+                         </a>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+     <div>
+         <nav class="navbar-inverse posiMenu">
+             <div class="container-fluid">
+                 <ul class="nav navbar-nav navbar-right">
+                     <li>
+                         <a href="#">
+                             <span class="glyphicon glyphicon-log-out"></span> Sair</a>
+                     </li>
+                 </ul>
+             </div>
+         </nav>
+     </div>
+                  <div class="painel-pesquisaMonitorias">
                   <div class="Titulo margem">
-                    <h3 class="Descrição">---Encontrando Monitorias---</h3>
+                    <h4 class="Descrição">Encontrando Monitorias</h4>
                   </div>
                   
                     <div id="alinhar" class="Titulo margem">
@@ -71,12 +97,10 @@
                     <button class="Nome btn-link" type="submit" >Pesquisar</button>
                     </div>
                 <div class="tabela">
-                  <table id="MonitoriasTable">
+                  <table class="bordered striped centered"">
                   <thead>
                     <div>
                       <tr>
-                        <table border = "10" bordercolor = "black" cellspacing = "0">
-                          <th></th>
                           <th>Matéria</th>
                           <th>Assunto</th>
                           <th>Data/Horário</th>
@@ -84,28 +108,39 @@
                           <th>Monitor(a)</th>
                           <th>Descrição</th>
                           <th>Nº de vagas</th>
+                          <th>        </th>
                       </tr>
                     </div>
                   </thead>
 
                   <tbody>
-                    <div>
                       <tr>
-                        <td>-1-</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><button class="btn-info btn btn-lado" disabled>Ver mais</button></td>
+                        <td>Matemática </td>
+                        <td>Trigonometria</td>
+                        <td>12/08/2019 13:15</td>
+                        <td>Bloco A-326</td>
+                        <td>Vanessa</td>
+                        <td>......</td>
+                        <td>07/20</td>
+                        <td><button class=" btn-default " disabled>Ver mais</button><br></td>
                       </tr>
-                    </div>
+                      <tr>
+                          <td>Matemática </td>
+                          <td>Números Compelxos</td>
+                          <td>12/08/2019 13:15</td>
+                          <td>Bloco A-326</td>
+                          <td>Lucas</td>
+                          <td>......</td>
+                          <td>08/20</td>
+                          <td><button class=" btn-default" disabled>Ver mais</button><br></td>
+                        </tr>
 
-                    </div>
+
+
+
                 </tbody>
-             </tbody>
           </table>
+          <div>
       </body>
 </html>
+
