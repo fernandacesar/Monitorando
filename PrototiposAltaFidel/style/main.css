@@ -1,6 +1,4 @@
-body{
-    
-}
+
 
 /* Menu */
 
@@ -306,6 +304,16 @@ label, input{
     
 }
 
+.espeMUF{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight:bold;
+    
+}
+.posicao{
+    margin-right: 23%;
+}
+
 .inputDados1{
     display: inline-block;
     width: 400px;
@@ -320,6 +328,14 @@ label, input{
     font-size: 12px;
     font-weight:bold;  
     /* width: 20%;   */
+}
+
+#alinharMesmaLinha{
+    padding-left: 300px;
+}
+
+#alinharMesmaLinha2{
+    padding-left: 323px;
 }
 
 #input-pesquisa{width: 50%;}
@@ -661,6 +677,7 @@ img{
     font-size: 18px;
     color: #808080;
 }
+
 .chat-form textarea:focus {
     background: #fff;
 }
@@ -828,7 +845,7 @@ thead {
     font-family: Arial, Helvetica, sans-serif;
     font-weight:bold;
 }
-/*FÓRUM PUBLICO E PROVADO - OPÇÕES*/
+/*FÓRUM PUBLICO E PRIVADO - OPÇÕES*/
 .linha-vertical2 {
     height: 80px;
     border-left: 1px solid;
@@ -885,4 +902,29 @@ thead {
     font-weight:bold;
     margin-left: -2%;
 }
-
+.hello{
+    width:60%;
+    height: 150px ;
+    resize: none;
+    padding:10 px;
+    font-size: 18px;
+}
+.descrif{
+    margin-top: -20px;
+    padding-left: 100px;
+}
+.btnf{
+    margin-left: 20%;
+    width: 30%; 
+    height: 30%;   
+}
+.localtexto{
+    width:65%;
+    height: 150px ;
+    resize: none;
+}
+localtextof{
+    width:65%;
+    height: 150px ;
+    resize: none;
+}

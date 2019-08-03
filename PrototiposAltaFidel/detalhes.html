@@ -4,90 +4,71 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Monitorando</title>
+    <title>Monitorando &bull;Avaliar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
-    <script src="scripts/main.js"></script>
+    <script src="main.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <style type="text/css">
-            span {
-                font-family: Arial, Helvetica, sans-serif;
-            }
-
-            p {
-                font-family: Arial, Helvetica, sans-serif;
-
-            }
-
-
-            .div-detalhes {
-                font-family: Arial, Helvetica, sans-serif;
-                margin-left: 40%;
-                margin-top: 5%;
-            }
-
-
-            h2 {
-                font-family: Arial, Helvetica, sans-serif;
-            }
-
-            button {
-                margin-left: 13%;
-            }
-        </style>
 </head>
 
-<body>
-    <div class="nav-side-menu">
-        <div class="brand">Monitorando</div>
-        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+<body onload="foco('local')">
+    <div class="bordaUsuarioMonitor">
+        <div class="nav-side-menu">
+            <div class="brand">Monitorando</div>
+            <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
-        <div class="menu-list">
+            <div class="menu-list">
 
-            <ul id="menu-content" class="menu-content collapse out">
-                <li>
-                    <a href="#">
-                        <i class="fas fa-lg"></i>
-                        <span class="glyphicon glyphicon-home"></span> Início
-                    </a>
-                </li>
-
-                <li data-toggle="collapse" data-target="#products" class="collapsed">
-                    <a href="#">
-                        <a href="perfilUsuarioMonitor.html">
+                <ul id="menu-content" class="menu-content collapse out">
+                    <li class="active">
+                        <a href="#">
                             <i class="fas fa-lg"></i>
-                            <span class="glyphicon glyphicon-user"></span> Perfil
+                            <span class="glyphicon glyphicon-home"></span> Início
                         </a>
-                    </a>
-                </li>
-                <br>
+                    </li>
+                    <br>
 
-                <li data-toggle="collapse" data-target="#service" class="collapsed">
-                    <a href="">
-                        <i class="fab fa-lg"></i>
-                        <span class="glyphicon glyphicon-book"></span> Monitorias inscritas
-                    </a>
-                </li>
+                    <li data-toggle="collapse" data-target="#products" class="collapsed">
+                        <a href="#">
+                            <a href="#">
+                                <i class="fas fa-lg"></i>
+                                <span class="glyphicon glyphicon-user"></span> Perfil
+                            </a>
+                        </a>
+                    </li>
 
-                <li data-toggle="collapse" data-target="#new" class="collapsed active">
-                    <a href="ListaMonitCad.html">
-                        <i class="fab fa-lg"></i>
-                        <span class="glyphicon glyphicon-list-alt"></span> Monitorias
-                    </a>
-                </li>
+                    <li data-toggle="collapse" data-target="#service" class="collapsed">
+                        <a href="#">
+                            <i class="fab fa-lg"></i>
+                            <span class="glyphicon glyphicon-book"></span> Monitorias inscritas
+                        </a>
+                    </li>
 
-                <li>
-                    <a href="forunsPubliPriva.html">
-                        <i class="fa fa-lg"></i>
-                        <span class="glyphicon glyphicon-comment"></span> Fóruns de dúvidas
-                    </a>
-                </li>
-            </ul>
+                    <li data-toggle="collapse" data-target="#new" class="collapsed">
+                        <a href="#">
+                            <i class="fab fa-lg"></i>
+                            <span class="glyphicon glyphicon-list-alt"></span> Monitorias cadastradas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-lg"></i>
+                            <span class="glyphicon glyphicon-map-marker"></span> Mapa das minhas monitorias
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-lg"></i>
+                            <span class="glyphicon glyphicon-comment"></span> Fóruns de dúvidas
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-
     <div>
         <nav class="navbar-inverse posiMenu">
             <div class="container-fluid">
@@ -100,44 +81,60 @@
             </div>
         </nav>
     </div>
-    <div class="div-detalhes">
-        <p style="font-size:100%">
-            <b>Monitoria:</b>
-            </span>
-            <span style="font-size: 80%"> (Nome da monitoria)</span>
-            <p class="form-group">
-                <label class="Data e horário" for="Data e horário:" style="font-size:100%">
-                    <b>Data e horário:</b>
-                </label>
-                <input class="Data e horário" type="datetime-local">
-            </p>
-            <p style="font-size:100%">
-                <b>Monitor:</b>
-                </span>
-                <span style="font-size:78%"> (Nome do monitor)</span>
-                <p style="font-size:100%">
-                    <b>Local:</b>
-                    </span>
-                    <span style="font-size:78%"> (Número da sala da monitoria)</span>
-                    <p style="font-size:100%">
-                        <b>Número de inscritos:</b>
-                        </span>
-                        <span style="font-size:70%"> (Número de inscritos da monitoria)</span>
-                        <p class="form-group">
-                            <label class="Arquivos" for="Arquivos:">
-                                <b>Arquivos:</b>
-                            </label>
-                            <!-- <input class="Arquivos" type="file"> -->
-                        <!-- </p> -->
-                        <!-- <p style="font-size:100%"> -->
-                            <b>Descrição:</b>
-                        <!-- </p> -->
-                        <h2 style="font-size:75%">
-                            <textarea rows="5" cols="50"> (Descrição da monitoria...)</textarea> </h2>
-                        <p>
-                            <button>Inscrito</button>
-                        </p>
-    </div>
+
+    <div class="panel panel-default panel-perfilComum">
+    
+                    <section class="corpo">
+                    <h2 class="blocktext" class="Titulo"></h2>
+                    <br>
+                
+    
+                    <label class="espeMU">Monitoria:</label>
+
+                    <span id="alinharMesmaLinha"> </span>
+                
+                    <label class="espeMU">Data e horário:</label>
+
+                    <br>
+                    <br>
+                
+
+    
+                    <label class="espeMU">Monitor:</label>
+
+                    <span id="alinharMesmaLinha2"> </span>
+
+                    <label class="espeMU">Local:</label>
+
+
+                    <br>
+                    <br>
+
+                    <label class="espeMU">Arquivo:</label>
+                    <a>arquivo.pdf</a>
+
+                
+    
+                    <br>
+                    <br>
+    
+                    <label class="espeMU"> Descrição: </label>
+            
+                    <div class="descrif">
+
+                            <textarea class="hello"></textarea>
+    
+                    </div>
+
+                    <br>
+                    <br>
+                    
+
+                    <button class="btn  btnf">Inscrever-se</button>
+                    
+    
+                    </section>
+                </div>
 </body>
 
 </html>
