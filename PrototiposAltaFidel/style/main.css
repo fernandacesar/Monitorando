@@ -237,11 +237,15 @@ label, input{
     margin-right: auto; 
     width: 6em; 
 }
-
+.btn-chat{
+    margin-left: 500px;
+    width: 10%;
+    display: inline;
+}
 .btn-gerenciar-monitoria{
     display: inline;
-    width: 80%;
-    margin-left: -80%;
+    width: 10%;
+    margin-left: 1%;
 }
 
 .minha-monitoria-info{
