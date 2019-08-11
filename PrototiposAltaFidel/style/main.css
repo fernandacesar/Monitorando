@@ -456,7 +456,7 @@ textarea{
     height: 550px;
 }
 .Titulo{
-    text-align: end;
+    text-align: center;
     margin-top: 7%;
     margin-left: 12%;
 }
@@ -1011,20 +1011,24 @@ thead {
     resize: none;
 }
 
-.AAa{
-    margin-left: 30%;
-    margin-right: 10%;
+.AAa {
+    margin-left: 25%;
 }
+
 .BBb {
-    margin-left: 64%;
+    margin-left: 54%;
 }
 .CCc {
-    margin-left: -40%;
-    margin-right: 20%;
-}
-
-.DDd {
-    margin-left: 30%;
+    margin-left: 55%;
+    margin-top: -14%
     
 }
-
+.DDd {
+    margin-top: 3%;
+    margin-left:26%; 
+    
+}
+.TituloOO {
+   margin-left:44%; 
+   margin-top: 10%;
+}
