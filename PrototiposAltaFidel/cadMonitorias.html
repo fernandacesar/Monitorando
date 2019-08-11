@@ -79,16 +79,13 @@
         <div class="panel-monitorias panel panel-default">
             <form method="post" action="" id="FrmMonitorias" autocomplete="off">
 
-                <div class="Titulo">
-                    <h3>Cadastre sua monitoria</h3>
+                <div class="Titulof">
+                    <h3>Cadastre sua monitoria:</h3>
                     <br>
                 </div>
 
                 <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label class="Salalocal" for="Sala/Local:">Sala/Local:</label>
-                        <input class="Salalocal form-control" id="local" type="text">
-                    </div>
+                   
                     <div class="form-group col-md-6">
                         <label class="DisciplinaCont" for="Disciplina:">Disciplina:</label>
                         <input class="DisciplinaCont form-control" type="text">
@@ -107,22 +104,49 @@
                     <label></label>
                     <input class="form-control" type="time">
                 </div>
-                
+
                 <div class="form-group col-md-6">
-                    <label for="aluProf">Criar chat: </label>
-                    <input type="radio" class="alunProf" name="sim" value="aluno" >Sim
-                    <label></label>
-                    <input type="radio" class="alunProf" name="nao" value="prof" > Não
+                        <label class="Numero" for="N° de vagas:">N° de vagas:</label>
+                        <input class="Numero form-control" type="number">
                 </div>
-                
-                <div class="form-group col-md-4">
-                    <label class="Numero" for="N° de vagas:">N° de vagas:</label>
-                    <input class="Numero form-control" type="number">
-                </div>
-                <div class="form-group col-md-12">
+
+                <div class="form-group col-md-2">
+                        <label class="Salalocal" for="Sala/Local:">Sala/Local:</label>
+                        <div>
+                            <select class="form-control sel1" id="sel1">
+                              <option>Bloco A</option>
+                              <option>Bloco C</option>
+                              <option>Bloco D</option>
+                              <option>Bloco E</option>
+                              <option>Bloco F</option>
+                            </select> 
+                        </div>     
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label></label>
+                            <div>
+                                <select class="form-control sel1" id="sel1">
+                                  <option>Laboratório</option>
+                                  <option>Sala</option>
+                            </select> 
+                        </div>     
+                    </div>
+                    <div class="form-group col-md-2">
+                            <label></label>
+                            <input class="DisciplinaCont form-control" type="text">   
+                    </div>
+              
+                <div class="form-group col-md-6">
                     <label class="Arquivos" for="Arquivos:">Arquivos:</label>
                     <input class="Arquivos" type="file">
                 </div>
+
+                <div class="form-group col-md-12">
+                        <label for="aluProf">Criar chat: </label>
+                        <input type="radio" class="alunProf" name="sim" value="aluno" >Sim
+                        <label></label>
+                        <input type="radio" class="alunProf" name="nao" value="prof" > Não
+                    </div>
                 <div class="form-group col-md-6">
                     <label class="Descrição" for="Descrição:">Descrição:</label>
                     <textarea class="Descrição form-control localtextof" id="msg">Digite o motivo...</textarea>
@@ -135,3 +159,4 @@
 
     </div>
 </html>
+

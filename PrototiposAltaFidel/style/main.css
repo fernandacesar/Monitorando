@@ -452,7 +452,7 @@ textarea{
     margin-left: 15%;
 }
 .panel-monitorias{
-    width: 68%;
+    width: 80%;
     height: 550px;
 }
 .Titulo{
@@ -460,6 +460,12 @@ textarea{
     margin-top: 7%;
     margin-left: 12%;
 }
+.Titulof{
+    text-align: center;
+    margin-top: 7%;
+    margin-left: 0%;
+}
+
 .TituloF{
     margin-left: 50%;
     margin-top: 1%;
