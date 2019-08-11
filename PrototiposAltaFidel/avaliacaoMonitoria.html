@@ -51,7 +51,7 @@
                             <span class="glyphicon glyphicon-list-alt"></span> Monitorias cadastradas
                         </a>
                     </li>
-                    
+
                     <li>
                         <a href="#">
                             <i class="fa fa-lg"></i>
@@ -74,53 +74,77 @@
             </div>
         </nav>
     </div>
+    <div class="tudo">
+        <div class="panel-monitorias panel panel-default">
+            <form method="post" action="" id="FrmMonitorias" autocomplete="off">
 
-    <div class="panel panel-default panel-perfilComum">
-            <section class="corpo">
-            <div class="dados">
-            <form method="post" action="" id="FrmLicenca" autocomplete="off">
-                <div>
-                    <h1 class="TituloUM">Avaliar</h1>
+                <div class="Titulo">
+                    <h3>Avaliar</h3>
+                    <br>
                 </div>
-                <div class="dados3">
-                    <label class="Monitoria" for="Monitoria:"></label>Monitoria: </label>
-                    <br></br>
-                    <label class="Monitor" for="Monitor:">Monitor:</label>
+                <div class="AAa">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="Salalocal" for="Sala/Local:">Monitoria:</label>
+                            <input class="Salalocal form-control" id="local" type="text">
+                        </div>
+                    </div>
                 </div>
-                <br></br>
-                <br></br>
-                <P class="blocktext3">
-                    <h5 class="Avalie">Avalie de 0 A 5:</h5>
-                </P>
 
-                <div class="estrelas">
-                    <input type="radio" id="cm_star-empty" name="fb" value="" checked />
-                    <label for="cm_star-1"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-1" name="fb" value="1" />
-                    <label for="cm_star-2"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-2" name="fb" value="2" />
-                    <label for="cm_star-3"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-3" name="fb" value="3" />
-                    <label for="cm_star-4"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-4" name="fb" value="4" />
-                    <label for="cm_star-5"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-5" name="fb" value="5" />
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <div class="BBb">
+                            <label class="Salalocal" for="Sala/Local:">Monitor: </label>
+                            <input class="Salalocal form-control" id="local" type="text">
+                        </div>
+                    </div>
                 </div>
                 <br></br>
-                <div class="form-group">
-                    <h5 class="Coment">Digite um comentário:</h5>
-                </div>
-                <div>
-                    <textarea id="msg">...</textarea>
-                </div>
                 <br></br>
-                <div>
-                    <button>Concluir</button>
+                <br></br>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <div class="CCc">
+                            <P class="blocktext3">
+                                <h5 class="Avalie">Avalie de 0 a 5:</h5>
+                            </P>
+
+                            <div class="estrelas">
+                                <input type="radio" id="cm_star-empty" name="fb" value="" checked />
+                                <label for="cm_star-1"><i class="fa"></i></label>
+                                <input type="radio" id="cm_star-1" name="fb" value="1" />
+                                <label for="cm_star-2"><i class="fa"></i></label>
+                                <input type="radio" id="cm_star-2" name="fb" value="2" />
+                                <label for="cm_star-3"><i class="fa"></i></label>
+                                <input type="radio" id="cm_star-3" name="fb" value="3" />
+                                <label for="cm_star-4"><i class="fa"></i></label>
+                                <input type="radio" id="cm_star-4" name="fb" value="4" />
+                                <label for="cm_star-5"><i class="fa"></i></label>
+                                <input type="radio" id="cm_star-5" name="fb" value="5" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="DDd">
+                    <div class="form-group"></div>
+                        <div class="form-group col-md-6">
+                            <label class="Coment">Comentário:</label>
+                            <div>
+                                <textarea id="msg"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                
+               
+                <div class="EEe">
+                    <button class="btn-success btn">Concluir</button>
+                </div></div>
             </form>
         </div>
-        </section>
     </div>
-</body>
 
 </html>
+</body>
