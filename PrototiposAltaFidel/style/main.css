@@ -778,7 +778,7 @@ img{
     border-radius:5px;
 }
 .formatoInformacoes{
-    Display: block;
+    Display: inline !important;
     font-size: 15px;
 }
 .Informacoes-privado{
