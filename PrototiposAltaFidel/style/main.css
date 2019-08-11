@@ -445,9 +445,17 @@ textarea{
     text-align: center;
     margin-top: 7%;
 }
+.TituloF{
+    margin-left: 50%;
+    margin-top: 1%;
+}
 .Titulocad ,.TituloUM{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+}
+.TituloUMFA{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
 }
 .TituloUM{
     margin-left: 80%;
@@ -465,8 +473,18 @@ textarea{
     display: inline !important;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+    font-weight:bold;}
+.NomepUMF{
+    display: inline !important;
+    font-family: Arial, Helvetica,san;
+    font-size: 14px;
     font-weight:bold;
 }
+
+.if{
+    display: inline;
+}
+
 .E-mailpUM{
     display: inline !important;
     font-family: Arial, Helvetica, sans-serif;
@@ -494,7 +512,6 @@ textarea{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight:bold;
-
 }
 
 
@@ -511,6 +528,11 @@ textarea{
 .btn-minhasMonitorias{
     width: 15%;
     margin-left: 80%;
+}
+.btn-minhasMonitoriasF{
+    width: 15%;
+    margin-left: 68%;
+    margin-top: -60%;
 }
 .tituloMonitorias{
     font-family: Arial, Helvetica, sans-serif;
@@ -547,6 +569,9 @@ textarea{
   }
 .botõesAbaixo{
     margin-top: 15%;
+}
+.dadosF{
+    margin-left: 15%;
 }
 .Forum{
     max-width: 500 !important;
@@ -913,6 +938,10 @@ thead {
     margin-top: -20px;
     padding-left: 100px;
 }
+.descriff{
+    margin-top: -20px;
+    padding-left: 300px;
+}
 .btnf{
     margin-left: 20%;
     width: 30%; 
@@ -923,8 +952,8 @@ thead {
     height: 150px ;
     resize: none;
 }
-localtextof{
-    width:65%;
+.localtextof{
+    width:400px;
     height: 150px ;
     resize: none;
 }
