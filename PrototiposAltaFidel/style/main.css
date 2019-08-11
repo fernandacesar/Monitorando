@@ -467,9 +467,10 @@ textarea{
 .TituloUMFA{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
+    margin-left: 50%;
 }
 .TituloUM{
-    margin-left: 80%;
+    margin-left: 99%;
 }
 .Arquivos{
     font-family: Arial, Helvetica, sans-serif;
@@ -487,7 +488,7 @@ textarea{
     font-weight:bold;}
 .NomepUMF{
     display: inline !important;
-    font-family: Arial, Helvetica,san;
+    font-family: Arial, Helvetica,;
     font-size: 14px;
     font-weight:bold;
 }
@@ -495,6 +496,7 @@ textarea{
 .if{
     display: inline;
 }
+
 
 .E-mailpUM{
     display: inline !important;
@@ -509,13 +511,13 @@ textarea{
 }
 .botõesLado{
     display: inline !important;
-    margin-top:-2%;
+    margin-left:27%;
 }
 .container-conteudo{
     padding-top: 30%;
 }
 .Avaliacoes {
-    margin-left: 0%;
+    margin-left: 10%;
     width: 40%;
     margin-top: -2%
 }
@@ -524,13 +526,17 @@ textarea{
     font-size: 16px;
     font-weight:bold;
 }
-
+.estrelas1{
+    margin-left:12%;
+    margin-top:3%;
+}
 
 .Status{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight:bold;
 }
+
 .tMonitorias{
     margin-left:60%;
     width: 40%;
@@ -556,6 +562,13 @@ textarea{
     margin-top: 3%; 
 
 }
+.magensTitulo{
+    margin-left: 12%;
+}
+.magensTitulof{
+    margin-left: 22%;
+}
+
 .tituloComentários{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -582,7 +595,13 @@ textarea{
     margin-top: 15%;
 }
 .dadosF{
-    margin-left: 15%;
+    margin-left: 20%;
+}
+.dadosFf{
+    margin-left: 40%;
+}
+.dados , .imagemUsuario{
+    margin-left: 10%;
 }
 .Forum{
     max-width: 500 !important;
@@ -981,3 +1000,21 @@ thead {
     height: 150px ;
     resize: none;
 }
+
+.AAa{
+    margin-left: 30%;
+    margin-right: 10%;
+}
+.BBb {
+    margin-left: 64%;
+}
+.CCc {
+    margin-left: -40%;
+    margin-right: 20%;
+}
+
+.DDd {
+    margin-left: 30%;
+    
+}
+
