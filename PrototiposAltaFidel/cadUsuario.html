@@ -31,7 +31,32 @@
                         <label for="nome">Nome</label>
                         <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
                     </div>
+
+                    <div class="form-group">
+                        <label for="aluProf">Você é... </label>
+                        <input type="radio" class="alunProf" id="aluno" name="aluProf" value="aluno" onclick="exibirAluno('dadosAluno')"> Aluno
+                        <input type="radio" class="alunProf" id="prof" name="aluProf" value="prof" onclick="exibirProf('dadosProf')"> Professor
+                    </div>
+
+                    <div class="form-group esconder" id="dadosAluno">
+                        <label for="turma">Turma</label>
+                        <select id="turma" class="form-control">
+                            <option value="131">131</option>
+                            <option value="113">113</option>
+                            <option value="231">231</option>
+                            <option value="213">213</option>
+                            <option value="331">331</option>
+                            <option value="313">313</option>
+                            <option value="431">431</option>
+                            <option value="413">413</option>
+                        </select>
+                    </div>
                     
+                    <div class="form-group esconder" id="dadosProf">
+                        <label for="disciplina">Disciplina</label>
+                        <input type="text" class="form-control" id="disciplina" name="disciplina" placeholder="Digite a disciplina exercida">
+                    </div>
+
                     <div class="form-group" id="dadosAluno">
                         <label for="email">E-mail</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
