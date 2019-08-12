@@ -171,14 +171,24 @@ label, input{
     font-family: Arial, Helvetica, sans-serif;
     /* height: 600px; */
     padding-top: 5%;
+    margin-left: 25%;
+}
+.corpo-detalhes{
+    font-family: Arial, Helvetica, sans-serif;
+    /* height: 600px; */
+    padding-top: 5%;
     margin-left: 15%;
 }
 .panel-perfilComum{
     margin-top: 3%;
     margin-left: 25%;
-    width: 900px;
-    height: 550px;
+    width: 915px;
+    height: 580px;
 
+}
+
+.panel-perfil-comum{
+    margin-left: -10%;
 }
 
 .conteudo {
@@ -191,13 +201,14 @@ label, input{
 .imagemUsuario {
     display: table-cell;
     float: left;
+    /* margin-left: 10%; */
 }
 .dados {
     display: table-cell;
     float: left;
     width: 300px; 
     margin-top: 10 px;
-    margin-left: 20px; 
+    margin-left: 50px; 
 }
 .tornarMonitor{
     font-family: Arial, Helvetica, sans-serif;
@@ -210,30 +221,37 @@ label, input{
     font-size: 10px;
     margin-left: 51%;
 }
-.btn-perfilcomum{
-    width: 85%;
-    margin-left: 30%;
+.btn-perfil-alterar{
+    width: 160px;
+    margin-left: 350px !important;
+}
+.btn-perfil-salvar{
+    width: 125px;
+    margin-left: 10px !important;
 }
 .btn-monitor{
     width: 50%;
     margin-left: 20%;
 }
-.Nome{
-    font-family: Arial, Helvetica, sans-serif;
-    display: inline !important;  
+.dados-perfil-comum{
+    width: 300% !important;
 }
-.Email{
-    font-family: Arial, Helvetica, sans-serif;
-    display: inline !important;  
+
+.perfil-comum-turma{
+    width: 50% !important;
 }
 .codigo{
     font-family: Arial, Helvetica, sans-serif;
     display: inline !important;  
 }
 
+.perfil-status{
+    display: inline !important;
+}
+
 .blocktext {
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 25%;
+    margin-left: 35%;
     margin-right: auto; 
     width: 6em; 
 }
@@ -460,6 +478,9 @@ textarea{
     margin-top: 7%;
     margin-left: 12%;
 }
+.titulo-monitoria{
+    margin-left: 30%;
+}
 .Titulof{
     text-align: center;
     margin-top: 7%;
@@ -495,7 +516,7 @@ textarea{
     display: inline !important;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    font-weight:bold;}
+}
 .NomepUMF{
     display: inline !important;
     font-family: Arial, Helvetica,;
@@ -512,19 +533,18 @@ textarea{
     display: inline !important;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    font-weight:bold;
 }
 .btnlado{
     margin-top: 20%;
     margin-left: 7%;
-    width: 25%;
+    width: 35%;
 }
 .botõesLado{
     display: inline !important;
-    margin-left:27%;
+    margin-left:10%;
 }
 .container-conteudo{
-    padding-top: 30%;
+    padding-top: 35%;
 }
 .Avaliacoes {
     margin-left: 10%;
@@ -610,8 +630,8 @@ textarea{
 .dadosFf{
     margin-left: 40%;
 }
-.dados , .imagemUsuario{
-    margin-left: 10%;
+.dados, .imagemUsuario{
+    margin-left: 5%;
 }
 .Forum{
     max-width: 500 !important;
@@ -809,7 +829,6 @@ img{
 }
 .corpo-foruns{
     font-family: Arial, Helvetica, sans-serif;
-
     height: 600px;
     padding-top: 5%;
     margin-left: 25%;
