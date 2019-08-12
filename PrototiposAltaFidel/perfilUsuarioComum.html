@@ -80,30 +80,31 @@
     <div class="panel panel-default panel-perfilComum">
         <section class="corpo">
             <h3 class="blocktext">Meu Perfil</h3>
-            <br>
-
+            <button class="btn btn-default btn-perfil-alterar"> Alterar dados da conta </button>
+            <button class="btn btn-default btn-perfil-salvar"> Salvar alterações</button><br><br>
             <div class="imagemUsuario">
                 <img id="perfilUsuario" src="images/perfilUsuario.png" alt="perfilUsuario">
             </div>
 
             <div class="dados">
-                <label class="Nome" for="Nome:"> Nome:</label>
-                <input class="Nome form-control" type="">
-                <label class="Email" for="Email"> Email:</label>
-                <input class="Email form-control" type="text">
-                <h5> Status: Aluno</h5>
-                <div class="col-md-6">
-                    <button class="btn btn-default btn-perfilcomum"> Alterar senha </button>
+                <div class="col-md-6 panel-perfil-comum">
+                    <label for="Nome:"> Nome:</label>
+                    <input class="dados-perfil-comum form-control" type="text" value="Fellipe">
+                    <label for="Email"> Email:</label>
+                    <input class="dados-perfil-comum form-control" type="text" value="fellipe@gmail.com">
+                    <label for="turma">Turma: </label>
+                    <input class="perfil-comum-turma form-control" type="text" value="213">
+                    <h5 class="perfil-status"> Status: Aluno</h5>
                 </div>
                 <div class="col-md-6">
-                    <button class="btn btn-default btn-perfilcomum"> Salvar </button>
                 </div>
+                
 
                 <div class="tornarMonitor">
                     <br></br>
                     <h4>Tornar-se monitor</h4>
                     <label for="codigo">Insira o código enviado para seu e-mail:</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" value="1234">
                     <a class="solicitar" href="">Ainda não solicitou seu código?</a>
                     <br>
                     <br>
