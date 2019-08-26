@@ -84,14 +84,20 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Turma` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Turma` (`Numero`, `Curso_Id`) VALUES (113, 1);
+INSERT INTO `Monitorando`.`Turma` (`Numero`, `Curso_Id`) VALUES
+(113, 5), (131, 5), (213, 5), (231, 5), (313, 5), (331, 5), (413, 5), (431, 5),
+(110, 6), (130, 6), (210, 6), (230, 6), (310, 6), (330, 6), (410, 6), (430, 6),
+(111, 7), (112, 7), (211, 7), (212, 7), (311, 7), (312, 7), (411, 7), (412, 7),
+(132, 8), (232, 8), (323, 8), (432, 8);
+
+
 
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Aluno`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Aluno` (
-  `Id` INT NOT NULL,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `Status` ENUM('Monitor', 'Comum') NOT NULL,
   `IdUsuario` INT NOT NULL,
   `Id Turma` INT NOT NULL,
@@ -111,21 +117,12 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Aluno` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `Monitorando`.`Professor`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Monitorando`.`Professor` (
-  `Id` INT NOT NULL,
-  `Disciplina` VARCHAR(60) NOT NULL,
-  `IdUsuario` INT NOT NULL,
-  PRIMARY KEY (`Id`),
-  INDEX `fk_Professor_Usuario1_idx` (`IdUsuario` ASC),
-  CONSTRAINT `fk_Professor_Usuario1`
-    FOREIGN KEY (`IdUsuario`)
-    REFERENCES `Monitorando`.`Usuario` (`Id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+
+
+INSERT INTO `Monitorando`.`Aluno` (`Status`, `IdUsuario`, `Id Turma`) VALUES ("Monitor", 1, 3), ("Comum", 2, 1), ("Monitor", 3, 2), ("Comum", 4, 3), ("Comum", 5, 1), ("Comum", 6, 2), ("Comum", 7, 1);
+
+
+
 
 
 -- -----------------------------------------------------
@@ -167,6 +164,27 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Disciplina` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+
+
+-- -----------------------------------------------------
+-- Table `Monitorando`.`Professor`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Monitorando`.`Professor` (
+  `Id` INT NOT NULL,
+  `Disciplina` VARCHAR(60) NOT NULL,
+  `IdUsuario` INT NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_Professor_Usuario1_idx` (`IdUsuario` ASC),
+  CONSTRAINT `fk_Professor_Usuario1`
+    FOREIGN KEY (`IdUsuario`)
+    REFERENCES `Monitorando`.`Usuario` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+
 
 
 -- -----------------------------------------------------
