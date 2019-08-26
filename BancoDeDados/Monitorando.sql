@@ -21,7 +21,7 @@ USE `Monitorando` ;
 -- Table `Monitorando`.`Usuario`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Usuario` (
-  `Id` INT NOT NULL AUTO INCREMENT,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `Nome` VARCHAR(65) NOT NULL,
   `Senha` VARCHAR(100) NOT NULL,
   `Tipo` ENUM('Aluno', 'Professor') NOT NULL,
@@ -30,18 +30,18 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Usuario` (
   PRIMARY KEY (`Id`))
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Usuario` (`Id`, `Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fellipe Costa Reis", "0000004", "Aluno", "fcr@gmail.com", "imagem1.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Id`, `Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fernanda Cesar da Silva", "0000003", "Aluno", "g.reis@gmail.com", "imagem2.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Id`, `Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Kayane Rocha ", "0000002", "Aluno", "ghuyiyg@gmail.com", "imagem3.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Id`, `Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Natália Penalva Panighel", "0000001", "Aluno", "fellipe@gmail.com", "imagem4.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Id`, `Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Angelecia Ferreira Gomes", "0000005", "Aluno", "angel.ferreira@gmail.com", "imagem5.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Id`, `Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Jean Vitor Hass", "0000006", "Aluno", "jean.hass@gmail.com", "imagem6.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Id`, `Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Bruno Ferreira Ribeiro", "0000007", "Aluno", "bruno.ddff@gmail.com", "imagem7.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Id`, `Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Cristina Soares", "0000008", "Aluno", "cris.almeida@gmail.com", "imagem8.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Id`, `Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Ana Beatriz Nascimento", "0000009", "Aluno", "bia.luscas@gmail.com", "imagem9.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Id`, `Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Camilla Cabello ", "0000010", "Aluno", "a.leao@gmail.com", "imagem10.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Id`, `Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", "0000011", "Aluno", "cans.c@gmail.com", "imagem11.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Id`, `Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawnmilla não é fake", "00000", "Aluno", "melhorcasal@gmail.com", "imagem12.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fellipe Costa Reis", "0000004", "Aluno", "fcr@gmail.com", "imagem1.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fernanda Cesar da Silva", "0000003", "Aluno", "g.reis@gmail.com", "imagem2.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Kayane Rocha ", "0000002", "Aluno", "ghuyiyg@gmail.com", "imagem3.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Natália Penalva Panighel", "0000001", "Aluno", "fellipe@gmail.com", "imagem4.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Angelecia Ferreira Gomes", "0000005", "Aluno", "angel.ferreira@gmail.com", "imagem5.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Jean Vitor Hass", "0000006", "Aluno", "jean.hass@gmail.com", "imagem6.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Bruno Ferreira Ribeiro", "0000007", "Aluno", "bruno.ddff@gmail.com", "imagem7.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Cristina Soares", "0000008", "Aluno", "cris.almeida@gmail.com", "imagem8.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Ana Beatriz Nascimento", "0000009", "Aluno", "bia.luscas@gmail.com", "imagem9.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Camilla Cabello ", "0000010", "Aluno", "a.leao@gmail.com", "imagem10.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", "0000011", "Aluno", "cans.c@gmail.com", "imagem11.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawnmilla não é fake", "00000", "Aluno", "melhorcasal@gmail.com", "imagem12.png/AAAAA");
 
 
 
@@ -53,38 +53,38 @@ INSERT INTO `Monitorando`.`Usuario` (`Id`, `Nome`, `Senha`, `Tipo`, `Email`, `Fo
 -- Table `Monitorando`.`Curso`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Curso` (
-  `Id` INT NOT NULL AUTO INCREMENT,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `Nome` VARCHAR(30) NOT NULL,
   PRIMARY KEY (`Id`))
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Curso` (`Id`, `Nome`) VALUES ("Informática");
-INSERT INTO `Monitorando`.`Curso` (`Id`, `Nome`) VALUES ("Mecanica")
-INSERT INTO `Monitorando`.`Curso` (`Id`, `Nome`) VALUES ("Eletronica");
-INSERT INTO `Monitorando`.`Curso` (`Id`, `Nome`) VALUES ("Eletrotecnica");
-INSERT INTO `Monitorando`.`Curso` (`Id`, `Nome`) VALUES ("Informática Integrado");
-INSERT INTO `Monitorando`.`Curso` (`Id`, `Nome`) VALUES ("Mecanica Integrado");
-INSERT INTO `Monitorando`.`Curso` (`Id`, `Nome`) VALUES ("Eletronica Integrado");
-INSERT INTO `Monitorando`.`Curso` (`Id`, `Nome`) VALUES ("Eletrotecnica Integrado");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Informática");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Mecanica");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletronica");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletrotecnica");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Informática Integrado");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Mecanica Integrado");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletronica Integrado");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletrotecnica Integrado");
 
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Turma`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Turma` (
-  `Id` INT NOT NULL AUTO INCREMENT,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `Numero` INT NOT NULL,
-  `Curso_copy3_idCurso` INT NOT NULL,
   `Curso_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Turma_Curso1_idx` (`Curso_Id` ASC) VISIBLE,
+  INDEX `fk_Turma_Curso1_idx` (`Curso_Id` ASC),
   CONSTRAINT `fk_Turma_Curso1`
     FOREIGN KEY (`Curso_Id`)
     REFERENCES `Monitorando`.`Curso` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-INSERT INTO `Monitorando`.`Turma` (`Id`, `Numero`, `Curso_Id`) VALUES (113, 1);
+
+INSERT INTO `Monitorando`.`Turma` (`Numero`, `Curso_Id`) VALUES (113, 1);
 
 
 -- -----------------------------------------------------
@@ -96,8 +96,8 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Aluno` (
   `IdUsuario` INT NOT NULL,
   `Id Turma` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Aluno_Usuario1_idx` (`IdUsuario` ASC) VISIBLE,
-  INDEX `fk_Aluno_Turma1_idx` (`Id Turma` ASC) VISIBLE,
+  INDEX `fk_Aluno_Usuario1_idx` (`IdUsuario` ASC),
+  INDEX `fk_Aluno_Turma1_idx` (`Id Turma` ASC),
   CONSTRAINT `fk_Aluno_Usuario1`
     FOREIGN KEY (`IdUsuario`)
     REFERENCES `Monitorando`.`Usuario` (`Id`)
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Professor` (
   `Disciplina` VARCHAR(60) NOT NULL,
   `IdUsuario` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Professor_Usuario1_idx` (`IdUsuario` ASC) VISIBLE,
+  INDEX `fk_Professor_Usuario1_idx` (`IdUsuario` ASC),
   CONSTRAINT `fk_Professor_Usuario1`
     FOREIGN KEY (`IdUsuario`)
     REFERENCES `Monitorando`.`Usuario` (`Id`)
@@ -132,23 +132,23 @@ ENGINE = InnoDB;
 -- Table `Monitorando`.`Local`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Local` (
-  `Id` INT NOT NULL AUTO INCREMENT,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `Identificacao` VARCHAR(15) NOT NULL,
   `Tipo` ENUM('Laboratório', 'Sala') NOT NULL,
   `Bloco` ENUM('Bloco A', 'Bloco C', 'Bloco D', 'Bloco E', 'Bloco F') NOT NULL,
   PRIMARY KEY (`Id`))
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Local` (`Id`, `Identificacao`, `Tipo`, `Bloco`) VALUES (300, "Sala", "A");
-INSERT INTO `Monitorando`.`Local` (`Id`, `Identificacao`, `Tipo`, `Bloco`) VALUES (301, "Sala", "A");
-INSERT INTO `Monitorando`.`Local` (`Id`, `Identificacao`, `Tipo`, `Bloco`) VALUES (302, "Sala", "A");
-INSERT INTO `Monitorando`.`Local` (`Id`, `Identificacao`, `Tipo`, `Bloco`) VALUES (303, "Sala", "A");
-INSERT INTO `Monitorando`.`Local` (`Id`, `Identificacao`, `Tipo`, `Bloco`) VALUES (304, "Sala", "A");
-INSERT INTO `Monitorando`.`Local` (`Id`, `Identificacao`, `Tipo`, `Bloco`) VALUES (305, "Sala", "A");
-INSERT INTO `Monitorando`.`Local` (`Id`, `Identificacao`, `Tipo`, `Bloco`) VALUES (306, "Sala", "A");
-INSERT INTO `Monitorando`.`Local` (`Id`, `Identificacao`, `Tipo`, `Bloco`) VALUES (307, "Sala", "A");
-INSERT INTO `Monitorando`.`Local` (`Id`, `Identificacao`, `Tipo`, `Bloco`) VALUES (308, "Sala", "A");
-INSERT INTO `Monitorando`.`Local` (`Id`, `Identificacao`, `Tipo`, `Bloco`) VALUES (309, "Sala", "A");
+INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (300, "Sala", "Bloco A");
+INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (301, "Sala", "Bloco A");
+INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (302, "Sala", "Bloco A");
+INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (303, "Sala", "Bloco A");
+INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (304, "Sala", "Bloco A");
+INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (305, "Sala", "Bloco A");
+INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (306, "Sala", "Bloco A");
+INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (307, "Sala", "Bloco A");
+INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (308, "Sala", "Bloco A");
+INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (309, "Sala", "Bloco A");
 
 
 -- -----------------------------------------------------
@@ -160,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Disciplina` (
   `Curso` VARCHAR(45) NOT NULL,
   `Curso_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Disciplina_Curso1_idx` (`Curso_Id` ASC) VISIBLE,
+  INDEX `fk_Disciplina_Curso1_idx` (`Curso_Id` ASC),
   CONSTRAINT `fk_Disciplina_Curso1`
     FOREIGN KEY (`Curso_Id`)
     REFERENCES `Monitorando`.`Curso` (`Id`)
@@ -173,24 +173,24 @@ ENGINE = InnoDB;
 -- Table `Monitorando`.`Codigo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Codigo` (
-  `Id` INT NOT NULL AUTO INCREMENT,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `Codigo` VARCHAR(45) NULL,
   PRIMARY KEY (`Id`))
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Codigo` (`Id`, `Codigo`) VALUES ("A02");
-INSERT INTO `Monitorando`.`Codigo` (`Id`, `Codigo`) VALUES ("A03");
-INSERT INTO `Monitorando`.`Codigo` (`Id`, `Codigo`) VALUES ("A04");
-INSERT INTO `Monitorando`.`Codigo` (`Id`, `Codigo`) VALUES ("A05");
-INSERT INTO `Monitorando`.`Codigo` (`Id`, `Codigo`) VALUES ("A06");
-INSERT INTO `Monitorando`.`Codigo` (`Id`, `Codigo`) VALUES ("A07");
-INSERT INTO `Monitorando`.`Codigo` (`Id`, `Codigo`) VALUES ("A08");
-INSERT INTO `Monitorando`.`Codigo` (`Id`, `Codigo`) VALUES ("A09");
-INSERT INTO `Monitorando`.`Codigo` (`Id`, `Codigo`) VALUES ("A10");
-INSERT INTO `Monitorando`.`Codigo` (`Id`, `Codigo`) VALUES ("A11");
-INSERT INTO `Monitorando`.`Codigo` (`Id`, `Codigo`) VALUES ("A12");
-INSERT INTO `Monitorando`.`Codigo` (`Id`, `Codigo`) VALUES ("A13");
-INSERT INTO `Monitorando`.`Codigo` (`Id`, `Codigo`) VALUES ("A14");
+INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A02");
+INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A03");
+INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A04");
+INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A05");
+INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A06");
+INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A07");
+INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A08");
+INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A09");
+INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A10");
+INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A11");
+INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A12");
+INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A13");
+INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A14");
 
 
 
@@ -205,8 +205,8 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitor` (
   `Status` ENUM('Ativo', 'Desativado', 'Verificando') NOT NULL,
   `Codigo_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Monitor_Usuario1_idx` (`Id Usuario` ASC) VISIBLE,
-  INDEX `fk_Monitor_Codigo1_idx` (`Codigo_Id` ASC) VISIBLE,
+  INDEX `fk_Monitor_Usuario1_idx` (`Id Usuario` ASC),
+  INDEX `fk_Monitor_Codigo1_idx` (`Codigo_Id` ASC),
   CONSTRAINT `fk_Monitor_Usuario1`
     FOREIGN KEY (`Id Usuario`)
     REFERENCES `Monitorando`.`Usuario` (`Id`)
@@ -234,9 +234,9 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitoria` (
   `IdDisciplina` INT NOT NULL,
   `Id Monitor` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Monitoria_Local1_idx` (`IdLocal` ASC) VISIBLE,
-  INDEX `fk_Monitoria_Disciplina1_idx` (`IdDisciplina` ASC) VISIBLE,
-  INDEX `fk_Monitoria_Monitor1_idx` (`Id Monitor` ASC) VISIBLE,
+  INDEX `fk_Monitoria_Local1_idx` (`IdLocal` ASC),
+  INDEX `fk_Monitoria_Disciplina1_idx` (`IdDisciplina` ASC),
+  INDEX `fk_Monitoria_Monitor1_idx` (`Id Monitor` ASC),
   CONSTRAINT `fk_Monitoria_Local1`
     FOREIGN KEY (`IdLocal`)
     REFERENCES `Monitorando`.`Local` (`Id`)
@@ -263,8 +263,8 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Inscricao` (
   `IdUsuario` INT NOT NULL,
   `IdMonitoria` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Inscricao_Usuario1_idx` (`IdUsuario` ASC) VISIBLE,
-  INDEX `fk_Inscricao_Monitoria1_idx` (`IdMonitoria` ASC) VISIBLE,
+  INDEX `fk_Inscricao_Usuario1_idx` (`IdUsuario` ASC),
+  INDEX `fk_Inscricao_Monitoria1_idx` (`IdMonitoria` ASC),
   CONSTRAINT `fk_Inscricao_Usuario1`
     FOREIGN KEY (`IdUsuario`)
     REFERENCES `Monitorando`.`Usuario` (`Id`)
@@ -288,7 +288,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Avalicao` (
   `Nota` INT NULL,
   `Inscricao_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Avalicao_Inscricao1_idx` (`Inscricao_Id` ASC) VISIBLE,
+  INDEX `fk_Avalicao_Inscricao1_idx` (`Inscricao_Id` ASC),
   CONSTRAINT `fk_Avalicao_Inscricao1`
     FOREIGN KEY (`Inscricao_Id`)
     REFERENCES `Monitorando`.`Inscricao` (`Id`)
@@ -306,7 +306,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Arquivo` (
   `IdMonitoria` INT NOT NULL,
   `Local` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Arquivo_Monitoria1_idx` (`IdMonitoria` ASC) VISIBLE,
+  INDEX `fk_Arquivo_Monitoria1_idx` (`IdMonitoria` ASC),
   CONSTRAINT `fk_Arquivo_Monitoria1`
     FOREIGN KEY (`IdMonitoria`)
     REFERENCES `Monitorando`.`Monitoria` (`Id`)
@@ -324,7 +324,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Mensagem` (
   `Conteudo` VARCHAR(500) NOT NULL,
   `Inscricao_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Mensagem_Inscricao1_idx` (`Inscricao_Id` ASC) VISIBLE,
+  INDEX `fk_Mensagem_Inscricao1_idx` (`Inscricao_Id` ASC),
   CONSTRAINT `fk_Mensagem_Inscricao1`
     FOREIGN KEY (`Inscricao_Id`)
     REFERENCES `Monitorando`.`Inscricao` (`Id`)
@@ -342,7 +342,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Pedido` (
   `Data` DATETIME NOT NULL,
   `Aluno_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Pedido_Aluno1_idx` (`Aluno_Id` ASC) VISIBLE,
+  INDEX `fk_Pedido_Aluno1_idx` (`Aluno_Id` ASC),
   CONSTRAINT `fk_Pedido_Aluno1`
     FOREIGN KEY (`Aluno_Id`)
     REFERENCES `Monitorando`.`Aluno` (`Id`)
@@ -354,3 +354,7 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+
+
