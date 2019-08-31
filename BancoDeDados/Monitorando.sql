@@ -34,13 +34,13 @@ INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) V
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fernanda Cesar da Silva", "0000003", "Aluno", "g.reis@gmail.com", "imagem2.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Kayane Rocha ", "0000002", "Aluno", "ghuyiyg@gmail.com", "imagem3.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Natália Penalva Panighel", "0000001", "Aluno", "fellipe@gmail.com", "imagem4.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Angelecia Ferreira Gomes", "0000005", "Aluno", "angel.ferreira@gmail.com", "imagem5.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Angelica Ferreira Gomes", "0000005", "Aluno", "angel.ferreira@gmail.com", "imagem5.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Jean Vitor Hass", "0000006", "Aluno", "jean.hass@gmail.com", "imagem6.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Bruno Ferreira Ribeiro", "0000007", "Aluno", "bruno.ddff@gmail.com", "imagem7.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Cristina Soares", "0000008", "Aluno", "cris.almeida@gmail.com", "imagem8.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Ana Beatriz Nascimento", "0000009", "Aluno", "bia.luscas@gmail.com", "imagem9.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Camilla Cabello ", "0000010", "Aluno", "a.leao@gmail.com", "imagem10.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", "0000011", "Aluno", "cans.c@gmail.com", "imagem11.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Camila Cabello ", "0000010", "Aluno", "a.leao@gmail.com", "imagem10.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", "0000011", "Aluno", "camz.c@gmail.com", "imagem11.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawnmilla não é fake", "00000", "Aluno", "melhorcasal@gmail.com", "imagem12.png/AAAAA");
 
 
@@ -120,7 +120,15 @@ ENGINE = InnoDB;
 
 
 
-INSERT INTO `Monitorando`.`Aluno` (`Status`, `IdUsuario`, `Id Turma`) VALUES ("Monitor", 1, 3), ("Comum", 2, 1), ("Monitor", 3, 2), ("Comum", 4, 3), ("Comum", 5, 1), ("Comum", 6, 2), ("Comum", 7, 1);
+INSERT INTO `Monitorando`.`Aluno` (`Status`, `IdUsuario`, `IdTurma`)
+VALUES ("Monitor", 1, 3),
+("Comum", 2, 1),
+("Monitor", 3, 2),
+("Comum", 4, 3),
+("Comum", 5, 1),
+("Comum", 6, 2),
+("Comum", 7, 1);
+("Comum", 11, 8);
 
 
 
@@ -386,7 +394,7 @@ VALUES
 ("Desenho técnico", "Eletrotécnica", "8"),
 ("Instalações elétricas 1", "Eletrotécnica", "8"),
 ("Eletrônica", "Eletrotécnica", "8"),
-("Laboratório de eletrotêcnica 2", "Eletrotécnica", "8"),
+("Laboratório de eletrotécnica 2", "Eletrotécnica", "8"),
 ("Segurança e gestão do trabalho", "Eletrotécnica", "8"),
 ("Eletricidade 3", "Eletrotécnica", "8"),
 ("Medidas elétricas", "Eletrotécnica", "8"),
@@ -482,6 +490,10 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Professor` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `Monitorando`.`Professor` (`Disciplina`, `IdUsuario`) VALUES ("Banco de dados", 8),
+("Gestão Industrial", 9),
+("Desenho técnico", 10),
+("Eletromagnetismo", 11);
 
 
 
@@ -517,8 +529,7 @@ INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A14");
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitor` (
   `Id` INT NOT NULL,
-  `Código` VARCHAR(45) NOT NULL,
-  `Id Usuario` INT NOT NULL,
+  `IdUsuario` INT NOT NULL,
   `Status` ENUM('Ativo', 'Desativado', 'Verificando') NOT NULL,
   `Codigo_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
@@ -535,6 +546,9 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitor` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+INSERT INTO `Monitorando`.`Monitor` (`IdUsuario`, `Status`, `Codigo_Id`) VALUES ("Banco de dados", 1, 1),
+("Banco de dados", 3, 2);
 
 
 -- -----------------------------------------------------
