@@ -58,14 +58,15 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Curso` (
   PRIMARY KEY (`Id`))
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Informática");
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Mecanica");
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletronica");
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletrotecnica");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Linguagens");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Matemática");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Humanas");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Ciências Naturais");
 INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Informática Integrado");
 INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Mecanica Integrado");
 INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletronica Integrado");
 INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletrotecnica Integrado");
+
 
 
 -- -----------------------------------------------------
@@ -321,7 +322,7 @@ VALUES
 -- Table `Monitorando`.`Disciplina`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Disciplina` (
-  `Id` INT NOT NULL,
+  `Id` INT NOT NULL auto_increment,
   `Nome` VARCHAR(45) NOT NULL,
   `Curso` VARCHAR(45) NOT NULL,
   `Curso_Id` INT NOT NULL,
@@ -333,6 +334,111 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Disciplina` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+INSERT INTO `Monitorando`.`Disciplina` (`Nome`, `Curso`, `Curso_Id`) 
+VALUES
+("Gestão Industrial", "Informática", "5"),
+("Informática", "Informática", "5"),
+("Sistemas computacionais", "Informática", "5"),
+("Lógica 1", "Informática", "5"),
+("Lógica 2", "Informática", "5"),
+("Linguagem de programação 1", "Informática", "5"),
+("Projeto integrador", "Informática", "5"),
+("Redes de computadores e internet", "Informática", "5"),
+("Banco de dados", "Informática", "5"),
+("Linguagem de programação 2", "Informática", "5"),
+("Linguagem de programação 3", "Informática", "5"),
+("Teoria e desenvolvimento de sistemas", "Informática", "5"),
+("Tópicos profissionais", "Informática", "5"),
+("Aplicações para Web 1", "Informática", "5"),
+("Prática do desenvolvimento de sistemas", "Informática", "5"),
+("Aplicações para Web 2", "Informática", "5"),
+("Segurança da informação", "Informática", "5"),
+
+("Gestão Industrial", "Eletrônica", "7"),
+("Eletricidade 1", "Eletrônica", "7"),
+("Eletromagnetismo", "Eletrônica", "7"),
+("Laboratório de eletrotécnica 1", "Eletrônica", "7"),
+("Eletricidade 2", "Eletrônica", "7"),
+("Desenho técnico", "Eletrônica", "7"),
+("Instalações elétricas 1", "Eletrônica", "7"),
+("Eletrônica", "Eletrônica", "7"),
+("Laboratório de eletrotêcnica 2", "Eletrônica", "7"),
+("Segurança e gestão do trabalho", "Eletrônica", "7"),
+("Eletricidade 3", "Eletrônica", "7"),
+("Medidas elétricas", "Eletrônica", "7"),
+("Laboratório de eletrotécnica 3", "Eletrônica", "7"),
+("Instalações elétricas 2", "Eletrônica", "7"),
+("Máquinas elétricas 1", "Eletrônica", "7"),
+("Maquinas elétricas 2", "Eletrônica", "7"),
+("Geração, transmissão e distribuição", "Eletrônica", "7"),
+("Segurança 2 - NR 10", "Eletrônica", "7"),
+("Eficiência energética", "Eletrônica", "7"),
+("Automação", "Eletrônica", "7"),
+
+("Materiais de construção mecânica", "Mecânica", "6"),
+("Metrologia", "Mecânica", "6"),
+("Segurança do trabalho", "Mecânica", "6"),
+("Mecânica técnica", "Mecânica", "6"),
+("Desenho auxiliado por computador", "Mecânica", "6"),
+("Eletricidade", "Mecânica", "6"),
+("Máquinas, ferramentas e dispositivos", "Mecânica", "6"),
+("Prática em mecânica 1", "Mecânica", "6"),
+("Resistência dos materiais", "Mecânica", "6"),
+("Elementos de máquinas", "Mecânica", "6"),
+("Laboratório de mecânica 1", "Mecânica", "6"),
+("Prática em mecânica 2", "Mecânica", "6"),
+("Máquinas e aparelhos mecânicos", "Mecânica", "6"),
+("Laboratório de mecânica 2", "Mecânica", "6"),
+("Projetos de máquinas e dispositivos", "Mecânica", "6"),
+("Metodologia do trabalho científico", "Mecânica", "6"),
+("Gestão industrial", "Mecânica", "6"),
+("Desenho técnico em mecânica", "Mecânica", "6"),
+
+("Inglês 1", "Linguagens", "1"),
+("Inglês 2", "Linguagens", "1"),
+("Inglês 3", "Linguagens", "1"),
+("Língua portuguesa e literatura 1", "Linguagens", "1"),
+("Língua portuguesa e literatura 2", "Linguagens", "1"),
+("Língua portuguesa e literatura 3", "Linguagens", "1"),
+("Língua portuguesa e literatura 4", "Linguagens", "1"),
+("Educação física 1", "Linguagens", "1"),
+("Educação física 2", "Linguagens", "1"),
+("Educação física 3", "Linguagens", "1"),
+("Espanhol 1", "Linguagens", "1"),
+("Espanhol 2", "Linguagens", "1"),
+("Libras 1", "Linguagens", "1"),
+("Libras 2", "Linguagens", "1"),
+("Artes 4", "Linguagens", "1"),
+
+("Matemática 1", "Matemática", "2"),
+("Matemática 2", "Matemática", "2"),
+("Matemática 3", "Matemática", "2"),
+("Matemática 4", "Matemática", "2"),
+
+("História 1", "Humanas", "3"),
+("História 2", "Humanas", "3"),
+("História 3", "Humanas", "3"),
+("Geografia 1", "Humanas", "3"),
+("Geografia 2", "Humanas", "3"),
+("Geografia 3", "Humanas", "3"),
+("Sociologia 1", "Humanas", "3"),
+("Sociologia 2", "Humanas", "3"),
+("Sociologia 3", "Humanas", "3"),
+("Filosofia 1", "Humanas", "3"),
+("Filosofia 2", "Humanas", "3"),
+("Filosofia 3", "Humanas", "3"),
+
+("Biologia 1", "Ciências Naturais", "4"),
+("Biologia 2", "Ciências Naturais", "4"),
+("Biologia 3", "Ciências Naturais", "4"),
+("Física 1", "Ciências Naturais", "4"),
+("Física 2", "Ciências Naturais", "4"),
+("Física 3", "Ciências Naturais", "4"),
+("Química 1", "Ciências Naturais", "4"),
+("Química 2", "Ciências Naturais", "4"),
+("Química 3", "Ciências Naturais", "4");
+
 
 
 
