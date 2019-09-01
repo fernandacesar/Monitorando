@@ -34,13 +34,13 @@ INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) V
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fernanda Cesar da Silva", "0000003", "Aluno", "g.reis@gmail.com", "imagem2.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Kayane Rocha ", "0000002", "Aluno", "ghuyiyg@gmail.com", "imagem3.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Natália Penalva Panighel", "0000001", "Aluno", "fellipe@gmail.com", "imagem4.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Angelecia Ferreira Gomes", "0000005", "Aluno", "angel.ferreira@gmail.com", "imagem5.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Angelica Ferreira Gomes", "0000005", "Aluno", "angel.ferreira@gmail.com", "imagem5.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Jean Vitor Hass", "0000006", "Aluno", "jean.hass@gmail.com", "imagem6.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Bruno Ferreira Ribeiro", "0000007", "Aluno", "bruno.ddff@gmail.com", "imagem7.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Cristina Soares", "0000008", "Aluno", "cris.almeida@gmail.com", "imagem8.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Ana Beatriz Nascimento", "0000009", "Aluno", "bia.luscas@gmail.com", "imagem9.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Camilla Cabello ", "0000010", "Aluno", "a.leao@gmail.com", "imagem10.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", "0000011", "Aluno", "cans.c@gmail.com", "imagem11.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Camila Cabello ", "0000010", "Aluno", "a.leao@gmail.com", "imagem10.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", "0000011", "Aluno", "camz.c@gmail.com", "imagem11.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawnmilla não é fake", "00000", "Aluno", "melhorcasal@gmail.com", "imagem12.png/AAAAA");
 
 
@@ -58,14 +58,15 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Curso` (
   PRIMARY KEY (`Id`))
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Informática");
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Mecanica");
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletronica");
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletrotecnica");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Linguagens");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Matemática");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Humanas");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Ciências Naturais");
 INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Informática Integrado");
 INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Mecanica Integrado");
 INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletronica Integrado");
 INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletrotecnica Integrado");
+
 
 
 -- -----------------------------------------------------
@@ -116,14 +117,15 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Aluno` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-
-
-
-INSERT INTO `Monitorando`.`Aluno` (`Status`, `IdUsuario`, `Id Turma`) VALUES ("Monitor", 1, 3), ("Comum", 2, 1), ("Monitor", 3, 2), ("Comum", 4, 3), ("Comum", 5, 1), ("Comum", 6, 2), ("Comum", 7, 1);
-
-
-
-
+INSERT INTO `Monitorando`.`Aluno` (`Status`, `IdUsuario`, `IdTurma`)
+VALUES ("Monitor", 1, 3),
+("Comum", 2, 1),
+("Monitor", 3, 2),
+("Comum", 4, 3),
+("Monitor", 5, 1),
+("Comum", 6, 2),
+("Comum", 7, 1),
+("Comum", 11, 8);
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Local`
@@ -131,21 +133,190 @@ INSERT INTO `Monitorando`.`Aluno` (`Status`, `IdUsuario`, `Id Turma`) VALUES ("M
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Local` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Identificacao` VARCHAR(15) NOT NULL,
-  `Tipo` ENUM('Laboratório', 'Sala') NOT NULL,
-  `Bloco` ENUM('Bloco A', 'Bloco C', 'Bloco D', 'Bloco E', 'Bloco F') NOT NULL,
+  `Tipo` ENUM('Laboratório', 'Sala', 'Auditório') NOT NULL,
+  `Bloco` ENUM('Bloco A', 'Bloco C', 'Bloco D', 'Bloco E', 'Bloco F', 'Bloco H', 'Saguão') NOT NULL,
   PRIMARY KEY (`Id`))
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (300, "Sala", "Bloco A");
-INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (301, "Sala", "Bloco A");
-INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (302, "Sala", "Bloco A");
-INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (303, "Sala", "Bloco A");
-INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (304, "Sala", "Bloco A");
-INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (305, "Sala", "Bloco A");
-INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (306, "Sala", "Bloco A");
-INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (307, "Sala", "Bloco A");
-INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (308, "Sala", "Bloco A");
-INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (309, "Sala", "Bloco A");
+INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) 
+VALUES 
+("299", "Sala", "Bloco A"),
+("300", "Sala", "Bloco A"),
+("302", "Sala", "Bloco A"),
+("304", "Sala", "Bloco A"),
+("308", "Sala", "Bloco A"),
+("309", "Sala", "Bloco A"),
+("310", "Sala", "Bloco A"),
+("311", "Sala", "Bloco A"),
+("312", "Sala", "Bloco A"),
+("314", "Sala", "Bloco A"),
+("315", "Sala", "Bloco A"),
+("316", "Sala", "Bloco A"),
+("317", "Sala", "Bloco A"),
+("318", "Sala", "Bloco A"),
+("319", "Sala", "Bloco A"),
+("321", "Sala", "Bloco A"),
+("322", "Laboratório", "Bloco A"),
+("323", "Sala", "Bloco A"),
+("324", "Laboratório", "Bloco A"),
+("325", "Sala", "Bloco A"),
+("326A", "Sala", "Bloco A"),
+("326", "Laboratório", "Bloco A"),
+("328", "Sala", "Bloco A"),
+("329", "Sala", "Bloco A"),
+("330", "Sala", "Bloco A"),
+("331", "Sala", "Bloco A"),
+("332A", "Sala", "Bloco A"),
+("332", "Sala", "Bloco A"),
+("333", "Laboratório", "Bloco A"),
+("334", "Sala", "Bloco A"),
+("338", "Sala", "Bloco A"),
+("340", "Sala", "Bloco A"),
+("342", "Sala", "Bloco A"),
+("348", "Sala", "Bloco A"),
+("350", "Sala", "Bloco A"),
+("354", "Sala", "Bloco A"),
+("356", "Laboratório", "Bloco A"),
+
+("C105", "Auditório", "Bloco C"),
+("C104", "Laboratório", "Bloco C"),
+("C103", "Laboratório", "Bloco C"),
+("C106", "Sala", "Bloco C"),
+("C102", "Laboratório", "Bloco C"),
+("C107", "Laboratório", "Bloco C"),
+("C108", "Laboratório", "Bloco C"),
+("C110", "Laboratório", "Bloco C"),
+("508", "Sala", "Bloco C"),
+("C109", "Laboratório", "Bloco C"),
+("C110", "Laboratório", "Bloco C"),
+("C201", "Laboratório", "Bloco C"),
+("C209", "Sala", "Bloco C"),
+("C202", "Laboratório", "Bloco C"),
+("C203", "Laboratório", "Bloco C"),
+("C207", "Laboratório", "Bloco C"),
+("C208", "Laboratório", "Bloco C"),
+("C204", "Laboratório", "Bloco C"),
+("C205", "Laboratório", "Bloco C"),
+("C206", "Sala", "Bloco C"),
+("C133", "Laboratório", "Bloco C"),
+("C134", "Laboratório", "Bloco C"),
+("C116", "Laboratório", "Bloco C"),
+("C222", "Laboratório", "Bloco C"),
+("C221", "Laboratório", "Bloco C"),
+("Laboratório 16", "Laboratório", "Bloco C"),
+("C215", "Laboratório", "Bloco C"),
+("C220", "Laboratório", "Bloco C"),
+("C219", "Laboratório", "Bloco C"),
+("C216", "Laboratório", "Bloco C"),
+("C217", "Laboratório", "Bloco C"),
+("C218", "Laboratório", "Bloco C"),
+("C213", "Laboratório", "Bloco C"),
+("C212", "Laboratório", "Bloco C"),
+("C211", "Laboratório", "Bloco C"),
+("C210", "Laboratório", "Bloco C"),
+
+("D224", "Sala", "Bloco D"),
+("D225", "Sala", "Bloco D"),
+("D226", "Laboratório", "Bloco D"),
+("D221", "Laboratório", "Bloco D"),
+("D223", "Sala", "Bloco D"),
+("D222", "Sala", "Bloco D"),
+("D220", "Laboratório", "Bloco D"),
+("D219", "Laboratório", "Bloco D"),
+("D218", "Laboratório", "Bloco D"),
+("D217", "Laboratório", "Bloco D"),
+("D215", "Sala", "Bloco D"),
+("D216", "Laboratório", "Bloco D"),
+("D213", "Sala", "Bloco D"),
+("D214", "Laboratório", "Bloco D"),
+("D211", "Sala", "Bloco D"),
+("D212", "Laboratório", "Bloco D"),
+("D210", "Sala", "Bloco D"),
+("D209", "Laboratório", "Bloco D"),
+("D204", "Sala", "Bloco D"),
+("D205", "Sala", "Bloco D"),
+("D203", "Sala", "Bloco D"),
+("D202", "Sala", "Bloco D"),
+("D109", "Laboratório", "Bloco D"),
+("D108", "Laboratório", "Bloco D"),
+("D107", "Laboratório", "Bloco D"),
+("D106", "Laboratório", "Bloco D"),
+("D117", "Laboratório", "Bloco D"),
+("D115", "Laboratório", "Bloco D"),
+("D114", "Laboratório", "Bloco D"),
+("D113", "Laboratório", "Bloco D"),
+("A108", "Laboratório", "Bloco D"),
+("A210", "Sala", "Bloco D"),
+("A113", "Sala", "Bloco D"),
+("A114", "Sala", "Bloco D"),
+("A116", "Sala", "Bloco D"),
+("A117", "Sala", "Bloco D"),
+
+("715", "Laboratório", "Bloco E"),
+("701", "Sala", "Bloco E"),
+("704", "Sala", "Bloco E"),
+("707", "Sala", "Bloco E"),
+("708", "Sala", "Bloco E"),
+("714", "Laboratório", "Bloco E"),
+("712", "Laboratório", "Bloco E"),
+("711", "Sala", "Bloco E"),
+("125", "Laboratório", "Bloco E"),
+
+("816", "Laboratório", "Bloco F"),
+("812", "Laboratório", "Bloco F"),
+("813", "Laboratório", "Bloco F"),
+("814", "Laboratório", "Bloco F"),
+("815", "Sala", "Bloco F"),
+("806", "Laboratório", "Bloco F"),
+("805", "Sala", "Bloco F"),
+("803", "Sala", "Bloco F"),
+("802", "Laboratório", "Bloco F"),
+("801", "Sala", "Bloco F"),
+("807", "Laboratório", "Bloco F"),
+("808", "Laboratório", "Bloco F"),
+
+("A201", "Auditório", "Saguão"),
+("A219", "Auditório", "Saguão"),
+
+("H130", "Laboratório", "Bloco H"),
+("H129", "Laboratório", "Bloco H"),
+("H127", "Laboratório", "Bloco H"),
+("H128", "Laboratório", "Bloco H"),
+("H126", "Laboratório", "Bloco H"),
+("H131", "Laboratório", "Bloco H"),
+("H125", "Laboratório", "Bloco H"),
+("H123", "Laboratório", "Bloco H"),
+("H122", "Laboratório", "Bloco H"),
+("H121", "Laboratório", "Bloco H"),
+("H120", "Laboratório", "Bloco H"),
+("H115", "Sala", "Bloco H"),
+("H114", "Laboratório", "Bloco H"),
+("H113", "Laboratório", "Bloco H"),
+("H112", "Sala", "Bloco H"),
+("H111", "Laboratório", "Bloco H"),
+("H110", "Laboratório", "Bloco H"),
+("H134", "Laboratório", "Bloco H"),
+("H109", "Laboratório", "Bloco H"),
+("H108", "Laboratório", "Bloco H"),
+("H107", "Laboratório", "Bloco H"),
+("H106", "Laboratório", "Bloco H"),
+("H105", "Laboratório", "Bloco H"),
+("H133", "Laboratório", "Bloco H"),
+("H103", "Laboratório", "Bloco H"),
+("H104", "Laboratório", "Bloco H"),
+("H203", "Laboratório", "Bloco H"),
+("H204", "Sala", "Bloco H"),
+("H205", "Sala", "Bloco H"),
+("H206", "Sala", "Bloco H"),
+("H207", "Sala", "Bloco H"),
+("H208", "Sala", "Bloco H"),
+("H209", "Laboratório", "Bloco H"),
+("H210", "Laboratório", "Bloco H"),
+("H211", "Laboratório", "Bloco H"),
+("H212", "Sala", "Bloco H"),
+("H213", "Sala", "Bloco H"),
+("H217", "Sala", "Bloco H");
+
 
 
 -- -----------------------------------------------------
@@ -164,8 +335,134 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Disciplina` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Local` (`Nome`, `Curso`,`Curso_Id`) VALUES ("Fellipe", "", "Bloco A");
 
+INSERT INTO `Monitorando`.`Disciplina` (`Nome`, `Curso`, `Curso_Id`) 
+VALUES
+("Gestão Industrial", "Informática", "5"),
+("Informática", "Informática", "5"),
+("Sistemas computacionais", "Informática", "5"),
+("Lógica 1", "Informática", "5"),
+("Lógica 2", "Informática", "5"),
+("Linguagem de programação 1", "Informática", "5"),
+("Projeto integrador", "Informática", "5"),
+("Redes de computadores e internet", "Informática", "5"),
+("Banco de dados", "Informática", "5"),
+("Linguagem de programação 2", "Informática", "5"),
+("Linguagem de programação 3", "Informática", "5"),
+("Teoria e desenvolvimento de sistemas", "Informática", "5"),
+("Tópicos profissionais", "Informática", "5"),
+("Aplicações para Web 1", "Informática", "5"),
+("Prática do desenvolvimento de sistemas", "Informática", "5"),
+("Aplicações para Web 2", "Informática", "5"),
+("Segurança da informação", "Informática", "5"),
+
+("Desenho técnico", "Eletrônica", 7),
+("Gestão industrial", "Eletrônica", 7),
+("Eletricidade básica", "Eletrônica", 7),
+("Eletrônica digital 1", "Eletrônica", 7),
+("Laboratório de electricidade", "Eletrônica", 7),
+("Circuitos elétricos", "Eletrônica", 7),
+("Desenho técniclo eletrônico", "Eletrônica", 7),
+("Eletrônica 1", "Eletrônica", 7),
+("Eletrônica aplicada 1", "Eletrônica", 7),
+("Eletrônica digital 2", "Eletrônica", 7),
+("Segurança do trabalho", "Eletrônica", 7),
+("Eletrônica 2", "Eletrônica", 7),
+("Eletrônica aplicada 2", "Eletrônica", 7),
+("Eletrônica digital 3", "Eletrônica", 7),
+("Eletrônica industrial", "Eletrônica", 7),
+("Microprocessadores", "Eletrônica", 7),
+("Programação", "Eletrônica", 7),
+("Automação", "Eletrônica", 7),
+("Elementos de telecomunicações", "Eletrônica", 7),
+("Microcontroladores", "Eletrônica", 7),
+("Projetos eletrônicos", "Eletrônica", 7),
+
+
+("Gestão Industrial", "Eletrotécnica", "8"),
+("Eletricidade 1", "Eletrotécnica", "8"),
+("Eletromagnetismo", "Eletrotécnica", "8"),
+("Laboratório de eletrotécnica 1", "Eletrotécnica", "8"),
+("Eletricidade 2", "Eletrotécnica", "8"),
+("Desenho técnico", "Eletrotécnica", "8"),
+("Instalações elétricas 1", "Eletrotécnica", "8"),
+("Eletrônica", "Eletrotécnica", "8"),
+("Laboratório de eletrotécnica 2", "Eletrotécnica", "8"),
+("Segurança e gestão do trabalho", "Eletrotécnica", "8"),
+("Eletricidade 3", "Eletrotécnica", "8"),
+("Medidas elétricas", "Eletrotécnica", "8"),
+("Laboratório de eletrotécnica 3", "Eletrotécnica", "8"),
+("Instalações elétricas 2", "Eletrotécnica", "8"),
+("Máquinas elétricas 1", "Eletrotécnica", "8"),
+("Maquinas elétricas 2", "Eletrotécnica", "8"),
+("Geração, transmissão e distribuição", "Eletrotécnica", "8"),
+("Segurança 2 - NR 10", "Eletrotécnica", "8"),
+("Eficiência energética", "Eletrotécnica", "8"),
+("Automação", "Eletrotécnica", "8"),
+
+
+("Materiais de construção mecânica", "Mecânica", "6"),
+("Metrologia", "Mecânica", "6"),
+("Segurança do trabalho", "Mecânica", "6"),
+("Mecânica técnica", "Mecânica", "6"),
+("Desenho auxiliado por computador", "Mecânica", "6"),
+("Eletricidade", "Mecânica", "6"),
+("Máquinas, ferramentas e dispositivos", "Mecânica", "6"),
+("Prática em mecânica 1", "Mecânica", "6"),
+("Resistência dos materiais", "Mecânica", "6"),
+("Elementos de máquinas", "Mecânica", "6"),
+("Laboratório de mecânica 1", "Mecânica", "6"),
+("Prática em mecânica 2", "Mecânica", "6"),
+("Máquinas e aparelhos mecânicos", "Mecânica", "6"),
+("Laboratório de mecânica 2", "Mecânica", "6"),
+("Projetos de máquinas e dispositivos", "Mecânica", "6"),
+("Metodologia do trabalho científico", "Mecânica", "6"),
+("Gestão industrial", "Mecânica", "6"),
+("Desenho técnico em mecânica", "Mecânica", "6"),
+
+("Inglês 1", "Linguagens", "1"),
+("Inglês 2", "Linguagens", "1"),
+("Inglês 3", "Linguagens", "1"),
+("Língua portuguesa e literatura 1", "Linguagens", "1"),
+("Língua portuguesa e literatura 2", "Linguagens", "1"),
+("Língua portuguesa e literatura 3", "Linguagens", "1"),
+("Língua portuguesa e literatura 4", "Linguagens", "1"),
+("Educação física 1", "Linguagens", "1"),
+("Educação física 2", "Linguagens", "1"),
+("Educação física 3", "Linguagens", "1"),
+("Espanhol 1", "Linguagens", "1"),
+("Espanhol 2", "Linguagens", "1"),
+("Libras 1", "Linguagens", "1"),
+("Libras 2", "Linguagens", "1"),
+("Artes 4", "Linguagens", "1"),
+
+("Matemática 1", "Matemática", "2"),
+("Matemática 2", "Matemática", "2"),
+("Matemática 3", "Matemática", "2"),
+("Matemática 4", "Matemática", "2"),
+
+("História 1", "Humanas", "3"),
+("História 2", "Humanas", "3"),
+("História 3", "Humanas", "3"),
+("Geografia 1", "Humanas", "3"),
+("Geografia 2", "Humanas", "3"),
+("Geografia 3", "Humanas", "3"),
+("Sociologia 1", "Humanas", "3"),
+("Sociologia 2", "Humanas", "3"),
+("Sociologia 3", "Humanas", "3"),
+("Filosofia 1", "Humanas", "3"),
+("Filosofia 2", "Humanas", "3"),
+("Filosofia 3", "Humanas", "3"),
+
+("Biologia 1", "Ciências Naturais", "4"),
+("Biologia 2", "Ciências Naturais", "4"),
+("Biologia 3", "Ciências Naturais", "4"),
+("Física 1", "Ciências Naturais", "4"),
+("Física 2", "Ciências Naturais", "4"),
+("Física 3", "Ciências Naturais", "4"),
+("Química 1", "Ciências Naturais", "4"),
+("Química 2", "Ciências Naturais", "4"),
+("Química 3", "Ciências Naturais", "4");
 
 
 
@@ -187,6 +484,10 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Professor` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `Monitorando`.`Professor` (`Disciplina`, `IdUsuario`) VALUES ("Banco de dados", 8),
+("Gestão Industrial", 9),
+("Desenho técnico", 10),
+("Eletromagnetismo", 11);
 
 
 
@@ -222,8 +523,7 @@ INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A14");
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitor` (
   `Id` INT NOT NULL,
-  `Código` VARCHAR(45) NOT NULL,
-  `Id Usuario` INT NOT NULL,
+  `IdUsuario` INT NOT NULL,
   `Status` ENUM('Ativo', 'Desativado', 'Verificando') NOT NULL,
   `Codigo_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
@@ -241,6 +541,11 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitor` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `Monitorando`.`Monitor` (`IdUsuario`, `Status`, `Codigo_Id`)
+VALUES (1, "Ativo", 1),
+(3, "Desativado", 2),
+(5, "Verificando", 3);
+
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Monitoria`
@@ -254,7 +559,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitoria` (
   `Descricao` MEDIUMTEXT NOT NULL,
   `IdLocal` INT NOT NULL,
   `IdDisciplina` INT NOT NULL,
-  `Id Monitor` INT NOT NULL,
+  `IdMonitor` INT NOT NULL,
   PRIMARY KEY (`Id`),
   INDEX `fk_Monitoria_Local1_idx` (`IdLocal` ASC),
   INDEX `fk_Monitoria_Disciplina1_idx` (`IdDisciplina` ASC),
@@ -276,6 +581,9 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitoria` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `Monitorando`.`Monitoria` ( `Conteudo`, `DataHorario`, `NumVagas`, `NumInscritos`, `Descricao`, `IdLocal`, `IdDisciplina`, `IdMonitor`) 
+values ("Banco de Dados - MySQL", 2020-04-22 08:30:00 , 10, 4, "Monitoria para retirar dúvidas sobre mySQL.", 32,  9, 1),
+	   ("Criação de Tabelas - MySQL Workbench", 2019-10-22 14:45:00, 20, 4,  "Monitoria para retirar dúvidas sobre a criação e ralacionamento de tabelas ultizando MySQL Workbench", 32,  9, 2);
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Inscricao`
@@ -298,7 +606,15 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Inscricao` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
+INSERT INTO `Monitorando`.`Inscricao` (`IdUsuario`, `IdMonitoria`) 
+	values( 1, 1),
+		  ( 2, 1),
+		  ( 3, 1),
+		  ( 4, 1),
+          ( 5, 2),
+		  ( 6, 2),
+		  ( 7, 2),
+		  ( 8, 2);
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Avalicao`
@@ -336,6 +652,10 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Arquivo` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `Monitorando`.`Arquivo` (`Nome`, `IdMonitoria`, `Local`)
+VALUES (`ListaExercicios.pdf`, 1, `Monitorias/Arquivos/ListaExercicios.pdf`),
+VALUES (`Slides.pdf`, 1, `Monitorias/Arquivos/Slides.pdf`)
+
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Mensagem`
@@ -371,6 +691,12 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Pedido` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+INSERT INTO `Monitorando`.`Pedido` (`Motivo`, `Data`, `Aluno_Id`)
+VALUES(`Tenho tempo livre e facilidade de ajudar amigos em algumas disciplinas, então quero poder ajudar outros também.`, 2019-08-28, 4),
+(`Quero transmitir meus conhecimentos para outros.`, 2019-08-15, 6),
+(`Ah eu gosto muito de matemática e quero ajudar o pessoal.`, 2019-08-06, 7),
+(`Tenho facilidade em algumas disciplinas e quero ajudar meus colegas.`, 2019-06-25, 8);
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
