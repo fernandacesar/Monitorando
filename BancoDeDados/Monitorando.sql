@@ -42,7 +42,8 @@ INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) V
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Camila Cabello ", "0000010", "Aluno", "a.leao@gmail.com", "imagem10.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", "0000011", "Aluno", "camz.c@gmail.com", "imagem11.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawnmilla não é fake", "00000", "Aluno", "melhorcasal@gmail.com", "imagem12.png/AAAAA");
-
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fernando AAAA", "22200", "Aluno", "FEFE@gmail.com", "imagem13.png/AAAAA"),
+																					
 
 
 
@@ -583,7 +584,8 @@ ENGINE = InnoDB;
 
 INSERT INTO `Monitorando`.`Monitoria` ( `Conteudo`, `DataHorario`, `NumVagas`, `NumInscritos`, `Descricao`, `IdLocal`, `IdDisciplina`, `IdMonitor`) 
 values ("Banco de Dados - MySQL", '2020-04-22 08:30:00', 10, 4, "Monitoria para retirar dúvidas sobre mySQL.", 32,  9, 1),
-	   ("Criação de Tabelas - MySQL Workbench", '2019-10-22 14:45:00' , 20, 4,  "Monitoria para retirar dúvidas sobre a criação e ralacionamento de tabelas ultizando MySQL Workbench", 32,  9, 2);
+	   ("Criação de Tabelas - MySQL Workbench", '2019-10-22 14:45:00' , 20, 4,  "Monitoria para retirar dúvidas sobre a criação e ralacionamento de tabelas ultizando MySQL Workbench", 32,  9, 2), 
+       ("PJI", '2019-10-22 15:45:00', 15, 15, "Plantão para reitar dúvidas sobre o banco de dados do projeto",32,  9, 3);
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Inscricao`
@@ -615,6 +617,7 @@ INSERT INTO `Monitorando`.`Inscricao` (`IdUsuario`, `IdMonitoria`)
 		  ( 6, 2),
 		  ( 7, 2),
 		  ( 8, 2);
+          
 
 
 -- -----------------------------------------------------
