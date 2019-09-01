@@ -43,7 +43,8 @@ INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) V
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", "0000011", "Aluno", "camz.c@gmail.com", "imagem11.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawnmilla não é fake", "00000", "Aluno", "melhorcasal@gmail.com", "imagem12.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fernando AAAA", "22200", "Aluno", "FEFE@gmail.com", "imagem13.png/AAAAA"),
-																					
+																					  ("Adriana BBBBB", 454545, "Aluno", "dridri@gmail.com", "imagem14.png/AAAAA"),
+                                                                                      ("Giovana BBBBB", 787875, "Aluno", "gigi@gmail.com", "imagem15.png/AAAAA");
 
 
 
@@ -616,7 +617,25 @@ INSERT INTO `Monitorando`.`Inscricao` (`IdUsuario`, `IdMonitoria`)
           ( 5, 2),
 		  ( 6, 2),
 		  ( 7, 2),
-		  ( 8, 2);
+		  ( 8, 2),
+          (1, 3),
+          (2, 3),
+          (3,3),
+          (4,3),
+          (5,3),
+          (6,3),
+          (7,3),
+          (8,3),
+          (8,3),
+          (9,3),
+          (10,3),
+          (11,3),
+          (12,3),
+          (13,3),
+          (14,3),
+          (15,3);
+          
+	
           
 
 
