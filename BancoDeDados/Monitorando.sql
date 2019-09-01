@@ -585,6 +585,16 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitoria` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `Monitorando`.`Monitoria` ( `Conteudo`, 
+                                        `DataHorario`, 
+                                        `NumVagas`, 
+                                        `NumInscritos`,
+                                        `Descricao`, 
+                                        `IdLocal`, 
+                                        `IdDisciplina`, 
+                                        `Id Monitor`) 
+values ("Banco de Dados - MySQL", "2020-04-22 08:30:00 ", 10, 4, "Monitoria para retirar dúvidas sobre mySQL.", 32,  9, 1),
+	   ("Criação de Tabelas - MySQL Workbench", "2019-10-22 14:45:00", 20, 4,  "Monitoria para retirar dúvidas sobre a criação e ralacionamento de tabelas ultizando MySQL Workbench", 32,  9, 1);
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Inscricao`
@@ -607,7 +617,15 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Inscricao` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
+INSERT INTO `Monitorando`.`Inscricao` (`IdUsuario`, `IdMonitoria`) 
+	values( 1, 1),
+		  ( 2, 1),
+		  ( 3, 1),
+		  ( 4, 1),
+          ( 5, 2),
+		  ( 6, 2),
+		  ( 7, 2),
+		  ( 8, 2);
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Avalicao`
