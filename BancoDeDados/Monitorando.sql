@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Aluno` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Aluno` (`Status`, `IdUsuario`, `IdTurma`)
+INSERT INTO `Monitorando`.`Aluno` (`Status`, `IdUsuario`, `Id Turma`)
 VALUES ("Monitor", 1, 3),
 ("Comum", 2, 1),
 ("Monitor", 3, 2),
@@ -582,8 +582,8 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitoria` (
 ENGINE = InnoDB;
 
 INSERT INTO `Monitorando`.`Monitoria` ( `Conteudo`, `DataHorario`, `NumVagas`, `NumInscritos`, `Descricao`, `IdLocal`, `IdDisciplina`, `IdMonitor`) 
-values ("Banco de Dados - MySQL", 2020-04-22 08:30:00 , 10, 4, "Monitoria para retirar dúvidas sobre mySQL.", 32,  9, 1),
-	   ("Criação de Tabelas - MySQL Workbench", 2019-10-22 14:45:00, 20, 4,  "Monitoria para retirar dúvidas sobre a criação e ralacionamento de tabelas ultizando MySQL Workbench", 32,  9, 2);
+values ("Banco de Dados - MySQL", '2020-04-22 08:30:00', 10, 4, "Monitoria para retirar dúvidas sobre mySQL.", 32,  9, 1),
+	   ("Criação de Tabelas - MySQL Workbench", '2019-10-22 14:45:00' , 20, 4,  "Monitoria para retirar dúvidas sobre a criação e ralacionamento de tabelas ultizando MySQL Workbench", 32,  9, 2);
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Inscricao`
@@ -616,6 +616,7 @@ INSERT INTO `Monitorando`.`Inscricao` (`IdUsuario`, `IdMonitoria`)
 		  ( 7, 2),
 		  ( 8, 2);
 
+
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Avalicao`
 -- -----------------------------------------------------
@@ -634,6 +635,16 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Avalicao` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `Monitorando`.`Avalicao` ( `Conteudo`,`DataPubli`,`Nota`,`Inscricao_Id`)
+							Values("Muito boa!",01/09/2019,5,1),
+								  ("Não gostei da Monitoria,monitor sem paciência de explicar e tirar dúvidas.",07/09/2019,2,2),
+                                  ("Monitoria mediana ,monitor explicou de forma muito chata!",09/10/2019,3,3),
+                                  ("Monitoria muito boa ,monitor com uma didática muito boa.",31/09/2019,5,4),
+                                  ("Monitoria maravilhosa, monitor extremamente atencioso!",26/03/2019,4,5),
+                                  ("Simplesmente me facina ,monitoria que todos deveriam participar",26/11/2019,5,6),
+                                  ("Nunca mais voltarei a frequentar essa monitoria,muito ruim!",06/03/2019,1,7),
+                                  ("Estou dando uma estrela para poder comentar ,pois nem isso essa monitoria vale !!!",03/11/2019,1,8);
+                            
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Arquivo`
@@ -654,14 +665,14 @@ ENGINE = InnoDB;
 
 INSERT INTO `Monitorando`.`Arquivo` (`Nome`, `IdMonitoria`, `Local`)
 VALUES (`ListaExercicios.pdf`, 1, `Monitorias/Arquivos/ListaExercicios.pdf`),
-VALUES (`Slides.pdf`, 1, `Monitorias/Arquivos/Slides.pdf`)
+        (`Slides.pdf`, 1, `Monitorias/Arquivos/Slides.pdf`);
 
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Mensagem`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Mensagem` (
-  `Id` INT NOT NULL,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `DataHorario` DATETIME NOT NULL,
   `Conteudo` VARCHAR(500) NOT NULL,
   `Inscricao_Id` INT NOT NULL,
@@ -673,6 +684,18 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Mensagem` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+INSERT INTO `Monitorando`.`Mensagem` (`DataHOrario`,`Conteudo`,`Inscricao_Id`)
+                        VALUES( '12/12/2019 20:12:00',"Olá,boa noite pessoal ,alguém poderia tirar uma dúvida minha?",1),
+							('12/12/2019 20:13:00',"Claro,qual seria sua dúvida?",2),
+							('12/12/2019 20:13:30',"Como faço para indetificar qual lado de um triângulo retangulo é a Hipotenusa ?",1),
+							('12/12/2019 20:14:00',"Observe o lado  oposto ao ângulo de 90°/reto ,esse lado será a Hipotenusa !",2),
+							('12/12/2019 20:14:10',"Ahh, muito obrigado!",1),
+							('12/12/2019 20:14:50',"Ahh, muito obrigado!",2),
+							('12/12/2019 20:15:,00',"Tchau,bons estudos!",2),
+							('12/12/2019 20:15:10',"Tchau,até mais...",1);
+					
+
 
 
 -- -----------------------------------------------------
