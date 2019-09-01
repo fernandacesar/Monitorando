@@ -152,9 +152,8 @@ INSERT INTO `Monitorando`.`Local` (`Identificacao`, `Tipo`, `Bloco`) VALUES (309
 -- Table `Monitorando`.`Disciplina`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Disciplina` (
-  `Id` INT NOT NULL,
+  `Id` INT NOT NULL auto_increment,
   `Nome` VARCHAR(45) NOT NULL,
-  `Curso` VARCHAR(45) NOT NULL,
   `Curso_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
   INDEX `fk_Disciplina_Curso1_idx` (`Curso_Id` ASC),
@@ -164,6 +163,11 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Disciplina` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+INSERT INTO `Monitorando`.`Local` (`Nome`, `Curso`,`Curso_Id`) VALUES ("Fellipe", "", "Bloco A");
+
+
+
 
 
 
