@@ -117,22 +117,15 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Aluno` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-
-
-
 INSERT INTO `Monitorando`.`Aluno` (`Status`, `IdUsuario`, `IdTurma`)
 VALUES ("Monitor", 1, 3),
 ("Comum", 2, 1),
 ("Monitor", 3, 2),
 ("Comum", 4, 3),
-("Comum", 5, 1),
+("Monitor", 5, 1),
 ("Comum", 6, 2),
 ("Comum", 7, 1);
 ("Comum", 11, 8);
-
-
-
-
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Local`
@@ -547,8 +540,10 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitor` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Monitor` (`IdUsuario`, `Status`, `Codigo_Id`) VALUES ("Banco de dados", 1, 1),
-("Banco de dados", 3, 2);
+INSERT INTO `Monitorando`.`Monitor` (`IdUsuario`, `Status`, `Codigo_Id`)
+VALUES (1, "Ativo", 1),
+(3, "Desativado", 2),
+(5, "Verificando", 3);
 
 
 -- -----------------------------------------------------
@@ -563,7 +558,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitoria` (
   `Descricao` MEDIUMTEXT NOT NULL,
   `IdLocal` INT NOT NULL,
   `IdDisciplina` INT NOT NULL,
-  `Id Monitor` INT NOT NULL,
+  `IdMonitor` INT NOT NULL,
   PRIMARY KEY (`Id`),
   INDEX `fk_Monitoria_Local1_idx` (`IdLocal` ASC),
   INDEX `fk_Monitoria_Disciplina1_idx` (`IdDisciplina` ASC),
@@ -585,16 +580,9 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitoria` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Monitoria` ( `Conteudo`, 
-                                        `DataHorario`, 
-                                        `NumVagas`, 
-                                        `NumInscritos`,
-                                        `Descricao`, 
-                                        `IdLocal`, 
-                                        `IdDisciplina`, 
-                                        `Id Monitor`) 
-values ("Banco de Dados - MySQL", "2020-04-22 08:30:00 ", 10, 4, "Monitoria para retirar dúvidas sobre mySQL.", 32,  9, 1),
-	   ("Criação de Tabelas - MySQL Workbench", "2019-10-22 14:45:00", 20, 4,  "Monitoria para retirar dúvidas sobre a criação e ralacionamento de tabelas ultizando MySQL Workbench", 32,  9, 1);
+INSERT INTO `Monitorando`.`Monitoria` ( `Conteudo`, `DataHorario`, `NumVagas`, `NumInscritos`, `Descricao`, `IdLocal`, `IdDisciplina`, `IdMonitor`) 
+values ("Banco de Dados - MySQL", 2020-04-22 08:30:00 , 10, 4, "Monitoria para retirar dúvidas sobre mySQL.", 32,  9, 1),
+	   ("Criação de Tabelas - MySQL Workbench", 2019-10-22 14:45:00, 20, 4,  "Monitoria para retirar dúvidas sobre a criação e ralacionamento de tabelas ultizando MySQL Workbench", 32,  9, 2);
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Inscricao`
@@ -663,6 +651,10 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Arquivo` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `Monitorando`.`Arquivo` (`Nome`, `IdMonitoria`, `Local`)
+VALUES (`ListaExercicios.pdf`, 1, `Monitorias/Arquivos/ListaExercicios.pdf`),
+VALUES (`Slides.pdf`, 1, `Monitorias/Arquivos/Slides.pdf`)
+
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Mensagem`
@@ -698,6 +690,12 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Pedido` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+INSERT INTO `Monitorando`.`Pedido` (`Motivo`, `Data`, `Aluno_Id`)
+VALUES(`Tenho tempo livre e facilidade de ajudar amigos em algumas disciplinas, então quero poder ajudar outros também.`, 2019-08-28, 4),
+(`Quero transmitir meus conhecimentos para outros.`, 2019-08-15, 6),
+(`Ah eu gosto muito de matemática e quero ajudar o pessoal.`, 2019-08-06, 7),
+(`Tenho facilidade em algumas disciplinas e quero ajudar meus colegas.`, 2019-06-25, 8);
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
