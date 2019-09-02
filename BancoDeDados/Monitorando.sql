@@ -14,6 +14,8 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema Monitorando
 -- -----------------------------------------------------
+
+DROP SCHEMA `Monitorando`;
 CREATE SCHEMA IF NOT EXISTS `Monitorando` DEFAULT CHARACTER SET utf8 ;
 USE `Monitorando` ;
 
@@ -30,22 +32,25 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Usuario` (
   PRIMARY KEY (`Id`))
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fellipe Costa Reis", "0000004", "Aluno", "fcr@gmail.com", "imagem1.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fernanda Cesar da Silva", "0000003", "Aluno", "g.reis@gmail.com", "imagem2.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Kayane Rocha ", "0000002", "Aluno", "ghuyiyg@gmail.com", "imagem3.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Natália Penalva Panighel", "0000001", "Aluno", "fellipe@gmail.com", "imagem4.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Angelica Ferreira Gomes", "0000005", "Aluno", "angel.ferreira@gmail.com", "imagem5.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Jean Vitor Hass", "0000006", "Aluno", "jean.hass@gmail.com", "imagem6.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Bruno Ferreira Ribeiro", "0000007", "Aluno", "bruno.ddff@gmail.com", "imagem7.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Cristina Soares", "0000008", "Aluno", "cris.almeida@gmail.com", "imagem8.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Ana Beatriz Nascimento", "0000009", "Aluno", "bia.luscas@gmail.com", "imagem9.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Camila Cabello ", "0000010", "Aluno", "a.leao@gmail.com", "imagem10.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", "0000011", "Aluno", "camz.c@gmail.com", "imagem11.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawnmilla não é fake", "00000", "Aluno", "melhorcasal@gmail.com", "imagem12.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fernando AAAA", "22200", "Aluno", "FEFE@gmail.com", "imagem13.png/AAAAA"),
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fellipe Costa Reis", 0000004, "Aluno", "fcr@gmail.com", "imagem1.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fernanda Cesar da Silva", 0000003, "Aluno", "g.reis@gmail.com", "imagem2.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Kayane Rocha ", 0000002, "Aluno", "ghuyiyg@gmail.com", "imagem3.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Natália Penalva Panighel", 0000001, "Aluno", "fellipe@gmail.com", "imagem4.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Angelica Ferreira Gomes", 0000005, "Aluno", "angel.ferreira@gmail.com", "imagem5.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Jean Vitor Hass", 0000006, "Aluno", "jean.hass@gmail.com", "imagem6.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Bruno Ferreira Ribeiro", 0000007, "Aluno", "bruno.ddff@gmail.com", "imagem7.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Cristina Soares", 0000008, "Aluno", "cris.almeida@gmail.com", "imagem8.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Ana Beatriz Nascimento", 0000009, "Aluno", "bia.luscas@gmail.com", "imagem9.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Camila Cabello ", 0000010, "Aluno", "a.leao@gmail.com", "imagem10.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", 0000011, "Aluno", "camz.c@gmail.com", "imagem11.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawnmilla não é fake", 00000, "Aluno", "melhorcasal@gmail.com", "imagem12.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fernando AAAA", 22200, "Aluno", "FEFE@gmail.com", "imagem13.png/AAAAA"),
 																					  ("Adriana BBBBB", 454545, "Aluno", "dridri@gmail.com", "imagem14.png/AAAAA"),
-                                                                                      ("Giovana BBBBB", 787875, "Aluno", "gigi@gmail.com", "imagem15.png/AAAAA");
-
+                                                                                      ("Giovana BBBBB", 787875, "Aluno", "gigi@gmail.com", "imagem15.png/AAAAA"),
+                                                                                      ("AAAAAAA", 555555, "Professor", "aaaaaaa@gmail.com", "imagem16.png/AAAAA"),
+                                                                                      ("zzzzzzZZZZZ", 555555, "Professor","ZAZAZZA@gmail.com", "imagem17.png/AAAAA"),
+                                                                                      ("FEFEFEFE", 555555, "Professor", "aaaaaKYKUTFaa@gmail.com", "imagem18.png/AAAAA"),
+                                                                                      ("HELPME", 555555, "Professor", "aaaRHHYRTUHRaaaa@gmail.com", "imagem19.png/AAAAA");
 
 
 
@@ -338,133 +343,133 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Disciplina` (
 ENGINE = InnoDB;
 
 
-INSERT INTO `Monitorando`.`Disciplina` (`Nome`, `Curso`, `Curso_Id`) 
+INSERT INTO `Monitorando`.`Disciplina` (`Nome`,`Curso_Id`) 
 VALUES
-("Gestão Industrial", "Informática", "5"),
-("Informática", "Informática", "5"),
-("Sistemas computacionais", "Informática", "5"),
-("Lógica 1", "Informática", "5"),
-("Lógica 2", "Informática", "5"),
-("Linguagem de programação 1", "Informática", "5"),
-("Projeto integrador", "Informática", "5"),
-("Redes de computadores e internet", "Informática", "5"),
-("Banco de dados", "Informática", "5"),
-("Linguagem de programação 2", "Informática", "5"),
-("Linguagem de programação 3", "Informática", "5"),
-("Teoria e desenvolvimento de sistemas", "Informática", "5"),
-("Tópicos profissionais", "Informática", "5"),
-("Aplicações para Web 1", "Informática", "5"),
-("Prática do desenvolvimento de sistemas", "Informática", "5"),
-("Aplicações para Web 2", "Informática", "5"),
-("Segurança da informação", "Informática", "5"),
+("Gestão Industrial", 5),
+("Informática", 5),
+("Sistemas computacionais", 5),
+("Lógica 1", 5),
+("Lógica 2", 5),
+("Linguagem de programação 1",  5),
+("Projeto integrador",  5),
+("Redes de computadores e internet", 5),
+("Banco de dados", 5),
+("Linguagem de programação 2",  5),
+("Linguagem de programação 3", 5),
+("Teoria e desenvolvimento de sistemas",  5),
+("Tópicos profissionais",  5),
+("Aplicações para Web 1", 5),
+("Prática do desenvolvimento de sistemas",  5),
+("Aplicações para Web 2",  5),
+("Segurança da informação",  5),
 
-("Desenho técnico", "Eletrônica", 7),
-("Gestão industrial", "Eletrônica", 7),
-("Eletricidade básica", "Eletrônica", 7),
-("Eletrônica digital 1", "Eletrônica", 7),
-("Laboratório de electricidade", "Eletrônica", 7),
-("Circuitos elétricos", "Eletrônica", 7),
-("Desenho técniclo eletrônico", "Eletrônica", 7),
-("Eletrônica 1", "Eletrônica", 7),
-("Eletrônica aplicada 1", "Eletrônica", 7),
-("Eletrônica digital 2", "Eletrônica", 7),
-("Segurança do trabalho", "Eletrônica", 7),
-("Eletrônica 2", "Eletrônica", 7),
-("Eletrônica aplicada 2", "Eletrônica", 7),
-("Eletrônica digital 3", "Eletrônica", 7),
-("Eletrônica industrial", "Eletrônica", 7),
-("Microprocessadores", "Eletrônica", 7),
-("Programação", "Eletrônica", 7),
-("Automação", "Eletrônica", 7),
-("Elementos de telecomunicações", "Eletrônica", 7),
-("Microcontroladores", "Eletrônica", 7),
-("Projetos eletrônicos", "Eletrônica", 7),
-
-
-("Gestão Industrial", "Eletrotécnica", "8"),
-("Eletricidade 1", "Eletrotécnica", "8"),
-("Eletromagnetismo", "Eletrotécnica", "8"),
-("Laboratório de eletrotécnica 1", "Eletrotécnica", "8"),
-("Eletricidade 2", "Eletrotécnica", "8"),
-("Desenho técnico", "Eletrotécnica", "8"),
-("Instalações elétricas 1", "Eletrotécnica", "8"),
-("Eletrônica", "Eletrotécnica", "8"),
-("Laboratório de eletrotécnica 2", "Eletrotécnica", "8"),
-("Segurança e gestão do trabalho", "Eletrotécnica", "8"),
-("Eletricidade 3", "Eletrotécnica", "8"),
-("Medidas elétricas", "Eletrotécnica", "8"),
-("Laboratório de eletrotécnica 3", "Eletrotécnica", "8"),
-("Instalações elétricas 2", "Eletrotécnica", "8"),
-("Máquinas elétricas 1", "Eletrotécnica", "8"),
-("Maquinas elétricas 2", "Eletrotécnica", "8"),
-("Geração, transmissão e distribuição", "Eletrotécnica", "8"),
-("Segurança 2 - NR 10", "Eletrotécnica", "8"),
-("Eficiência energética", "Eletrotécnica", "8"),
-("Automação", "Eletrotécnica", "8"),
+("Desenho técnico",  7),
+("Gestão industrial", 7),
+("Eletricidade básica", 7),
+("Eletrônica digital 1", 7),
+("Laboratório de electricidade", 7),
+("Circuitos elétricos", 7),
+("Desenho técniclo eletrônico", 7),
+("Eletrônica 1", 7),
+("Eletrônica aplicada 1", 7),
+("Eletrônica digital 2", 7),
+("Segurança do trabalho", 7),
+("Eletrônica 2", 7),
+("Eletrônica aplicada 2", 7),
+("Eletrônica digital 3", 7),
+("Eletrônica industrial", 7),
+("Microprocessadores", 7),
+("Programação", 7),
+("Automação", 7),
+("Elementos de telecomunicações", 7),
+("Microcontroladores", 7),
+("Projetos eletrônicos", 7),
 
 
-("Materiais de construção mecânica", "Mecânica", "6"),
-("Metrologia", "Mecânica", "6"),
-("Segurança do trabalho", "Mecânica", "6"),
-("Mecânica técnica", "Mecânica", "6"),
-("Desenho auxiliado por computador", "Mecânica", "6"),
-("Eletricidade", "Mecânica", "6"),
-("Máquinas, ferramentas e dispositivos", "Mecânica", "6"),
-("Prática em mecânica 1", "Mecânica", "6"),
-("Resistência dos materiais", "Mecânica", "6"),
-("Elementos de máquinas", "Mecânica", "6"),
-("Laboratório de mecânica 1", "Mecânica", "6"),
-("Prática em mecânica 2", "Mecânica", "6"),
-("Máquinas e aparelhos mecânicos", "Mecânica", "6"),
-("Laboratório de mecânica 2", "Mecânica", "6"),
-("Projetos de máquinas e dispositivos", "Mecânica", "6"),
-("Metodologia do trabalho científico", "Mecânica", "6"),
-("Gestão industrial", "Mecânica", "6"),
-("Desenho técnico em mecânica", "Mecânica", "6"),
+("Gestão Industrial", 8),
+("Eletricidade 1", 8),
+("Eletromagnetismo", 8),
+("Laboratório de eletrotécnica 1", 8),
+("Eletricidade 2", 8),
+("Desenho técnico", 8),
+("Instalações elétricas 1", 8),
+("Eletrônica", 8),
+("Laboratório de eletrotécnica 2", 8),
+("Segurança e gestão do trabalho", 8),
+("Eletricidade 3", 8),
+("Medidas elétricas", 8),
+("Laboratório de eletrotécnica 3", 8),
+("Instalações elétricas 2", 8),
+("Máquinas elétricas 1", 8),
+("Maquinas elétricas 2", 8),
+("Geração, transmissão e distribuição", 8),
+("Segurança 2 - NR 10", 8),
+("Eficiência energética", 8),
+("Automação", 8),
 
-("Inglês 1", "Linguagens", "1"),
-("Inglês 2", "Linguagens", "1"),
-("Inglês 3", "Linguagens", "1"),
-("Língua portuguesa e literatura 1", "Linguagens", "1"),
-("Língua portuguesa e literatura 2", "Linguagens", "1"),
-("Língua portuguesa e literatura 3", "Linguagens", "1"),
-("Língua portuguesa e literatura 4", "Linguagens", "1"),
-("Educação física 1", "Linguagens", "1"),
-("Educação física 2", "Linguagens", "1"),
-("Educação física 3", "Linguagens", "1"),
-("Espanhol 1", "Linguagens", "1"),
-("Espanhol 2", "Linguagens", "1"),
-("Libras 1", "Linguagens", "1"),
-("Libras 2", "Linguagens", "1"),
-("Artes 4", "Linguagens", "1"),
 
-("Matemática 1", "Matemática", "2"),
-("Matemática 2", "Matemática", "2"),
-("Matemática 3", "Matemática", "2"),
-("Matemática 4", "Matemática", "2"),
+("Materiais de construção mecânica", 6),
+("Metrologia", 6),
+("Segurança do trabalho", 6),
+("Mecânica técnica", 6),
+("Desenho auxiliado por computador", 6),
+("Eletricidade", 6),
+("Máquinas, ferramentas e dispositivos", 6),
+("Prática em mecânica 1", 6),
+("Resistência dos materiais", 6),
+("Elementos de máquinas", 6),
+("Laboratório de mecânica 1", 6),
+("Prática em mecânica 2", 6),
+("Máquinas e aparelhos mecânicos", 6),
+("Laboratório de mecânica 2", 6),
+("Projetos de máquinas e dispositivos", 6),
+("Metodologia do trabalho científico", 6),
+("Gestão industrial", 6),
+("Desenho técnico em mecânica", 6),
 
-("História 1", "Humanas", "3"),
-("História 2", "Humanas", "3"),
-("História 3", "Humanas", "3"),
-("Geografia 1", "Humanas", "3"),
-("Geografia 2", "Humanas", "3"),
-("Geografia 3", "Humanas", "3"),
-("Sociologia 1", "Humanas", "3"),
-("Sociologia 2", "Humanas", "3"),
-("Sociologia 3", "Humanas", "3"),
-("Filosofia 1", "Humanas", "3"),
-("Filosofia 2", "Humanas", "3"),
-("Filosofia 3", "Humanas", "3"),
+("Inglês 1", 1),
+("Inglês 2", 1),
+("Inglês 3", 1),
+("Língua portuguesa e literatura 1", 1),
+("Língua portuguesa e literatura 2", 1),
+("Língua portuguesa e literatura 3", 1),
+("Língua portuguesa e literatura 4", 1),
+("Educação física 1", 1),
+("Educação física 2", 1),
+("Educação física 3", 1),
+("Espanhol 1", 1),
+("Espanhol 2", 1),
+("Libras 1", 1),
+("Libras 2", 1),
+("Artes 4", 1),
 
-("Biologia 1", "Ciências Naturais", "4"),
-("Biologia 2", "Ciências Naturais", "4"),
-("Biologia 3", "Ciências Naturais", "4"),
-("Física 1", "Ciências Naturais", "4"),
-("Física 2", "Ciências Naturais", "4"),
-("Física 3", "Ciências Naturais", "4"),
-("Química 1", "Ciências Naturais", "4"),
-("Química 2", "Ciências Naturais", "4"),
-("Química 3", "Ciências Naturais", "4");
+("Matemática 1", 2),
+("Matemática 2", 2),
+("Matemática 3", 2),
+("Matemática 4", 2),
+
+("História 1", 3),
+("História 2", 3),
+("História 3", 3),
+("Geografia 1", 3),
+("Geografia 2", 3),
+("Geografia 3", 3),
+("Sociologia 1", 3),
+("Sociologia 2", 3),
+("Sociologia 3", 3),
+("Filosofia 1", 3),
+("Filosofia 2", 3),
+("Filosofia 3", 3),
+
+("Biologia 1", 4),
+("Biologia 2", 4),
+("Biologia 3", 4),
+("Física 1", 4),
+("Física 2", 4),
+("Física 3", 4),
+("Química 1", 4),
+("Química 2", 4),
+("Química 3", 4);
 
 
 
@@ -474,7 +479,7 @@ VALUES
 -- Table `Monitorando`.`Professor`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Professor` (
-  `Id` INT NOT NULL,
+  `Id` INT NOT NULL  AUTO_INCREMENT,
   `Disciplina` VARCHAR(60) NOT NULL,
   `IdUsuario` INT NOT NULL,
   PRIMARY KEY (`Id`),
@@ -486,10 +491,10 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Professor` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Professor` (`Disciplina`, `IdUsuario`) VALUES ("Banco de dados", 8),
-("Gestão Industrial", 9),
-("Desenho técnico", 10),
-("Eletromagnetismo", 11);
+INSERT INTO `Monitorando`.`Professor` (`Disciplina`, `IdUsuario`) VALUES ("Banco de dados", 16),
+("Gestão Industrial", 17),
+("Desenho técnico", 18),
+("Eletromagnetismo", 19);
 
 
 
@@ -524,15 +529,15 @@ INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A14");
 -- Table `Monitorando`.`Monitor`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitor` (
-  `Id` INT NOT NULL,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `IdUsuario` INT NOT NULL,
   `Status` ENUM('Ativo', 'Desativado', 'Verificando') NOT NULL,
   `Codigo_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Monitor_Usuario1_idx` (`Id Usuario` ASC),
+  INDEX `fk_Monitor_Usuario1_idx` (`IdUsuario` ASC),
   INDEX `fk_Monitor_Codigo1_idx` (`Codigo_Id` ASC),
   CONSTRAINT `fk_Monitor_Usuario1`
-    FOREIGN KEY (`Id Usuario`)
+    FOREIGN KEY (`IdUsuario`)
     REFERENCES `Monitorando`.`Usuario` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
@@ -553,7 +558,7 @@ VALUES (1, "Ativo", 1),
 -- Table `Monitorando`.`Monitoria`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitoria` (
-  `Id` INT NOT NULL,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `Conteudo` VARCHAR(100) NOT NULL,
   `DataHorario` DATETIME NOT NULL,
   `NumVagas` INT NOT NULL,
@@ -565,7 +570,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitoria` (
   PRIMARY KEY (`Id`),
   INDEX `fk_Monitoria_Local1_idx` (`IdLocal` ASC),
   INDEX `fk_Monitoria_Disciplina1_idx` (`IdDisciplina` ASC),
-  INDEX `fk_Monitoria_Monitor1_idx` (`Id Monitor` ASC),
+  INDEX `fk_Monitoria_Monitor1_idx` (`IdMonitor` ASC),
   CONSTRAINT `fk_Monitoria_Local1`
     FOREIGN KEY (`IdLocal`)
     REFERENCES `Monitorando`.`Local` (`Id`)
@@ -577,7 +582,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitoria` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Monitoria_Monitor1`
-    FOREIGN KEY (`Id Monitor`)
+    FOREIGN KEY (`IdMonitor`)
     REFERENCES `Monitorando`.`Monitor` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -592,7 +597,7 @@ values ("Banco de Dados - MySQL", '2020-04-22 08:30:00', 10, 4, "Monitoria para 
 -- Table `Monitorando`.`Inscricao`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Inscricao` (
-  `Id` INT NOT NULL,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `IdUsuario` INT NOT NULL,
   `IdMonitoria` INT NOT NULL,
   PRIMARY KEY (`Id`),
@@ -658,14 +663,14 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Avalicao` (
 ENGINE = InnoDB;
 
 INSERT INTO `Monitorando`.`Avalicao` ( `Conteudo`,`DataPubli`,`Nota`,`Inscricao_Id`)
-							Values("Muito boa!",01/09/2019,5,1),
-								  ("Não gostei da Monitoria,monitor sem paciência de explicar e tirar dúvidas.",07/09/2019,2,2),
-                                  ("Monitoria mediana ,monitor explicou de forma muito chata!",09/10/2019,3,3),
-                                  ("Monitoria muito boa ,monitor com uma didática muito boa.",31/09/2019,5,4),
-                                  ("Monitoria maravilhosa, monitor extremamente atencioso!",26/03/2019,4,5),
-                                  ("Simplesmente me facina ,monitoria que todos deveriam participar",26/11/2019,5,6),
-                                  ("Nunca mais voltarei a frequentar essa monitoria,muito ruim!",06/03/2019,1,7),
-                                  ("Estou dando uma estrela para poder comentar ,pois nem isso essa monitoria vale !!!",03/11/2019,1,8);
+							Values("Muito boa!","2019/09/01",5,1),
+								  ("Não gostei da Monitoria,monitor sem paciência de explicar e tirar dúvidas.","2019/09/07",2,2),
+                                  ("Monitoria mediana, monitor explicou de forma muito chata!", "2019/05/5", 3, 3),
+                                  ("Monitoria muito boa, monitor com uma didática muito boa.", "2019/06/22",5,4),
+                                  ("Monitoria maravilhosa, monitor extremamente atencioso!", "2019/02/6", 4 ,5),
+                                  ("Simplesmente me facina, monitoria que todos deveriam participar", "2019/11/29" ,5,6),
+                                  ("Nunca mais voltarei a frequentar essa monitoria, muito ruim!", "2019/06/7",1,7),
+                                  ("Estou dando uma estrela para poder comentar, pois nem isso essa monitoria vale !!!", "2019/03/8", 1,8);
                             
 
 -- -----------------------------------------------------
@@ -675,7 +680,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Arquivo` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Nome` VARCHAR(100) NULL,
   `IdMonitoria` INT NOT NULL,
-  `Local` VARCHAR(45) NOT NULL,
+  `Local` VARCHAR(300) NOT NULL,
   PRIMARY KEY (`Id`),
   INDEX `fk_Arquivo_Monitoria1_idx` (`IdMonitoria` ASC),
   CONSTRAINT `fk_Arquivo_Monitoria1`
@@ -686,8 +691,8 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Arquivo` (
 ENGINE = InnoDB;
 
 INSERT INTO `Monitorando`.`Arquivo` (`Nome`, `IdMonitoria`, `Local`)
-VALUES (`ListaExercicios.pdf`, 1, `Monitorias/Arquivos/ListaExercicios.pdf`),
-        (`Slides.pdf`, 1, `Monitorias/Arquivos/Slides.pdf`);
+VALUES ("ListaExercicios.pdf", 1, "Monitorias/Arquivos/ListaExercicios.pdf"),
+        ("Slides.pdf", 2, "Monitorias/Arquivos/Slides.pdf");
 
 
 -- -----------------------------------------------------
@@ -708,14 +713,14 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Mensagem` (
 ENGINE = InnoDB;
 
 INSERT INTO `Monitorando`.`Mensagem` (`DataHOrario`,`Conteudo`,`Inscricao_Id`)
-                        VALUES( '12/12/2019 20:12:00',"Olá,boa noite pessoal ,alguém poderia tirar uma dúvida minha?",1),
-							('12/12/2019 20:13:00',"Claro,qual seria sua dúvida?",2),
-							('12/12/2019 20:13:30',"Como faço para indetificar qual lado de um triângulo retangulo é a Hipotenusa ?",1),
-							('12/12/2019 20:14:00',"Observe o lado  oposto ao ângulo de 90°/reto ,esse lado será a Hipotenusa !",2),
-							('12/12/2019 20:14:10',"Ahh, muito obrigado!",1),
-							('12/12/2019 20:14:50',"Ahh, muito obrigado!",2),
-							('12/12/2019 20:15:,00',"Tchau,bons estudos!",2),
-							('12/12/2019 20:15:10',"Tchau,até mais...",1);
+                        VALUES( '2019/12/12 20:12:00',"Olá,boa noite pessoal ,alguém poderia tirar uma dúvida minha?",1),
+							('2019/02/07 20:13:00',"Claro,qual seria sua dúvida?",2),
+							('2019/05/6 20:13:30',"Como faço para indetificar qual lado de um triângulo retangulo é a Hipotenusa ?",1),
+							('2019/05/5 20:14:00',"Observe o lado  oposto ao ângulo de 90°/reto ,esse lado será a Hipotenusa !",2),
+							('2019/12/12 20:14:10',"Ahh, muito obrigado!",1),
+							('2019/12/12 20:14:50',"Ahh, muito obrigado!",2),
+							('2019/12/12 20:15:,00',"Tchau,bons estudos!",2),
+							('2019/12/19 20:15:10',"Tchau,até mais...",1);
 					
 
 
@@ -724,7 +729,7 @@ INSERT INTO `Monitorando`.`Mensagem` (`DataHOrario`,`Conteudo`,`Inscricao_Id`)
 -- Table `Monitorando`.`Pedido`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Pedido` (
-  `Id` INT NOT NULL,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `Motivo` TEXT NOT NULL,
   `Data` DATETIME NOT NULL,
   `Aluno_Id` INT NOT NULL,
