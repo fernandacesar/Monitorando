@@ -14,8 +14,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema Monitorando
 -- -----------------------------------------------------
-
-DROP SCHEMA `Monitorando`;
 CREATE SCHEMA IF NOT EXISTS `Monitorando` DEFAULT CHARACTER SET utf8 ;
 USE `Monitorando` ;
 
@@ -32,25 +30,20 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Usuario` (
   PRIMARY KEY (`Id`))
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fellipe Costa Reis", 0000004, "Aluno", "fcr@gmail.com", "imagem1.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fernanda Cesar da Silva", 0000003, "Aluno", "g.reis@gmail.com", "imagem2.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Kayane Rocha ", 0000002, "Aluno", "ghuyiyg@gmail.com", "imagem3.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Natália Penalva Panighel", 0000001, "Aluno", "fellipe@gmail.com", "imagem4.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Angelica Ferreira Gomes", 0000005, "Aluno", "angel.ferreira@gmail.com", "imagem5.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Jean Vitor Hass", 0000006, "Aluno", "jean.hass@gmail.com", "imagem6.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Bruno Ferreira Ribeiro", 0000007, "Aluno", "bruno.ddff@gmail.com", "imagem7.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Cristina Soares", 0000008, "Aluno", "cris.almeida@gmail.com", "imagem8.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Ana Beatriz Nascimento", 0000009, "Aluno", "bia.luscas@gmail.com", "imagem9.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Camila Cabello ", 0000010, "Aluno", "a.leao@gmail.com", "imagem10.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", 0000011, "Aluno", "camz.c@gmail.com", "imagem11.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawnmilla não é fake", 00000, "Aluno", "melhorcasal@gmail.com", "imagem12.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fernando AAAA", 22200, "Aluno", "FEFE@gmail.com", "imagem13.png/AAAAA"),
-																					  ("Adriana BBBBB", 454545, "Aluno", "dridri@gmail.com", "imagem14.png/AAAAA"),
-                                                                                      ("Giovana BBBBB", 787875, "Aluno", "gigi@gmail.com", "imagem15.png/AAAAA"),
-                                                                                      ("AAAAAAA", 555555, "Professor", "aaaaaaa@gmail.com", "imagem16.png/AAAAA"),
-                                                                                      ("zzzzzzZZZZZ", 555555, "Professor","ZAZAZZA@gmail.com", "imagem17.png/AAAAA"),
-                                                                                      ("FEFEFEFE", 555555, "Professor", "aaaaaKYKUTFaa@gmail.com", "imagem18.png/AAAAA"),
-                                                                                      ("HELPME", 555555, "Professor", "aaaRHHYRTUHRaaaa@gmail.com", "imagem19.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fellipe Costa Reis", "0000004", "Aluno", "fcr@gmail.com", "imagem1.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Fernanda Cesar da Silva", "0000003", "Aluno", "g.reis@gmail.com", "imagem2.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Kayane Rocha ", "0000002", "Aluno", "ghuyiyg@gmail.com", "imagem3.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Natália Penalva Panighel", "0000001", "Aluno", "fellipe@gmail.com", "imagem4.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Angelica Ferreira Gomes", "0000005", "Aluno", "angel.ferreira@gmail.com", "imagem5.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Jean Vitor Hass", "0000006", "Aluno", "jean.hass@gmail.com", "imagem6.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Bruno Ferreira Ribeiro", "0000007", "Aluno", "bruno.ddff@gmail.com", "imagem7.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Cristina Soares", "0000008", "Aluno", "cris.almeida@gmail.com", "imagem8.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Ana Beatriz Nascimento", "0000009", "Aluno", "bia.luscas@gmail.com", "imagem9.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Camila Cabello ", "0000010", "Aluno", "a.leao@gmail.com", "imagem10.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", "0000011", "Aluno", "camz.c@gmail.com", "imagem11.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawnmilla não é fake", "00000", "Aluno", "melhorcasal@gmail.com", "imagem12.png/AAAAA");
+
+
 
 
 
@@ -107,24 +100,24 @@ INSERT INTO `Monitorando`.`Turma` (`Numero`, `Curso_Id`) VALUES
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Aluno` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Status` ENUM('Monitor', 'Comum') NOT NULL,
-  `IdUsuario` INT NOT NULL,
-  `Id Turma` INT NOT NULL,
+  `Id_Usuario` INT NOT NULL,
+  `Id_Turma` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Aluno_Usuario1_idx` (`IdUsuario` ASC),
-  INDEX `fk_Aluno_Turma1_idx` (`Id Turma` ASC),
+  INDEX `fk_Aluno_Usuario1_idx` (`Id_Usuario` ASC),
+  INDEX `fk_Aluno_Turma1_idx` (`Id_Turma` ASC),
   CONSTRAINT `fk_Aluno_Usuario1`
-    FOREIGN KEY (`IdUsuario`)
+    FOREIGN KEY (`Id_Usuario`)
     REFERENCES `Monitorando`.`Usuario` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Aluno_Turma1`
-    FOREIGN KEY (`Id Turma`)
+    FOREIGN KEY (`Id_Turma`)
     REFERENCES `Monitorando`.`Turma` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Aluno` (`Status`, `IdUsuario`, `Id Turma`)
+INSERT INTO `Monitorando`.`Aluno` (`Status`,`Id_Usuario`, `Id_Turma`)
 VALUES ("Monitor", 1, 3),
 ("Comum", 2, 1),
 ("Monitor", 3, 2),
@@ -330,7 +323,7 @@ VALUES
 -- Table `Monitorando`.`Disciplina`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Disciplina` (
-  `Id` INT NOT NULL auto_increment,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `Nome` VARCHAR(45) NOT NULL,
   `Curso_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
@@ -343,33 +336,32 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Disciplina` (
 ENGINE = InnoDB;
 
 
-INSERT INTO `Monitorando`.`Disciplina` (`Nome`,`Curso_Id`) 
-VALUES
-("Gestão Industrial", 5),
+INSERT INTO `Monitorando`.`Disciplina` (`Nome`, `Curso_Id`) 
+VALUES ("Gestão Industrial", 5),
 ("Informática", 5),
 ("Sistemas computacionais", 5),
 ("Lógica 1", 5),
 ("Lógica 2", 5),
-("Linguagem de programação 1",  5),
-("Projeto integrador",  5),
+("Linguagem de programação 1", 5),
+("Projeto integrador", 5),
 ("Redes de computadores e internet", 5),
 ("Banco de dados", 5),
-("Linguagem de programação 2",  5),
+("Linguagem de programação 2", 5),
 ("Linguagem de programação 3", 5),
-("Teoria e desenvolvimento de sistemas",  5),
-("Tópicos profissionais",  5),
+("Teoria e desenvolvimento de sistemas", 5),
+("Tópicos profissionais", 5),
 ("Aplicações para Web 1", 5),
-("Prática do desenvolvimento de sistemas",  5),
-("Aplicações para Web 2",  5),
-("Segurança da informação",  5),
+("Prática do desenvolvimento de sistemas", 5),
+("Aplicações para Web 2", 5),
+("Segurança da informação", 5),
 
-("Desenho técnico",  7),
+("Desenho técnico", 7),
 ("Gestão industrial", 7),
-("Eletricidade básica", 7),
+("Eletricidade básica",  7),
 ("Eletrônica digital 1", 7),
 ("Laboratório de electricidade", 7),
 ("Circuitos elétricos", 7),
-("Desenho técniclo eletrônico", 7),
+("Desenho técniclo eletrônico",7),
 ("Eletrônica 1", 7),
 ("Eletrônica aplicada 1", 7),
 ("Eletrônica digital 2", 7),
@@ -386,33 +378,33 @@ VALUES
 ("Projetos eletrônicos", 7),
 
 
-("Gestão Industrial", 8),
+("Gestão Industrial",8),
 ("Eletricidade 1", 8),
 ("Eletromagnetismo", 8),
-("Laboratório de eletrotécnica 1", 8),
+("Laboratório de eletrotécnica 1",8),
 ("Eletricidade 2", 8),
-("Desenho técnico", 8),
+("Desenho técnico",8),
 ("Instalações elétricas 1", 8),
 ("Eletrônica", 8),
 ("Laboratório de eletrotécnica 2", 8),
-("Segurança e gestão do trabalho", 8),
+("Segurança e gestão do trabalho",8),
 ("Eletricidade 3", 8),
 ("Medidas elétricas", 8),
 ("Laboratório de eletrotécnica 3", 8),
 ("Instalações elétricas 2", 8),
 ("Máquinas elétricas 1", 8),
-("Maquinas elétricas 2", 8),
+("Maquinas elétricas 2",8),
 ("Geração, transmissão e distribuição", 8),
 ("Segurança 2 - NR 10", 8),
-("Eficiência energética", 8),
+("Eficiência energética",8),
 ("Automação", 8),
 
 
-("Materiais de construção mecânica", 6),
-("Metrologia", 6),
-("Segurança do trabalho", 6),
+("Materiais de construção mecânica",6),
+("Metrologia",6),
+("Segurança do trabalho",6),
 ("Mecânica técnica", 6),
-("Desenho auxiliado por computador", 6),
+("Desenho auxiliado por computador",6),
 ("Eletricidade", 6),
 ("Máquinas, ferramentas e dispositivos", 6),
 ("Prática em mecânica 1", 6),
@@ -421,7 +413,7 @@ VALUES
 ("Laboratório de mecânica 1", 6),
 ("Prática em mecânica 2", 6),
 ("Máquinas e aparelhos mecânicos", 6),
-("Laboratório de mecânica 2", 6),
+("Laboratório de mecânica 2",6),
 ("Projetos de máquinas e dispositivos", 6),
 ("Metodologia do trabalho científico", 6),
 ("Gestão industrial", 6),
@@ -432,13 +424,13 @@ VALUES
 ("Inglês 3", 1),
 ("Língua portuguesa e literatura 1", 1),
 ("Língua portuguesa e literatura 2", 1),
-("Língua portuguesa e literatura 3", 1),
-("Língua portuguesa e literatura 4", 1),
-("Educação física 1", 1),
-("Educação física 2", 1),
-("Educação física 3", 1),
-("Espanhol 1", 1),
-("Espanhol 2", 1),
+("Língua portuguesa e literatura 3",1),
+("Língua portuguesa e literatura 4",1),
+("Educação física 1",1),
+("Educação física 2",1),
+("Educação física 2",1),
+("Espanhol 1",1),
+("Espanhol 2",1),
 ("Libras 1", 1),
 ("Libras 2", 1),
 ("Artes 4", 1),
@@ -455,7 +447,7 @@ VALUES
 ("Geografia 2", 3),
 ("Geografia 3", 3),
 ("Sociologia 1", 3),
-("Sociologia 2", 3),
+("Sociologia 2",3),
 ("Sociologia 3", 3),
 ("Filosofia 1", 3),
 ("Filosofia 2", 3),
@@ -466,7 +458,7 @@ VALUES
 ("Biologia 3", 4),
 ("Física 1", 4),
 ("Física 2", 4),
-("Física 3", 4),
+("Física 3",4),
 ("Química 1", 4),
 ("Química 2", 4),
 ("Química 3", 4);
@@ -479,22 +471,22 @@ VALUES
 -- Table `Monitorando`.`Professor`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Professor` (
-  `Id` INT NOT NULL  AUTO_INCREMENT,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `Disciplina` VARCHAR(60) NOT NULL,
-  `IdUsuario` INT NOT NULL,
+  `Id_Usuario` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Professor_Usuario1_idx` (`IdUsuario` ASC),
+  INDEX `fk_Professor_Usuario1_idx` (`Id_Usuario` ASC),
   CONSTRAINT `fk_Professor_Usuario1`
-    FOREIGN KEY (`IdUsuario`)
+    FOREIGN KEY (`Id_Usuario`)
     REFERENCES `Monitorando`.`Usuario` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Professor` (`Disciplina`, `IdUsuario`) VALUES ("Banco de dados", 16),
-("Gestão Industrial", 17),
-("Desenho técnico", 18),
-("Eletromagnetismo", 19);
+INSERT INTO `Monitorando`.`Professor` (`Disciplina`, `Id_Usuario`) VALUES ("Banco de dados", 8),
+("Gestão Industrial", 9),
+("Desenho técnico", 10),
+("Eletromagnetismo", 11);
 
 
 
@@ -529,15 +521,15 @@ INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A14");
 -- Table `Monitorando`.`Monitor`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitor` (
-  `Id` INT NOT NULL AUTO_INCREMENT,
-  `IdUsuario` INT NOT NULL,
+  `Id` INT NOT NULL AUTO_INCREMENT ,
+  `Id_Usuario` INT NOT NULL,
   `Status` ENUM('Ativo', 'Desativado', 'Verificando') NOT NULL,
   `Codigo_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Monitor_Usuario1_idx` (`IdUsuario` ASC),
+  INDEX `fk_Monitor_Usuario1_idx` (`Id_Usuario` ASC),
   INDEX `fk_Monitor_Codigo1_idx` (`Codigo_Id` ASC),
   CONSTRAINT `fk_Monitor_Usuario1`
-    FOREIGN KEY (`IdUsuario`)
+    FOREIGN KEY (`Id_Usuario`)
     REFERENCES `Monitorando`.`Usuario` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
@@ -548,7 +540,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitor` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Monitor` (`IdUsuario`, `Status`, `Codigo_Id`)
+INSERT INTO `Monitorando`.`Monitor` (`Id_Usuario`, `Status`, `Codigo_Id`)
 VALUES (1, "Ativo", 1),
 (3, "Desativado", 2),
 (5, "Verificando", 3);
@@ -564,57 +556,56 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitoria` (
   `NumVagas` INT NOT NULL,
   `NumInscritos` INT NOT NULL,
   `Descricao` MEDIUMTEXT NOT NULL,
-  `IdLocal` INT NOT NULL,
-  `IdDisciplina` INT NOT NULL,
-  `IdMonitor` INT NOT NULL,
+  `Id_Local` INT NOT NULL,
+  `Id_Disciplina` INT NOT NULL,
+  `Id_Monitor` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Monitoria_Local1_idx` (`IdLocal` ASC),
-  INDEX `fk_Monitoria_Disciplina1_idx` (`IdDisciplina` ASC),
-  INDEX `fk_Monitoria_Monitor1_idx` (`IdMonitor` ASC),
+  INDEX `fk_Monitoria_Local1_idx` (`Id_Local` ASC),
+  INDEX `fk_Monitoria_Disciplina1_idx` (`Id_Disciplina` ASC),
+  INDEX `fk_Monitoria_Monitor1_idx` (`Id_Monitor` ASC),
   CONSTRAINT `fk_Monitoria_Local1`
-    FOREIGN KEY (`IdLocal`)
+    FOREIGN KEY (`Id_Local`)
     REFERENCES `Monitorando`.`Local` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Monitoria_Disciplina1`
-    FOREIGN KEY (`IdDisciplina`)
+    FOREIGN KEY (`Id_Disciplina`)
     REFERENCES `Monitorando`.`Disciplina` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Monitoria_Monitor1`
-    FOREIGN KEY (`IdMonitor`)
+    FOREIGN KEY (`Id_Monitor`)
     REFERENCES `Monitorando`.`Monitor` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Monitoria` ( `Conteudo`, `DataHorario`, `NumVagas`, `NumInscritos`, `Descricao`, `IdLocal`, `IdDisciplina`, `IdMonitor`) 
+INSERT INTO `Monitorando`.`Monitoria` ( `Conteudo`, `DataHorario`, `NumVagas`, `NumInscritos`, `Descricao`, `Id_Local`, `Id_Disciplina`, `Id_Monitor`) 
 values ("Banco de Dados - MySQL", '2020-04-22 08:30:00', 10, 4, "Monitoria para retirar dúvidas sobre mySQL.", 32,  9, 1),
-	   ("Criação de Tabelas - MySQL Workbench", '2019-10-22 14:45:00' , 20, 4,  "Monitoria para retirar dúvidas sobre a criação e ralacionamento de tabelas ultizando MySQL Workbench", 32,  9, 2), 
-       ("PJI", '2019-10-22 15:45:00', 15, 15, "Plantão para reitar dúvidas sobre o banco de dados do projeto",32,  9, 3);
+	   ("Criação de Tabelas - MySQL Workbench", '2019-10-22 14:45:00' , 20, 4,  "Monitoria para retirar dúvidas sobre a criação e ralacionamento de tabelas ultizando MySQL Workbench", 32,  9, 2);
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Inscricao`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Inscricao` (
-  `Id` INT NOT NULL AUTO_INCREMENT,
-  `IdUsuario` INT NOT NULL,
-  `IdMonitoria` INT NOT NULL,
+  `Id` INT NOT NULL   AUTO_INCREMENT,
+  `Id_Usuario` INT NOT NULL,
+  `Id_Monitoria` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Inscricao_Usuario1_idx` (`IdUsuario` ASC),
-  INDEX `fk_Inscricao_Monitoria1_idx` (`IdMonitoria` ASC),
+  INDEX `fk_Inscricao_Usuario1_idx` (`Id_Usuario` ASC),
+  INDEX `fk_Inscricao_Monitoria1_idx` (`Id_Monitoria` ASC),
   CONSTRAINT `fk_Inscricao_Usuario1`
-    FOREIGN KEY (`IdUsuario`)
+    FOREIGN KEY (`Id_Usuario`)
     REFERENCES `Monitorando`.`Usuario` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Inscricao_Monitoria1`
-    FOREIGN KEY (`IdMonitoria`)
+    FOREIGN KEY (`Id_Monitoria`)
     REFERENCES `Monitorando`.`Monitoria` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-INSERT INTO `Monitorando`.`Inscricao` (`IdUsuario`, `IdMonitoria`) 
+INSERT INTO `Monitorando`.`Inscricao` (`Id_Usuario`, `Id_Monitoria`) 
 	values( 1, 1),
 		  ( 2, 1),
 		  ( 3, 1),
@@ -622,26 +613,7 @@ INSERT INTO `Monitorando`.`Inscricao` (`IdUsuario`, `IdMonitoria`)
           ( 5, 2),
 		  ( 6, 2),
 		  ( 7, 2),
-		  ( 8, 2),
-          (1, 3),
-          (2, 3),
-          (3,3),
-          (4,3),
-          (5,3),
-          (6,3),
-          (7,3),
-          (8,3),
-          (8,3),
-          (9,3),
-          (10,3),
-          (11,3),
-          (12,3),
-          (13,3),
-          (14,3),
-          (15,3);
-          
-	
-          
+		  ( 8, 2);
 
 
 -- -----------------------------------------------------
@@ -662,7 +634,6 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Avalicao` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-<<<<<<< HEAD
 INSERT INTO `Monitorando`.`Avalicao` ( `Conteudo`,`DataPubli`,`Nota`,`Inscricao_Id`)VALUES("Muito boa!",01/09/2019,5,1),
 																						  ("Não gostei da Monitoria,monitor sem paciência de explicar e tirar dúvidas.",07/09/2019,2,2),
 																						  ("Monitoria mediana ,monitor explicou de forma muito chata!",09/10/2019,3,3),
@@ -671,18 +642,6 @@ INSERT INTO `Monitorando`.`Avalicao` ( `Conteudo`,`DataPubli`,`Nota`,`Inscricao_
 																						  ("Simplesmente me facina ,monitoria que todos deveriam participar",26/11/2019,5,6),
 																						  ("Nunca mais voltarei a frequentar essa monitoria,muito ruim!",06/03/2019,1,7),
 																						  ("Estou dando uma estrela para poder comentar ,pois nem isso essa monitoria vale !!!",03/11/2019,1,8);
-=======
-INSERT INTO `Monitorando`.`Avalicao` ( `Conteudo`,`DataPubli`,`Nota`,`Inscricao_Id`)
-							Values("Muito boa!","2019/09/01",5,1),
-								  ("Não gostei da Monitoria,monitor sem paciência de explicar e tirar dúvidas.","2019/09/07",2,2),
-                                  ("Monitoria mediana, monitor explicou de forma muito chata!", "2019/05/5", 3, 3),
-                                  ("Monitoria muito boa, monitor com uma didática muito boa.", "2019/06/22",5,4),
-                                  ("Monitoria maravilhosa, monitor extremamente atencioso!", "2019/02/6", 4 ,5),
-                                  ("Simplesmente me facina, monitoria que todos deveriam participar", "2019/11/29" ,5,6),
-                                  ("Nunca mais voltarei a frequentar essa monitoria, muito ruim!", "2019/06/7",1,7),
-                                  ("Estou dando uma estrela para poder comentar, pois nem isso essa monitoria vale !!!", "2019/03/8", 1,8);
-                            
->>>>>>> 3878c910bb2bba4ec483bafc7c4c9b05c7e5c9ea
 
 
 select * from `Avalicao`;
@@ -692,20 +651,20 @@ select * from `Avalicao`;
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Arquivo` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Nome` VARCHAR(100) NULL,
-  `IdMonitoria` INT NOT NULL,
-  `Local` VARCHAR(300) NOT NULL,
+  `Id_Monitoria` INT NOT NULL,
+  `Local` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Arquivo_Monitoria1_idx` (`IdMonitoria` ASC),
+  INDEX `fk_Arquivo_Monitoria1_idx` (`Id_Monitoria` ASC),
   CONSTRAINT `fk_Arquivo_Monitoria1`
-    FOREIGN KEY (`IdMonitoria`)
+    FOREIGN KEY (`Id_Monitoria`)
     REFERENCES `Monitorando`.`Monitoria` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Arquivo` (`Nome`, `IdMonitoria`, `Local`)
-VALUES ("ListaExercicios.pdf", 1, "Monitorias/Arquivos/ListaExercicios.pdf"),
-        ("Slides.pdf", 2, "Monitorias/Arquivos/Slides.pdf");
+INSERT INTO `Monitorando`.`Arquivo` (`Nome`, `Id_Monitoria`, `Local`)
+VALUES (`ListaExercicios.pdf`, 1, `Monitorias/Arquivos/ListaExercicios.pdf`),
+        (`Slides.pdf`, 1, `Monitorias/Arquivos/Slides.pdf`);
 
 
 -- -----------------------------------------------------
@@ -725,36 +684,24 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Mensagem` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-<<<<<<< HEAD
 INSERT INTO `Monitorando`.`Mensagem` (`DataHorario`,`Conteudo`,`Inscricao_Id`)
                         VALUES( '12/12/2019 20:12:00',"Olá,boa noite pessoal ,alguém poderia tirar uma dúvida minha?",1),
-							(12/12/2019 20:13:00,"Claro,qual seria sua dúvida?",2),
-							(12/12/2019 20:13:30,"Como faço para indetificar qual lado de um triângulo retangulo é a Hipotenusa ?",1),
-							(12/12/2019 20:14:00,"Observe o lado  oposto ao ângulo de 90°/reto ,esse lado será a Hipotenusa !",2),
-							(12/12/2019 20:14:10,"Ahh, muito obrigado!",1),
-							(12/12/2019 20:14:50,"Ahh, muito obrigado!",2),
-							(12/12/2019 20:15:00,"Tchau,bons estudos!",2),
-							(12/12/2019 20:15:10,"Tchau,até mais...",1);
-=======
-INSERT INTO `Monitorando`.`Mensagem` (`DataHOrario`,`Conteudo`,`Inscricao_Id`)
-                        VALUES( '2019/12/12 20:12:00',"Olá,boa noite pessoal ,alguém poderia tirar uma dúvida minha?",1),
-							('2019/02/07 20:13:00',"Claro,qual seria sua dúvida?",2),
-							('2019/05/6 20:13:30',"Como faço para indetificar qual lado de um triângulo retangulo é a Hipotenusa ?",1),
-							('2019/05/5 20:14:00',"Observe o lado  oposto ao ângulo de 90°/reto ,esse lado será a Hipotenusa !",2),
-							('2019/12/12 20:14:10',"Ahh, muito obrigado!",1),
-							('2019/12/12 20:14:50',"Ahh, muito obrigado!",2),
-							('2019/12/12 20:15:,00',"Tchau,bons estudos!",2),
-							('2019/12/19 20:15:10',"Tchau,até mais...",1);
->>>>>>> 3878c910bb2bba4ec483bafc7c4c9b05c7e5c9ea
+							('12-12-19 20:13:00',"Claro,qual seria sua dúvida?",2),
+							('12-12-19 20:13:30',"Como faço para indetificar qual lado de um triângulo retangulo é a Hipotenusa ?",1),
+							('12-12-19 20:14:00',"Observe o lado  oposto ao ângulo de 90°/reto ,esse lado será a Hipotenusa !",2),
+							('12-12-19 20:14:10',"Ahh, muito obrigado!",1),
+							('12-12-19 20:14:50',"Ahh, muito obrigado!",2),
+							('12-12-19 20:15:00',"Tchau,bons estudos!",2),
+							('12-12-19 20:15:10',"Tchau,até mais...",1);
 					
 
-select * from `Mensagem`;
+Select * from `Mensagem`;
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Pedido`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Pedido` (
-  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Id` INT NOT NULL,
   `Motivo` TEXT NOT NULL,
   `Data` DATETIME NOT NULL,
   `Aluno_Id` INT NOT NULL,
