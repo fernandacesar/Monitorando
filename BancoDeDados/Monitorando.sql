@@ -635,17 +635,17 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Avalicao` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Avalicao` ( `Conteudo`,`DataPubli`,`Nota`,`Inscricao_Id`)
-							Values("Muito boa!",01/09/2019,5,1),
-								  ("Não gostei da Monitoria,monitor sem paciência de explicar e tirar dúvidas.",07/09/2019,2,2),
-                                  ("Monitoria mediana ,monitor explicou de forma muito chata!",09/10/2019,3,3),
-                                  ("Monitoria muito boa ,monitor com uma didática muito boa.",31/09/2019,5,4),
-                                  ("Monitoria maravilhosa, monitor extremamente atencioso!",26/03/2019,4,5),
-                                  ("Simplesmente me facina ,monitoria que todos deveriam participar",26/11/2019,5,6),
-                                  ("Nunca mais voltarei a frequentar essa monitoria,muito ruim!",06/03/2019,1,7),
-                                  ("Estou dando uma estrela para poder comentar ,pois nem isso essa monitoria vale !!!",03/11/2019,1,8);
-                            
+INSERT INTO `Monitorando`.`Avalicao` ( `Conteudo`,`DataPubli`,`Nota`,`Inscricao_Id`)VALUES("Muito boa!",01/09/2019,5,1),
+																						  ("Não gostei da Monitoria,monitor sem paciência de explicar e tirar dúvidas.",07/09/2019,2,2),
+																						  ("Monitoria mediana ,monitor explicou de forma muito chata!",09/10/2019,3,3),
+																						  ("Monitoria muito boa ,monitor com uma didática muito boa.",31/09/2019,5,4),
+																						  ("Monitoria maravilhosa, monitor extremamente atencioso!",26/03/2019,4,5),
+																						  ("Simplesmente me facina ,monitoria que todos deveriam participar",26/11/2019,5,6),
+																						  ("Nunca mais voltarei a frequentar essa monitoria,muito ruim!",06/03/2019,1,7),
+																						  ("Estou dando uma estrela para poder comentar ,pois nem isso essa monitoria vale !!!",03/11/2019,1,8);
 
+
+select * from `Avalicao`;
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Arquivo`
 -- -----------------------------------------------------
@@ -685,18 +685,18 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Mensagem` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Mensagem` (`DataHOrario`,`Conteudo`,`Inscricao_Id`)
+INSERT INTO `Monitorando`.`Mensagem` (`DataHorario`,`Conteudo`,`Inscricao_Id`)
                         VALUES( '12/12/2019 20:12:00',"Olá,boa noite pessoal ,alguém poderia tirar uma dúvida minha?",1),
-							('12/12/2019 20:13:00',"Claro,qual seria sua dúvida?",2),
-							('12/12/2019 20:13:30',"Como faço para indetificar qual lado de um triângulo retangulo é a Hipotenusa ?",1),
-							('12/12/2019 20:14:00',"Observe o lado  oposto ao ângulo de 90°/reto ,esse lado será a Hipotenusa !",2),
-							('12/12/2019 20:14:10',"Ahh, muito obrigado!",1),
-							('12/12/2019 20:14:50',"Ahh, muito obrigado!",2),
-							('12/12/2019 20:15:,00',"Tchau,bons estudos!",2),
-							('12/12/2019 20:15:10',"Tchau,até mais...",1);
+							(12/12/2019 20:13:00,"Claro,qual seria sua dúvida?",2),
+							(12/12/2019 20:13:30,"Como faço para indetificar qual lado de um triângulo retangulo é a Hipotenusa ?",1),
+							(12/12/2019 20:14:00,"Observe o lado  oposto ao ângulo de 90°/reto ,esse lado será a Hipotenusa !",2),
+							(12/12/2019 20:14:10,"Ahh, muito obrigado!",1),
+							(12/12/2019 20:14:50,"Ahh, muito obrigado!",2),
+							(12/12/2019 20:15:00,"Tchau,bons estudos!",2),
+							(12/12/2019 20:15:10,"Tchau,até mais...",1);
 					
 
-
+select * from `Mensagem`;
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Pedido`
