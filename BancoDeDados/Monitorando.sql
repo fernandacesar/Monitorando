@@ -14,6 +14,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema Monitorando
 -- -----------------------------------------------------
+drop schema `Monitorando`;
 CREATE SCHEMA IF NOT EXISTS `Monitorando` DEFAULT CHARACTER SET utf8 ;
 USE `Monitorando` ;
 
@@ -26,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Usuario` (
   `Senha` VARCHAR(100) NOT NULL,
   `Tipo` ENUM('Aluno', 'Professor') NOT NULL,
   `Email` VARCHAR(50) NOT NULL,
-  `Foto` VARCHAR(45) NULL,
+  `Foto` VARCHAR(45) ,
   PRIMARY KEY (`Id`))
 ENGINE = InnoDB;
 
@@ -38,15 +39,15 @@ INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) V
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Jean Vitor Hass", "0000006", "Aluno", "jean.hass@gmail.com", "imagem6.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Bruno Ferreira Ribeiro", "0000007", "Aluno", "bruno.ddff@gmail.com", "imagem7.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Cristina Soares", "0000008", "Aluno", "cris.almeida@gmail.com", "imagem8.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Ana Beatriz Nascimento", "0000009", "Aluno", "bia.luscas@gmail.com", "imagem9.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Ana Beatriz Nascimento", "0000009", "Aluno", "bia.luscas@gmail.com","");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Camila Cabello ", "0000010", "Aluno", "a.leao@gmail.com", "imagem10.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", "0000011", "Aluno", "camz.c@gmail.com", "imagem11.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawnmilla não é fake", "00000", "Aluno", "melhorcasal@gmail.com", "imagem12.png/AAAAA");
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Adriana Ribas", "00000", "Aluno", "adr.tibas@gmail.com","" );
 
 
 
 
-
+select * from `Monitorando`.`Usuario`;
 
 
 -- -----------------------------------------------------
@@ -67,6 +68,7 @@ INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Mecanica Integrado");
 INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletronica Integrado");
 INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletrotecnica Integrado");
 
+select * from `Curso`;
 
 
 -- -----------------------------------------------------
@@ -93,8 +95,9 @@ INSERT INTO `Monitorando`.`Turma` (`Numero`, `Curso_Id`) VALUES
 
 
 
+select * from `Turma`;
 
--- -----------------------------------------------------
+--------------------------------------------------------
 -- Table `Monitorando`.`Aluno`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Aluno` (
@@ -126,6 +129,8 @@ VALUES ("Monitor", 1, 3),
 ("Comum", 6, 2),
 ("Comum", 7, 1),
 ("Comum", 11, 8);
+
+select * from `Aluno`;
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Local`
@@ -317,7 +322,7 @@ VALUES
 ("H213", "Sala", "Bloco H"),
 ("H217", "Sala", "Bloco H");
 
-
+select * from `Local`;
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Disciplina`
@@ -464,7 +469,7 @@ VALUES ("Gestão Industrial", 5),
 ("Química 3", 4);
 
 
-
+select * from `Disciplina`;
 
 
 -- -----------------------------------------------------
@@ -488,7 +493,7 @@ INSERT INTO `Monitorando`.`Professor` (`Disciplina`, `Id_Usuario`) VALUES ("Banc
 ("Desenho técnico", 10),
 ("Eletromagnetismo", 11);
 
-
+select * from `Professor`;
 
 
 -- -----------------------------------------------------
@@ -514,7 +519,7 @@ INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A12");
 INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A13");
 INSERT INTO `Monitorando`.`Codigo` (`Codigo`) VALUES ("A14");
 
-
+select * from `Codigo`;
 
 
 -- -----------------------------------------------------
@@ -545,7 +550,7 @@ VALUES (1, "Ativo", 1),
 (3, "Desativado", 2),
 (5, "Verificando", 3);
 
-
+select * from `Monitor`;
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Monitoria`
 -- -----------------------------------------------------
@@ -581,8 +586,18 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitoria` (
 ENGINE = InnoDB;
 
 INSERT INTO `Monitorando`.`Monitoria` ( `Conteudo`, `DataHorario`, `NumVagas`, `NumInscritos`, `Descricao`, `Id_Local`, `Id_Disciplina`, `Id_Monitor`) 
-values ("Banco de Dados - MySQL", '2020-04-22 08:30:00', 10, 4, "Monitoria para retirar dúvidas sobre mySQL.", 32,  9, 1),
-	   ("Criação de Tabelas - MySQL Workbench", '2019-10-22 14:45:00' , 20, 4,  "Monitoria para retirar dúvidas sobre a criação e ralacionamento de tabelas ultizando MySQL Workbench", 32,  9, 2);
+values ("Banco de Dados - MySQL", '2020-04-22 08:30:00', 10, 4, "Monitoria para retirar dúvidas sobre mySQL.", 1,  9, 1),
+	   ("Criação de Tabelas - MySQL Workbench", '2019-10-22 14:45:00' , 20, 13,  "Monitoria para retirar dúvidas sobre a criação e ralacionamento de tabelas ultizando MySQL Workbench", 2,  9, 2),
+       ("Trigonometria", '2019-10-27 13:15:00' , 50, 4,  "Monitoria destinada a pessoas que estão com dúvidas em Trigonometria, ou querem aprofundar seus estudos sobre o assunto", 3,  93, 2),
+       ("Números Complexos", '2019-09-27 13:15:00' , 45, 4,  "Vamos juntos obter conhecimento sobre Números Complexos!", 1,  93, 1),
+	   ("Matrizes", '2019-10-27 13:15:00' , 25, 18,  "Vamos juntos obter conhecimento sobre Números Complexos!", 10,  93, 1),
+       ("Sistema Lineares", '2020-04-22 7:15:00', 20, 9, "Sistemas Lineares não são monstros,venha descobrir", 15,  93, 2),
+	   ("Funções Afins", '2019-10-22 11:45:00' , 60, 7,  "Monitoria para quem deseja realmente ententer o assunto, sendo explicado de uma forma mais tranquila e sólida!", 33,  92, 2),
+       ("Funções Quadráticas", '2019-08-12 11:15:00' , 50, 45,  "Monitoria destinada a pessoas que estão com dúvidas em Trigonometria, ou querem aprofundar seus estudos sobre o assunto", 31,  92, 2),
+       ("Função Exponêncial", '2019-09-17 18:15:00' , 35, 20,  "Vamos juntos obter conhecimento sobre Números Complexos!", 31,  92, 2),
+	   ("Funções logarítmicas", '2019-04-14 9:15:00' , 40, 36,  "Vamos juntos obter conhecimento sobre Números Complexos!", 31,  92, 1);
+
+select * from  `Monitoria`;
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Inscricao`
@@ -615,6 +630,7 @@ INSERT INTO `Monitorando`.`Inscricao` (`Id_Usuario`, `Id_Monitoria`)
 		  ( 7, 2),
 		  ( 8, 2);
 
+select * from `Inscricao`; 
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Avalicao`
@@ -634,17 +650,18 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Avalicao` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Avalicao` ( `Conteudo`,`DataPubli`,`Nota`,`Inscricao_Id`)VALUES("Muito boa!",01/09/2019,5,1),
-																						  ("Não gostei da Monitoria,monitor sem paciência de explicar e tirar dúvidas.",07/09/2019,2,2),
-																						  ("Monitoria mediana ,monitor explicou de forma muito chata!",09/10/2019,3,3),
-																						  ("Monitoria muito boa ,monitor com uma didática muito boa.",31/09/2019,5,4),
-																						  ("Monitoria maravilhosa, monitor extremamente atencioso!",26/03/2019,4,5),
-																						  ("Simplesmente me facina ,monitoria que todos deveriam participar",26/11/2019,5,6),
-																						  ("Nunca mais voltarei a frequentar essa monitoria,muito ruim!",06/03/2019,1,7),
-																						  ("Estou dando uma estrela para poder comentar ,pois nem isso essa monitoria vale !!!",03/11/2019,1,8);
+INSERT INTO `Monitorando`.`Avalicao` (`Conteudo`,`DataPubli`,`Nota`,`Inscricao_Id`)VALUES("Muito boa!",'2019-01-10',5,1),
+																						  ("Não gostei da Monitoria,monitor sem paciência de explicar e tirar dúvidas.",'2019-01-10',2,2),
+																						  ("Monitoria mediana ,monitor explicou de forma muito chata!",'2019-01-10',3,3),
+																						  ("Monitoria muito boa ,monitor com uma didática muito boa.",'2019-01-10',5,4),
+																						  ("Monitoria maravilhosa, monitor extremamente atencioso!",'2019-01-10',4,5),
+																						  ("Simplesmente me facina ,monitoria que todos deveriam participar",'2019-01-10',5,6),
+																						  ("Nunca mais voltarei a frequentar essa monitoria,muito ruim!",'2019-01-10',1,7),
+																						  ("Estou dando uma estrela para poder comentar ,pois nem isso essa monitoria vale !!!",'2019-01-10',1,8);
 
 
 select * from `Avalicao`;
+
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Arquivo`
 -- -----------------------------------------------------
@@ -652,7 +669,7 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Arquivo` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Nome` VARCHAR(100) NULL,
   `Id_Monitoria` INT NOT NULL,
-  `Local` VARCHAR(45) NOT NULL,
+  `Local` VARCHAR(60) NOT NULL,
   PRIMARY KEY (`Id`),
   INDEX `fk_Arquivo_Monitoria1_idx` (`Id_Monitoria` ASC),
   CONSTRAINT `fk_Arquivo_Monitoria1`
@@ -663,9 +680,20 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Arquivo` (
 ENGINE = InnoDB;
 
 INSERT INTO `Monitorando`.`Arquivo` (`Nome`, `Id_Monitoria`, `Local`)
-VALUES (`ListaExercicios.pdf`, 1, `Monitorias/Arquivos/ListaExercicios.pdf`),
-        (`Slides.pdf`, 1, `Monitorias/Arquivos/Slides.pdf`);
-
+VALUES ("ListaExercicios.pdf", 1, "Monitorias/Arquivos/ListaExercicios.pdf"),
+			   ("Slides.pdf", 1, "Monitorias/Arquivos/Slides.pdf"),
+			   ("ListaExercicios_Trigonomeria.pdf", 3, "Monitorias/Arquivos/ListaExercicios_Trigonomeria.pdf"),
+			   ("ListaExercicios_NumeroComplexos.pdf", 4, "Monitorias/Arquivos/ListaExercicios_NumeroComplexos"), 
+			   ("ListaExercicios_FuncaoAfim.pdf", 7, "Monitorias/Arquivos/ListaExercicios_FuncaoAfim.pdf"),
+			   ("Formulas_FuncaoAfim.pdf",7, "Monitorias/Arquivos/Formulas_FuncaoAfim.pdf"),
+			   ("Formulas_NumerosComplexos.pdf", 4, "Monitorias/Arquivos/Formulas_NumerosComplexos.pdf"),
+			   ("ListaExercicios_FuncaoExponencial.pdf", 9, "Monitorias/Arquivos/ListaExercicios_FuncaoExponencial.pdf"),
+			   ("Teoria_ComoCalcularRo.pdf", 3, "Monitorias/Arquivos/Teoria_ComoCalcular.pdf"),
+			   ("Lista_Parabolas.pdf", 8, "Monitorias/Arquivos/Lista_Parabolas.pdf"),
+               ("ListaMatrizes.pdf", 5, "Monitorias/Arquivos/ListaMatrizes.pdf"),
+               ("TeoremaGauss.pdf",6,"Monitorias/Arquivos/TeoremaGauss.pdf");
+			
+select * from `Arquivo`;
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Mensagem`
@@ -685,23 +713,28 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Mensagem` (
 ENGINE = InnoDB;
 
 INSERT INTO `Monitorando`.`Mensagem` (`DataHorario`,`Conteudo`,`Inscricao_Id`)
-                        VALUES( '12/12/2019 20:12:00',"Olá,boa noite pessoal ,alguém poderia tirar uma dúvida minha?",1),
-							('12-12-19 20:13:00',"Claro,qual seria sua dúvida?",2),
-							('12-12-19 20:13:30',"Como faço para indetificar qual lado de um triângulo retangulo é a Hipotenusa ?",1),
-							('12-12-19 20:14:00',"Observe o lado  oposto ao ângulo de 90°/reto ,esse lado será a Hipotenusa !",2),
-							('12-12-19 20:14:10',"Ahh, muito obrigado!",1),
-							('12-12-19 20:14:50',"Ahh, muito obrigado!",2),
-							('12-12-19 20:15:00',"Tchau,bons estudos!",2),
-							('12-12-19 20:15:10',"Tchau,até mais...",1);
-					
-
+                        VALUES('2019-08-23 20:12:00',"Olá,boa noite pessoal ,alguém poderia tirar uma dúvida minha?",1),
+							('2019-08-23 20:13:00',"Claro,qual seria sua dúvida?",2),
+							('2019-08-23 20:13:30',"Como faço para indetificar qual lado de um triângulo retangulo é a Hipotenusa ?",1),
+							('2019-08-23 20:14:00',"Observe o lado  oposto ao ângulo de 90°/reto ,esse lado será a Hipotenusa !",2),
+							('2019-08-23 20:14:10',"Ahh, muito obrigado!",1),
+							('2019-08-23 20:14:50',"O prazer é todo meu!",2),
+							('2019-08-23 20:15:00',"Tchau,bons estudos!",2),
+							('2019-08-23 20:15:10',"Tchau,até mais...",1),                            
+                            
+                            ('2019-08-12 13:12:00',"Olá,boa tarde ,alguém gostaria de estudar juntos Trigonometria?",1),
+							('2019-08-12 13:13:00',"Claro,vamos combinar de nos encontramos ,para decidirmos tudo certinho?",3),
+							('2019-08-12 13:13:30',"Okay,muito obrigado!",1),
+							('2019-08-12 13:15:00',"Tchau,bons estudos!",2),
+							('2019-08-12 13:15:10',"Tchau,até mais...",1);
+                            
 Select * from `Mensagem`;
 
 -- -----------------------------------------------------
 -- Table `Monitorando`.`Pedido`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Pedido` (
-  `Id` INT NOT NULL,
+  `Id` INT NOT NULL  AUTO_INCREMENT,
   `Motivo` TEXT NOT NULL,
   `Data` DATETIME NOT NULL,
   `Aluno_Id` INT NOT NULL,
@@ -715,11 +748,12 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Pedido` (
 ENGINE = InnoDB;
 
 INSERT INTO `Monitorando`.`Pedido` (`Motivo`, `Data`, `Aluno_Id`)
-VALUES(`Tenho tempo livre e facilidade de ajudar amigos em algumas disciplinas, então quero poder ajudar outros também.`, 2019-08-28, 4),
-(`Quero transmitir meus conhecimentos para outros.`, 2019-08-15, 6),
-(`Ah eu gosto muito de matemática e quero ajudar o pessoal.`, 2019-08-06, 7),
-(`Tenho facilidade em algumas disciplinas e quero ajudar meus colegas.`, 2019-06-25, 8);
+VALUES("Tenho tempo livre e facilidade de ajudar amigos em algumas disciplinas, então quero poder ajudar outros também.", '2019-08-28', 4),
+("Quero transmitir meus conhecimentos para outros!", '2019-08-15', 6),
+("Eu gosto muito de Matemática e quero ajudar o pessoal.", '2019-08-06', 7),
+("Tenho facilidade em algumas disciplinas ,e quero ajudar meus colegas.", '2019-06-25', 8);
 
+select * from `Pedido`;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
