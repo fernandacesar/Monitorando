@@ -59,14 +59,10 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Curso` (
   PRIMARY KEY (`Id`))
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Linguagens");
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Matemática");
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Humanas");
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Ciências Naturais");
 INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Informática Integrado");
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Mecanica Integrado");
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletronica Integrado");
-INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletrotecnica Integrado");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Mecânica Integrado");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletrônica Integrado");
+INSERT INTO `Monitorando`.`Curso` (`Nome`) VALUES ("Eletrotécnica Integrado");
 
 select * from `Curso`;
 
@@ -77,17 +73,17 @@ select * from `Curso`;
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Turma` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Numero` INT NOT NULL,
-  `Curso_Id` INT NOT NULL,
+  `Id_Curso` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Turma_Curso1_idx` (`Curso_Id` ASC),
+  INDEX `fk_Turma_Curso1_idx` (`Id_Curso` ASC),
   CONSTRAINT `fk_Turma_Curso1`
-    FOREIGN KEY (`Curso_Id`)
+    FOREIGN KEY (`Id_Curso`)
     REFERENCES `Monitorando`.`Curso` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Turma` (`Numero`, `Curso_Id`) VALUES
+INSERT INTO `Monitorando`.`Turma` (`Numero`, `Id_Curso`) VALUES
 (113, 5), (131, 5), (213, 5), (231, 5), (313, 5), (331, 5), (413, 5), (431, 5),
 (110, 6), (130, 6), (210, 6), (230, 6), (310, 6), (330, 6), (410, 6), (430, 6),
 (111, 7), (112, 7), (211, 7), (212, 7), (311, 7), (312, 7), (411, 7), (412, 7),
@@ -330,143 +326,128 @@ select * from `Local`;
 CREATE TABLE IF NOT EXISTS `Monitorando`.`Disciplina` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Nome` VARCHAR(45) NOT NULL,
-  `Curso_Id` INT NOT NULL,
-  PRIMARY KEY (`Id`),
-  INDEX `fk_Disciplina_Curso1_idx` (`Curso_Id` ASC),
-  CONSTRAINT `fk_Disciplina_Curso1`
-    FOREIGN KEY (`Curso_Id`)
-    REFERENCES `Monitorando`.`Curso` (`Id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`Id`))
 ENGINE = InnoDB;
 
 
-INSERT INTO `Monitorando`.`Disciplina` (`Nome`, `Curso_Id`) 
-VALUES ("Gestão Industrial", 5),
-("Informática", 5),
-("Sistemas computacionais", 5),
-("Lógica 1", 5),
-("Lógica 2", 5),
-("Linguagem de programação 1", 5),
-("Projeto integrador", 5),
-("Redes de computadores e internet", 5),
-("Banco de dados", 5),
-("Linguagem de programação 2", 5),
-("Linguagem de programação 3", 5),
-("Teoria e desenvolvimento de sistemas", 5),
-("Tópicos profissionais", 5),
-("Aplicações para Web 1", 5),
-("Prática do desenvolvimento de sistemas", 5),
-("Aplicações para Web 2", 5),
-("Segurança da informação", 5),
+INSERT INTO `Monitorando`.`Disciplina` (`Nome`) 
+VALUES ("Gestão industrial"),
+("Informática"),
+("Sistemas computacionais"),
+("Lógica 1"),
+("Lógica 2"),
+("Linguagem de programação 1"),
+("Projeto integrador"),
+("Redes de computadores e Internet"),
+("Banco de dados"),
+("Linguagem de programação 2"),
+("Linguagem de programação 3"),
+("Teoria e desenvolvimento de sistemas"),
+("Tópicos profissionais"),
+("Aplicações para Web 1"),
+("Prática do desenvolvimento de sistemas"),
+("Aplicações para Web 2"),
+("Segurança da informação"),
 
-("Desenho técnico", 7),
-("Gestão industrial", 7),
-("Eletricidade básica",  7),
-("Eletrônica digital 1", 7),
-("Laboratório de electricidade", 7),
-("Circuitos elétricos", 7),
-("Desenho técniclo eletrônico",7),
-("Eletrônica 1", 7),
-("Eletrônica aplicada 1", 7),
-("Eletrônica digital 2", 7),
-("Segurança do trabalho", 7),
-("Eletrônica 2", 7),
-("Eletrônica aplicada 2", 7),
-("Eletrônica digital 3", 7),
-("Eletrônica industrial", 7),
-("Microprocessadores", 7),
-("Programação", 7),
-("Automação", 7),
-("Elementos de telecomunicações", 7),
-("Microcontroladores", 7),
-("Projetos eletrônicos", 7),
+("Desenho técnico"),
+("Eletricidade básica"),
+("Eletrônica digital 1"),
+("Laboratório de electricidade"),
+("Circuitos elétricos"),
+("Desenho técniclo eletrônico"),
+("Eletrônica 1"),
+("Eletrônica aplicada 1"),
+("Eletrônica digital 2"),
+("Segurança do trabalho"),
+("Eletrônica 2"),
+("Eletrônica aplicada 2"),
+("Eletrônica digital 3"),
+("Eletrônica industrial"),
+("Microprocessadores"),
+("Programação"),
+("Automação"),
+("Elementos de telecomunicações"),
+("Microcontroladores"),
+("Projetos eletrônicos"),
 
+("Eletricidade 1"),
+("Eletromagnetismo"),
+("Laboratório de eletrotécnica 1"),
+("Eletricidade 2"),
+("Instalações elétricas 1"),
+("Eletrônica"),
+("Laboratório de eletrotécnica 2"),
+("Segurança e gestão do trabalho"),
+("Eletricidade 3"),
+("Medidas elétricas"),
+("Laboratório de eletrotécnica 3"),
+("Instalações elétricas 2"),
+("Máquinas elétricas 1"),
+("Maquinas elétricas 2"),
+("Geração, transmissão e distribuição"),
+("Segurança 2 - NR 10"),
+("Eficiência energética"),
 
-("Gestão Industrial",8),
-("Eletricidade 1", 8),
-("Eletromagnetismo", 8),
-("Laboratório de eletrotécnica 1",8),
-("Eletricidade 2", 8),
-("Desenho técnico",8),
-("Instalações elétricas 1", 8),
-("Eletrônica", 8),
-("Laboratório de eletrotécnica 2", 8),
-("Segurança e gestão do trabalho",8),
-("Eletricidade 3", 8),
-("Medidas elétricas", 8),
-("Laboratório de eletrotécnica 3", 8),
-("Instalações elétricas 2", 8),
-("Máquinas elétricas 1", 8),
-("Maquinas elétricas 2",8),
-("Geração, transmissão e distribuição", 8),
-("Segurança 2 - NR 10", 8),
-("Eficiência energética",8),
-("Automação", 8),
+("Materiais de construção mecânica"),
+("Metrologia"),
+("Mecânica técnica"),
+("Desenho auxiliado por computador"),
+("Eletricidade"),
+("Máquinas, ferramentas e dispositivos"),
+("Prática em mecânica 1"),
+("Resistência dos materiais"),
+("Elementos de máquinas"),
+("Laboratório de mecânica 1"),
+("Prática em mecânica 2"),
+("Máquinas e aparelhos mecânicos"),
+("Laboratório de mecânica 2"),
+("Projetos de máquinas e dispositivos"),
+("Metodologia do trabalho científico"),
+("Desenho técnico em mecânica"),
 
+("Inglês 1"),
+("Inglês 2"),
+("Inglês 3"),
+("Língua portuguesa e literatura 1"),
+("Língua portuguesa e literatura 2"),
+("Língua portuguesa e literatura 3"),
+("Língua portuguesa e literatura 4"),
+("Educação física 1"),
+("Educação física 2"),
+("Educação física 2"),
+("Espanhol 1"),
+("Espanhol 2"),
+("Libras 1"),
+("Libras 2"),
+("Artes 4"),
 
-("Materiais de construção mecânica",6),
-("Metrologia",6),
-("Segurança do trabalho",6),
-("Mecânica técnica", 6),
-("Desenho auxiliado por computador",6),
-("Eletricidade", 6),
-("Máquinas, ferramentas e dispositivos", 6),
-("Prática em mecânica 1", 6),
-("Resistência dos materiais", 6),
-("Elementos de máquinas", 6),
-("Laboratório de mecânica 1", 6),
-("Prática em mecânica 2", 6),
-("Máquinas e aparelhos mecânicos", 6),
-("Laboratório de mecânica 2",6),
-("Projetos de máquinas e dispositivos", 6),
-("Metodologia do trabalho científico", 6),
-("Gestão industrial", 6),
-("Desenho técnico em mecânica", 6),
+("Matemática 1"),
+("Matemática 2"),
+("Matemática 3"),
+("Matemática 4"),
 
-("Inglês 1", 1),
-("Inglês 2", 1),
-("Inglês 3", 1),
-("Língua portuguesa e literatura 1", 1),
-("Língua portuguesa e literatura 2", 1),
-("Língua portuguesa e literatura 3",1),
-("Língua portuguesa e literatura 4",1),
-("Educação física 1",1),
-("Educação física 2",1),
-("Educação física 2",1),
-("Espanhol 1",1),
-("Espanhol 2",1),
-("Libras 1", 1),
-("Libras 2", 1),
-("Artes 4", 1),
+("História 1"),
+("História 2"),
+("História 3"),
+("Geografia 1"),
+("Geografia 2"),
+("Geografia 3"),
+("Sociologia 1"),
+("Sociologia 2"),
+("Sociologia 3"),
+("Filosofia 1"),
+("Filosofia 2"),
+("Filosofia 3"),
 
-("Matemática 1", 2),
-("Matemática 2", 2),
-("Matemática 3", 2),
-("Matemática 4", 2),
-
-("História 1", 3),
-("História 2", 3),
-("História 3", 3),
-("Geografia 1", 3),
-("Geografia 2", 3),
-("Geografia 3", 3),
-("Sociologia 1", 3),
-("Sociologia 2",3),
-("Sociologia 3", 3),
-("Filosofia 1", 3),
-("Filosofia 2", 3),
-("Filosofia 3", 3),
-
-("Biologia 1", 4),
-("Biologia 2", 4),
-("Biologia 3", 4),
-("Física 1", 4),
-("Física 2", 4),
-("Física 3",4),
-("Química 1", 4),
-("Química 2", 4),
-("Química 3", 4);
+("Biologia 1"),
+("Biologia 2"),
+("Biologia 3"),
+("Física 1"),
+("Física 2"),
+("Física 3"),
+("Química 1"),
+("Química 2"),
+("Química 3");
 
 
 select * from `Disciplina`;
@@ -529,23 +510,23 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Monitor` (
   `Id` INT NOT NULL AUTO_INCREMENT ,
   `Id_Usuario` INT NOT NULL,
   `Status` ENUM('Ativo', 'Desativado', 'Verificando') NOT NULL,
-  `Codigo_Id` INT NOT NULL,
+  `Id_Codigo` INT NOT NULL,
   PRIMARY KEY (`Id`),
   INDEX `fk_Monitor_Usuario1_idx` (`Id_Usuario` ASC),
-  INDEX `fk_Monitor_Codigo1_idx` (`Codigo_Id` ASC),
+  INDEX `fk_Monitor_Codigo1_idx` (`Id_Codigo` ASC),
   CONSTRAINT `fk_Monitor_Usuario1`
     FOREIGN KEY (`Id_Usuario`)
     REFERENCES `Monitorando`.`Usuario` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Monitor_Codigo1`
-    FOREIGN KEY (`Codigo_Id`)
+    FOREIGN KEY (`Id_Codigo`)
     REFERENCES `Monitorando`.`Codigo` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Monitor` (`Id_Usuario`, `Status`, `Codigo_Id`)
+INSERT INTO `Monitorando`.`Monitor` (`Id_Usuario`, `Status`, `Id_Codigo`)
 VALUES (1, "Ativo", 1),
 (3, "Desativado", 2),
 (5, "Verificando", 3);
@@ -640,24 +621,24 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Avalicao` (
   `Conteudo` VARCHAR(500) NOT NULL,
   `DataPubli` DATE NOT NULL,
   `Nota` INT NULL,
-  `Inscricao_Id` INT NOT NULL,
+  `Id_Inscricao` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Avalicao_Inscricao1_idx` (`Inscricao_Id` ASC),
+  INDEX `fk_Avalicao_Inscricao1_idx` (`Id_Inscricao` ASC),
   CONSTRAINT `fk_Avalicao_Inscricao1`
-    FOREIGN KEY (`Inscricao_Id`)
+    FOREIGN KEY (`Id_Inscricao`)
     REFERENCES `Monitorando`.`Inscricao` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Avalicao` (`Conteudo`,`DataPubli`,`Nota`,`Inscricao_Id`)VALUES("Muito boa!",'2019-01-10',5,1),
-																						  ("Não gostei da Monitoria,monitor sem paciência de explicar e tirar dúvidas.",'2019-01-10',2,2),
-																						  ("Monitoria mediana ,monitor explicou de forma muito chata!",'2019-01-10',3,3),
-																						  ("Monitoria muito boa ,monitor com uma didática muito boa.",'2019-01-10',5,4),
+INSERT INTO `Monitorando`.`Avalicao` (`Conteudo`,`DataPubli`,`Nota`,`Id_Inscricao`)VALUES("Muito boa!",'2019-01-10',5,1),
+																						  ("Não gostei da Monitoria, monitor sem paciência de explicar e tirar dúvidas.",'2019-01-10',2,2),
+																						  ("Monitoria mediana, monitor explicou de forma muito chata!",'2019-01-10',3,3),
+																						  ("Monitoria muito boa, monitor com uma didática muito boa.",'2019-01-10',5,4),
 																						  ("Monitoria maravilhosa, monitor extremamente atencioso!",'2019-01-10',4,5),
-																						  ("Simplesmente me facina ,monitoria que todos deveriam participar",'2019-01-10',5,6),
+																						  ("Simplesmente me facina, monitoria que todos deveriam participar",'2019-01-10',5,6),
 																						  ("Nunca mais voltarei a frequentar essa monitoria,muito ruim!",'2019-01-10',1,7),
-																						  ("Estou dando uma estrela para poder comentar ,pois nem isso essa monitoria vale !!!",'2019-01-10',1,8);
+																						  ("Estou dando uma estrela para poder comentar, pois nem isso essa monitoria vale!!!",'2019-01-10',1,8);
 
 
 select * from `Avalicao`;
@@ -702,31 +683,30 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Mensagem` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `DataHorario` DATETIME NOT NULL,
   `Conteudo` VARCHAR(500) NOT NULL,
-  `Inscricao_Id` INT NOT NULL,
+  `Id_Inscricao` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Mensagem_Inscricao1_idx` (`Inscricao_Id` ASC),
+  INDEX `fk_Mensagem_Inscricao1_idx` (`Id_Inscricao` ASC),
   CONSTRAINT `fk_Mensagem_Inscricao1`
-    FOREIGN KEY (`Inscricao_Id`)
+    FOREIGN KEY (`Id_Inscricao`)
     REFERENCES `Monitorando`.`Inscricao` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Mensagem` (`DataHorario`,`Conteudo`,`Inscricao_Id`)
-                        VALUES('2019-08-23 20:12:00',"Olá,boa noite pessoal ,alguém poderia tirar uma dúvida minha?",1),
-							('2019-08-23 20:13:00',"Claro,qual seria sua dúvida?",2),
-							('2019-08-23 20:13:30',"Como faço para indetificar qual lado de um triângulo retangulo é a Hipotenusa ?",1),
-							('2019-08-23 20:14:00',"Observe o lado  oposto ao ângulo de 90°/reto ,esse lado será a Hipotenusa !",2),
-							('2019-08-23 20:14:10',"Ahh, muito obrigado!",1),
-							('2019-08-23 20:14:50',"O prazer é todo meu!",2),
-							('2019-08-23 20:15:00',"Tchau,bons estudos!",2),
-							('2019-08-23 20:15:10',"Tchau,até mais...",1),                            
-                            
-                            ('2019-08-12 13:12:00',"Olá,boa tarde ,alguém gostaria de estudar juntos Trigonometria?",1),
-							('2019-08-12 13:13:00',"Claro,vamos combinar de nos encontramos ,para decidirmos tudo certinho?",3),
-							('2019-08-12 13:13:30',"Okay,muito obrigado!",1),
-							('2019-08-12 13:15:00',"Tchau,bons estudos!",2),
-							('2019-08-12 13:15:10',"Tchau,até mais...",1);
+INSERT INTO `Monitorando`.`Mensagem` (`DataHorario`,`Conteudo`,`Id_Inscricao`)
+                        VALUES('2019-08-23 20:12:00',"Olá, boa noite pessoal, alguém poderia tirar uma dúvida minha?", 1),
+							('2019-08-23 20:13:00',"Claro, qual seria sua dúvida?", 2),
+							('2019-08-23 20:13:30',"Como faço para indetificar qual lado de um triângulo retangulo é a Hipotenusa?", 1),
+							('2019-08-23 20:14:00',"Observe o lado oposto ao ângulo de 90°/reto, esse lado será a Hipotenusa!", 2),
+							('2019-08-23 20:14:10',"Ahh, muito obrigado!", 1),
+							('2019-08-23 20:14:50',"O prazer é todo meu!", 2),
+							('2019-08-23 20:15:00',"Tchau, bons estudos!", 2),
+							('2019-08-23 20:15:10',"Tchau, até mais...", 1),                            
+                            ('2019-08-12 13:12:00',"Olá, boa tarde, alguém gostaria de estudar juntos Trigonometria?", 1),
+							('2019-08-12 13:13:00',"Claro, vamos combinar de nos encontramos, para decidirmos tudo certinho?", 3),
+							('2019-08-12 13:13:30',"Okay, muito obrigado!", 1),
+							('2019-08-12 13:15:00',"Tchau, bons estudos!", 2),
+							('2019-08-12 13:15:10',"Tchau, até mais...", 1);
                             
 Select * from `Mensagem`;
 
@@ -737,23 +717,82 @@ CREATE TABLE IF NOT EXISTS `Monitorando`.`Pedido` (
   `Id` INT NOT NULL  AUTO_INCREMENT,
   `Motivo` TEXT NOT NULL,
   `Data` DATETIME NOT NULL,
-  `Aluno_Id` INT NOT NULL,
+  `Id_Aluno` INT NOT NULL,
   PRIMARY KEY (`Id`),
-  INDEX `fk_Pedido_Aluno1_idx` (`Aluno_Id` ASC),
+  INDEX `fk_Pedido_Aluno1_idx` (`Id_Aluno` ASC),
   CONSTRAINT `fk_Pedido_Aluno1`
-    FOREIGN KEY (`Aluno_Id`)
+    FOREIGN KEY (`Id_Aluno`)
     REFERENCES `Monitorando`.`Aluno` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Monitorando`.`Pedido` (`Motivo`, `Data`, `Aluno_Id`)
+INSERT INTO `Monitorando`.`Pedido` (`Motivo`, `Data`, `Id_Aluno`)
 VALUES("Tenho tempo livre e facilidade de ajudar amigos em algumas disciplinas, então quero poder ajudar outros também.", '2019-08-28', 4),
 ("Quero transmitir meus conhecimentos para outros!", '2019-08-15', 6),
 ("Eu gosto muito de Matemática e quero ajudar o pessoal.", '2019-08-06', 7),
 ("Tenho facilidade em algumas disciplinas ,e quero ajudar meus colegas.", '2019-06-25', 8);
 
 select * from `Pedido`;
+
+-- -----------------------------------------------------
+-- Table `Monitorando`.`CursoXDisciplina`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Monitorando`.`CursoXDisciplina` (
+  `Id_Curso` INT NOT NULL,
+  `Id_Disciplina` INT NOT NULL,
+  PRIMARY KEY (`Id_Curso`, `Id_Disciplina`),
+  INDEX `fk_Curso_has_Disciplina_Disciplina1_idx` (`Id_Disciplina` ASC),
+  INDEX `fk_Curso_has_Disciplina_Curso1_idx` (`Id_Curso` ASC),
+  CONSTRAINT `fk_Curso_has_Disciplina_Curso1`
+    FOREIGN KEY (`Id_Curso`)
+    REFERENCES `Monitorando`.`Curso` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Curso_has_Disciplina_Disciplina1`
+    FOREIGN KEY (`Id_Disciplina`)
+    REFERENCES `Monitorando`.`Disciplina` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+INSERT INTO `Monitorando`.`CursoXDisciplina` (`Id_Curso`, `Id_Disciplina`)
+VALUES (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9),
+(1, 10), (1, 11), (1, 12), (1, 13), (1, 14), (1, 15), (1, 16), (1, 17),
+
+(3, 18), (3, 19), (3, 20), (3, 21), (3, 22), (3, 23), (3, 24), (3, 25), (3, 26), (3, 27),
+(3, 28), (3, 29), (3, 30), (3, 31), (3, 32), (3, 33), (3, 34), (3, 35), (3, 36), (3, 37),
+
+(4, 38), (4, 39), (4, 40), (4, 41), (4, 42), (4, 43), (4, 44), (4, 45),
+(4, 46), (4, 47), (4, 48), (4, 49), (4, 50), (4, 51), (4, 52), (4, 53), (4, 54),
+
+(2, 55), (2, 56), (2, 57), (2, 58), (2, 59), (2, 60), (2, 61), (2, 62), (2, 63),
+(2, 64), (2, 65), (2, 66), (2, 67), (2, 68), (2, 69), (2, 70),
+
+(1, 71), (1, 72), (1, 73), (1, 74), (1, 75), (1, 76), (1, 77), (1, 78),
+(1, 79), (1, 80), (1, 81), (1, 82), (1, 83), (1, 84), (1, 85), (1, 86),
+(1, 87), (1, 88), (1, 89), (1, 90), (1, 91), (1, 92), (1, 93), (1, 94),
+(1, 95), (1, 96), (1, 97), (1, 98), (1, 99), (1, 100), (1, 101), (1, 102),
+(1, 103),  (1, 104), (1, 105), (1, 106), (1, 107), (1, 108), (1, 109), (1, 110),
+
+(2, 1), (2, 28), (2, 71), (2, 72), (2, 73), (2, 74), (2, 75), (2, 76), (2, 77), (2, 78),
+(2, 79), (2, 80), (2, 81), (2, 82), (2, 83), (2, 84), (2, 85), (2, 86),
+(2, 87), (2, 88), (2, 89), (2, 90), (2, 91), (2, 92), (2, 93), (2, 94),
+(2, 95), (2, 96), (2, 97), (2, 98), (2, 99), (2, 100), (2, 101), (2, 102),
+(2, 103), (2, 104), (2, 105), (2, 106), (2, 107), (2, 108), (2, 109), (2, 110),
+
+(3, 1), (3, 71), (3, 72), (3, 73), (3, 74), (3, 75), (3, 76), (3, 77), (3, 78),
+(3, 79), (3, 80), (3, 81), (3, 82), (3, 83), (3, 84), (3, 85), (3, 86),
+(3, 87), (3, 88), (3, 89), (3, 90), (3, 91), (3, 92), (3, 93), (3, 94),
+(3, 95), (3, 96), (3, 97), (3, 98), (3, 99), (3, 100), (3, 101), (3, 102),
+(3, 103), (3, 104), (3, 105), (3, 106), (3, 107), (3, 108), (3, 109), (3, 110),
+
+(4, 1), (4, 18), (4, 35), (4, 71), (4, 72), (4, 73), (4, 74), (4, 75), (4, 76), (4, 77), (4, 78),
+(4, 79), (4, 80), (4, 81), (4, 82), (4, 83), (4, 84), (4, 85), (4, 86),
+(4, 87), (4, 88), (4, 89), (4, 90), (4, 91), (4, 92), (4, 93), (4, 94),
+(4, 95), (4, 96), (4, 97), (4, 98), (4, 99), (4, 100), (4, 101), (4, 102),
+(4, 103), (4, 104), (4, 105), (4, 106), (4, 107), (4, 108), (4, 109), (4, 110);
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
