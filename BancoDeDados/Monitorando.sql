@@ -49,7 +49,7 @@ INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) V
 																					  ("Paulo Santos", "na2121", "Professor", "paulinhoS@gmail.com", "imagem21.png/BABA"),
 																					  ("Carla Traz", "569869", "Aluno", "PaulaTraz3bolos@gmail.com", "imagem22.png/BABA"),
 																					  ("Elangia Cesar", "4569876", "Aluno", "elangiaCe@gmail.com", "imagem23.png/BABA"),
-																					  ("Cacilda Teodoro", "fefefe", "Professor", "cacildsTeo@gmail.com", "imagem24.png/BABA");
+																					  ("Cacilda Teodoro", "fefefe", "Professor", "cacildsTeo@gmail.com", "imagem.png/BABA");
 
 
 
@@ -584,7 +584,8 @@ values ("Banco de Dados - MySQL", '2020-04-22 08:30:00', 10, 4, "Monitoria para 
        ("Funções Quadráticas", '2019-08-12 11:15:00' , 50, 45,  "Monitoria destinada a pessoas que estão com dúvidas em Trigonometria, ou querem aprofundar seus estudos sobre o assunto", 31,  92, 2),
        ("Função Exponêncial", '2019-09-17 18:15:00' , 35, 20,  "Vamos juntos obter conhecimento sobre Números Complexos!", 31,  92, 2),
 	   ("Funções logarítmicas", '2019-04-14 9:15:00' , 40, 36,  "Vamos juntos obter conhecimento sobre Números Complexos!", 31,  92, 1),
-	   ("Java - Logica 2", '2019-09-21 9:15:00' , 15, 2,  "Retirar duvidas exitentes para as turmas 213 e 231", 31,  92, 1)
+       ("Java - Logica 2", '2019-09-21 9:15:00' , 15, 2,  "Retirar duvidas exitentes para as turmas de segundo ano de informática", 1,  5, 4), 
+	   ("Vetores - JAVA - LG2", '2019-04-14 9:15:00' ,25, 20, "Retirar duvidas exitentes para as turmas de segundo ano de informática", 1,  5, 7);
 
 select * from  `Monitoria`;
 
