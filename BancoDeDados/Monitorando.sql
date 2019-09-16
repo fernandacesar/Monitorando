@@ -14,7 +14,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema Monitorando
 -- -----------------------------------------------------
-drop schema `Monitorando`;
+drop schema if exists  `Monitorando` ;
 CREATE SCHEMA IF NOT EXISTS `Monitorando` DEFAULT CHARACTER SET utf8 ;
 USE `Monitorando` ;
 
