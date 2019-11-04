@@ -14,7 +14,8 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema Monitorando
 -- -----------------------------------------------------
-DROP SCHEMA `Monitorando`;
+
+DROP SCHEMA IF EXISTS `Monitorando` ;
 CREATE SCHEMA IF NOT EXISTS `Monitorando` DEFAULT CHARACTER SET utf8 ;
 USE `Monitorando` ;
 
@@ -42,7 +43,14 @@ INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) V
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Ana Beatriz Nascimento", "0000009", "Aluno", "bia.luscas@gmail.com","");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Camila Cabello ", "0000010", "Aluno", "a.leao@gmail.com", "imagem10.png/AAAAA");
 INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Shawn Petter Raul Mendes", "0000011", "Aluno", "camz.c@gmail.com", "imagem11.png/AAAAA");
-INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Adriana Ribas", "00000", "Aluno", "adr.tibas@gmail.com","" );
+INSERT INTO `Monitorando`.`Usuario` (`Nome`, `Senha`, `Tipo`, `Email`, `Foto`) VALUES ("Adriana Ribas", "00000", "Aluno", "adr.tibas@gmail.com","" ),
+																					  ("Ana Beatriz Perreira", "nananada", "Professor", "anapp@gmail.com", "imagem18.png/BABA"),
+																					  ("Jéssica Pea", "ada", "Professor", "jejepea@gmail.com", "imagem19.png/BABA"),
+																					  ("Maria Silva", "454545", "Professor", "mama_silva@gmail.com", "imagem20.png/BABA"),
+																					  ("Paulo Santos", "na2121", "Professor", "paulinhoS@gmail.com", "imagem21.png/BABA"),
+																					  ("Carla Traz", "569869", "Aluno", "PaulaTraz3bolos@gmail.com", "imagem22.png/BABA"),
+																					  ("Elangia Cesar", "4569876", "Aluno", "elangiaCe@gmail.com", "imagem23.png/BABA"),
+																					  ("Cacilda Teodoro", "fefefe", "Professor", "cacildsTeo@gmail.com", "imagem.png/BABA");
 
 
 
@@ -541,7 +549,7 @@ select * from `Monitor`;
 CREATE TABLE IF NOT EXISTS `Monitorando`.`CodigoPedidoXMonitor` (
   `Id_CodigoPedido` INT NOT NULL,
   `Id_Monitor` INT NULL,
-  PRIMARY KEY (`Id`)),
+  PRIMARY KEY (`Id`),
   INDEX `fk_CodigoPedidoXMonitor_CodidoPedido1_idx` (`Id_CodigoPedidoXMonitor` ASC),
   INDEX `fk_CodigoPedidoXMonitor_Monitor1_idx` (`Id_Monitor` ASC),
   CONSTRAINT `fk_CodigoPedidoXMonitor_CodigoPedido1`
@@ -606,7 +614,9 @@ values ("Banco de Dados - MySQL", '2020-04-22 08:30:00', 10, 4, "Monitoria para 
 	   ("Funções Afins", '2019-10-22 11:45:00' , 60, 7,  "Monitoria para quem deseja realmente ententer o assunto, sendo explicado de uma forma mais tranquila e sólida!", 33,  92, 2),
        ("Funções Quadráticas", '2019-08-12 11:15:00' , 50, 45,  "Monitoria destinada a pessoas que estão com dúvidas em Trigonometria, ou querem aprofundar seus estudos sobre o assunto", 31,  92, 2),
        ("Função Exponêncial", '2019-09-17 18:15:00' , 35, 20,  "Vamos juntos obter conhecimento sobre Números Complexos!", 31,  92, 2),
-	   ("Funções logarítmicas", '2019-04-14 9:15:00' , 40, 36,  "Vamos juntos obter conhecimento sobre Números Complexos!", 31,  92, 1);
+	   ("Funções logarítmicas", '2019-04-14 9:15:00' , 40, 36,  "Vamos juntos obter conhecimento sobre Números Complexos!", 31,  92, 1),
+       ("Java - Logica 2", '2019-09-21 9:15:00' , 15, 2,  "Retirar duvidas exitentes para as turmas de segundo ano de informática", 1,  5, 4), 
+	   ("Vetores - JAVA - LG2", '2019-04-14 9:15:00' ,25, 20, "Retirar duvidas exitentes para as turmas de segundo ano de informática", 1,  5, 7);
 
 select * from  `Monitoria`;
 
