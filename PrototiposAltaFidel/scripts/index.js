@@ -27,7 +27,7 @@ server.get('/perfil/{id}/alterarDados', function(req, res) {
     res.send('<h1>Alterar dados da conta</h1>');
 });
 
-server.get('/monitoriasInscritas', function(req, res) {
+server.get('/monitoriasInscritas/{id}', function(req, res) {
     res.send('<h1>Monitorias Inscritas</h1>');
 });
 
