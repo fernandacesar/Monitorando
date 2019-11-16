@@ -26,14 +26,15 @@ server.get('/perfil/:id', function(req, res) {
     perfis[2] = {nome: 'FCR', status: 'Aluno/Monitor' }
     perfis[3] = {nome: 'Fer', status: 'Aluno' }
 
+    const sessao = 0;
     
     const id = req.params.id;
 
     let dados = '';
-    if(perfis[id] == undefined){
+    if(perfis[sessao] == undefined){
         dados = 'Perfil não encontrado.';
     }else{
-        dados = perfis[id].nome + ', ' + perfis[id].status;        
+        dados = perfis[sessao].nome + ', ' + perfis[sessao].status;        
     }
 
     res.send('<h1>Perfil</h1>'
@@ -59,130 +60,78 @@ server.get('/perfil/:id/alterarDados', function(req, res) {
         + '<input type="submit" value="Salvar">');
 });
 
-server.get('/perfil/:id/salvarAlteracao',function(req,res){
-    const id = req.params.id;
-
-    let nome = '';
-    if(perfis[id] == undefined){
-        dados = 'Salvar alteração';
-    }else{
-        dados = perfis[id].nome;
-    }
-
-    res.send('<h1>Salvar Alteração</h1>'
-        + '<h3>' + dados +'</h3>');
+server.get('/perfil/salvarAlteracao',function(req,res){
+    res.send('<h1>Salvar Alteração</h1>');
 });
 
-server.get('/perfil/:id/solicitarLicenca',function(req,res){
-    const id = req.params.id;
-
-    let nome = '';
-    if(perfis[id] == undefined){
-        dados = 'Solicitar Licença.';
-    }else{
-        dados = perfis[id].nome;
-    }
-
-    res.send('<h1>Solicitar Licença</h1>'
-        + '<h3>' + dados +'</h3>');
+server.get('/perfil/solicitarLicenca',function(req,res){
+    res.send('<h1>Solicitar Licença</h1>');
 });
 
-server.get('/perfil/:id/solicitarLicenca/solicitar',function(req,res){
-    const id = req.params.id;
-
-    let nome = '';
-    if(perfis[id] == undefined){
-        dados = 'Solicitar.';
-    }else{
-        dados = perfis[id].nome;
-    }
-
-    res.send('<h1>Solicitar</h1>'
-        + '<h3>' + dados +'</h3>');
-});
-server.get('/perfil/:id/tornarseMonitor',function(req,res){
-    const id = req.params.id;
-
-    let nome = '';
-    if(perfis[id] == undefined){
-        dados = 'Tornar-se Monitor.';
-    }else{
-        dados = perfis[id].nome;
-    }
-
-    res.send('<h1>Tornar-se Monitor</h1>'
-        + '<h3>' + dados +'</h3>');
+server.get('/perfil/solicitarLicenca/solicitar',function(req,res){
+    res.send('<h1>Solicitar licença</h1>');
 });
 
-server.get('/perfil/:id/cadastrarMonitorias', function(req,res){
-    const id = req.params.id;
-
-    let nome = '';
-    if(perfis[id] == undefined){
-        dados = 'Cadastrar Monitorias.';
-    }else{
-        dados = perfis[id].nome;
-    }
-
-    res.send('<h1>Cadastrar Monitorias</h1>'
-        + '<h3>' + dados +'</h3>');
+server.get('/perfil/tornarseMonitor',function(req,res){
+    res.send('<h1>Tornar-se Monitor</h1>');
 });
 
-server.get('/perfil/:id/cadastrarMonitorias/cadastro', function(req,res){
-    const id = req.params.id;
-
-    let nome = '';
-    if(perfis[id] == undefined){
-        dados = 'Cadatro Monitoria.';
-    }else{
-        dados = perfis[id].nome;
-    }
-
-    res.send('<h1>Cadatro Monitoria</h1>'
-        + '<h3>' + dados +'</h3>');
+server.get('/perfil/cadastrarMonitoria', function(req,res){
+    res.send('<h1>Cadastrar Monitoria</h1>');
 });
 
+server.get('/perfil/cadastrarMonitoria/cadastrar', function(req,res){
+    res.send('<h1>Cadastro de Monitoria</h1>');
+});
 
+server.get('/perfil/:idMonitoria/cancelarMonitoria', function(req,res){
+    const monitorias = [];
+    monitorias[0] = {assunto: 'Números complexos'}
+    monitorias[1] = {assunto: 'Células'}
 
-server.get('/perfil/:id/cancelarMonitoria', function(req,res){
-    const id = req.params.id;
+    const idMonitoria = req.params.idMonitoria;
 
-    let nome = '';
-    if(perfis[id] == undefined){
-        dados = 'Cancelar Monitoria.';
+    if(monitorias[idMonitoria] == undefined){
+        dados = 'Não foi possível concluir a solicitação.';
     }else{
-        dados = perfis[id].nome;
+        dados = monitorias[idMonitoria].assunto;
     }
 
     res.send('<h1>Cancelar Monitoria</h1>'
         + '<h3>' + dados +'</h3>');
 });
 
-server.get('/perfil/:id/detalhesMonitoria', function(req,res){
-    const id = req.params.id;
+server.get('/perfil/:idMonitoria/minhaMonitoria', function(req,res){
+    const monitorias = [];
+    monitorias[0] = {assunto: 'Números complexos'}
+    monitorias[1] = {assunto: 'Células'}
 
-    let nome = '';
-    if(perfis[id] == undefined){
-        dados = 'detalhesMonitoria.';
+    const idMonitoria = req.params.idMonitoria;
+
+    if(monitorias[idMonitoria] == undefined){
+        dados = 'Monitoria não encontrada.';
     }else{
-        dados = perfis[id].nome;
+        dados = monitorias[idMonitoria].assunto;
     }
 
-    res.send('<h1>detalhesMonitoria</h1>'
+    res.send('<h1>Minha monitoria</h1>'
         + '<h3>' + dados +'</h3>');
 });
 
-server.get('/perfil/:id/detalhesMonitoria/chat', function(req,res){
-    const id = req.params.id;
+server.get('/perfil/:idMonitoria/minhaMonitoria/chat', function(req,res){
+    const monitorias = [];
+    monitorias[0] = {assunto: 'Números complexos'}
+    monitorias[1] = {assunto: 'Células'}
 
-    let nome = '';
-    if(perfis[id] == undefined){
-        dados = 'Chat monitoria.';
+    const idMonitoria = req.params.idMonitoria;
+
+    if(monitorias[idMonitoria] == undefined){
+        dados = 'Monitoria ou chat não encontrado.';
     }else{
-        dados = perfis[id].nome;
+        dados = monitorias[idMonitoria].assunto + "<br>Chat";
     }
 
-    res.send('<h1>Chat monitoria</h1>'
+    res.send('<h1>Chat de monitoria</h1>'
         + '<h3>' + dados +'</h3>');
 });
 
