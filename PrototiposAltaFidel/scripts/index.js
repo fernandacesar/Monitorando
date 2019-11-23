@@ -169,6 +169,7 @@ server.get('/perfil/:id/minhaMonitoria/cancelar', function(req,res){
         + '<h3>' + dados +'</h3>');
 });
 
+//Precisa arrumar essa rota:
 server.get('/monitoriasInscritas/:idInscricao', function(req, res) {
     const usuarios = [];
     const monitorias = [];
@@ -194,20 +195,11 @@ server.get('/monitoriasInscritas/:idInscricao', function(req, res) {
     res.send('<h1>' + dados + '</h1>');
 });
 
-server.get('/monitorias', function(req, res) {
-    res.send('<h1>Monitorias</h1>');
-});
-
-server.get('/monitorias/pesquisar', function(req,res){
-    
-    res.send('<h1>Pesquisar Monitoria</h1>'
-        + '<h3>' + dados +'</h3>');
-});
-
 server.get('/chats', function(req, res) {
     res.send('<h1>Chats de dúvidas</h1>');
 });
 
+//Rever a questão do id
 server.get('/chats/:id', function(req, res){
     const chats = [];
     chats[0] = {conteudo: 'Olá'}
@@ -227,15 +219,94 @@ server.get('/chats/:id', function(req, res){
     + '<h3>' + dados + '</h3>');
 });
 
-server.get('/monitorias/pesquisar/verMais', function(req,res){
-    
+server.get('/chats/:id/enviarMensagem', function(req, res){
+    const chats = [];
+    chats[0] = {conteudo: 'Olá'}
+    chats[1] = {conteudo: 'Oi'}
+
+    const id = req.params.id;
+
+    let dados = '';
+
+    if(chats[id] == undefined){
+        dados = 'Chat não encontrado.';
+    }else{
+        dados = chats[id].conteudo;
+    }
+
+    res.send('<h1>Enviar mensagem no chat</h1>'
+    + '<h3>' + dados + '</h3>');
+});
+
+server.get('/monitorias', function(req, res) {
+    res.send('<h1>Lista de todas as monitorias cadastradas</h1>');
+});
+
+server.get('/monitorias/:id/detalhesMonitoria', function(req,res){
+    const monitorias = [];
+    monitorias[0] = {assunto: 'Números complexos'}
+    monitorias[1] = {assunto: 'Células'}
+
+    const id = req.params.id;
+
+    if(monitorias[id] == undefined){
+        dados = 'Monitoria não encontrada.';
+    }else{
+        dados = monitorias[id].assunto;
+    }
+
+    res.send('<h1>Detalhes de monitoria</h1>'
+        + '<h3>' + dados +'</h3>');
+});
+
+server.get('/monitorias/:id/pesquisar', function(req,res){
+    const monitorias = [];
+    monitorias[0] = {assunto: 'Números complexos'}
+    monitorias[1] = {assunto: 'Células'}
+
+    const id = req.params.id;
+
+    if(monitorias[id] == undefined){
+        dados = 'Monitoria não encontrada.';
+    }else{
+        dados = monitorias[id].assunto;
+    }
+
     res.send('<h1>Pesquisar Monitoria</h1>'
         + '<h3>' + dados +'</h3>');
 });
 
-server.get('/monitorias/pesquisar/verMais/inscrever', function(req,res){
-    
-    res.send('<h1>Pesquisar Monitoria</h1>'
+server.get('/monitorias/:id/pesquisar/detalhesMonitoria', function(req,res){
+    const monitorias = [];
+    monitorias[0] = {assunto: 'Números complexos'}
+    monitorias[1] = {assunto: 'Células'}
+
+    const id = req.params.id;
+
+    if(monitorias[id] == undefined){
+        dados = 'Monitoria não encontrada.';
+    }else{
+        dados = monitorias[id].assunto;
+    }
+
+    res.send('<h1>Detalhes de monitoria</h1>'
+        + '<h3>' + dados +'</h3>');
+});
+
+server.get('/monitorias/:id/pesquisar/detalhesMonitoria/inscrever', function(req,res){
+    const monitorias = [];
+    monitorias[0] = {assunto: 'Números complexos'}
+    monitorias[1] = {assunto: 'Células'}
+
+    const id = req.params.id;
+
+    if(monitorias[id] == undefined){
+        dados = 'Monitoria não encontrada.';
+    }else{
+        dados = monitorias[id].assunto;
+    }
+
+    res.send('<h1>Inscrever-se na monitoria:</h1>'
         + '<h3>' + dados +'</h3>');
 });
 
