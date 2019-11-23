@@ -19,25 +19,12 @@ server.get('/home', function(req, res) {
     res.send('<h1>Informações sobre o site</h1>');
 });
 
-server.get('/perfil/:id', function(req, res) {
-    const perfis = [];
-    perfis[0] = {nome: 'Ana', status: 'Aluno' } //pode criar objetos sem ter a classe
-    perfis[1] = {nome: 'Damis', status: 'Aluno/Monitor' }
-    perfis[2] = {nome: 'FCR', status: 'Aluno/Monitor' }
-    perfis[3] = {nome: 'Fer', status: 'Aluno' }
+server.get('/sair', function(req, res){
+    res.send('<h1>Sair da conta</h1>');
+});
 
-    const sessao = 0;
-    
-    const id = req.params.id;
-
-    let dados = '';
-    if(perfis[sessao] == undefined){
-        dados = 'Perfil não encontrado.';
-    }else{
-        dados = perfis[sessao].nome + ', ' + perfis[sessao].status;        
-    }
-
-    res.send('<h1>Perfil</h1>'
+server.get('/perfil', function(req, res) {
+    res.send('<h1>Perfil do usuário logado</h1>'
         + '<h3>' + dados +'</h3>');
 });
 
@@ -73,7 +60,7 @@ server.get('/perfil/solicitarLicenca/solicitar',function(req,res){
 });
 
 server.get('/perfil/tornarseMonitor',function(req,res){
-    res.send('<h1>Tornar-se Monitor</h1>');
+    res.send('<h1>Enviar código para tornar-se Monitor</h1>');
 });
 
 server.get('/perfil/cadastrarMonitoria', function(req,res){
