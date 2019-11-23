@@ -169,69 +169,131 @@ server.get('/perfil/:id/minhaMonitoria/cancelar', function(req,res){
         + '<h3>' + dados +'</h3>');
 });
 
-//Precisa arrumar essa rota:
-server.get('/monitoriasInscritas/:idInscricao', function(req, res) {
-    const usuarios = [];
+server.get('/monitoriasInscritas', function(req, res) {
+    res.send('<h1>Lista de todas as monitorias em que o usuário logado está inscrito</h1>');
+});
+
+server.get('/monitoriasInscritas/:id/cancelarInscricao', function(req, res){
     const monitorias = [];
-    const inscricoes = [];
+    monitorias[0] = {assunto: 'Números complexos'}
+    monitorias[1] = {assunto: 'Células'}
 
-    usuarios[0] = {nome: 'Ana'}
-    usuarios[1] = {nome: 'Fer'}
+    const id = req.params.id;
 
-    monitorias[0] = {conteudo: 'Números complexos'}
-    monitorias[1] = {conteudo: 'Conjuntos numéricos'}
-
-    inscricoes[0] = {idUsuario: usuarios[0], idMonitoria: monitorias[1]}
-    
-    const idInscricao = req.params.idInscricao;
-
-    let dados = '';
-
-    if(inscricoes[idInscricao] == undefined){
-        dados = "Inscrições não encontradas.";
+    if(monitorias[id] == undefined){
+        dados = 'Monitoria não encontrada.';
     }else{
-        dados = inscricoes[idInscricao].idInscricao + inscricoes[idInscricao].idMonitoria;
+        dados = monitorias[id].assunto;
     }
-    res.send('<h1>' + dados + '</h1>');
+
+    res.send('<h1>Cancelar inscrição da monitoria:</h1>'
+        + '<h3>' + dados +'</h3>');
+});
+
+server.get('/monitoriasInscritas/:id/avaliar', function(req, res){
+    const monitorias = [];
+    monitorias[0] = {assunto: 'Números complexos'}
+    monitorias[1] = {assunto: 'Células'}
+
+    const id = req.params.id;
+
+    if(monitorias[id] == undefined){
+        dados = 'Monitoria não encontrada.';
+    }else{
+        dados = monitorias[id].assunto;
+    }
+
+    res.send('<h1>Avaliar monitoria de:</h1>'
+        + '<h3>' + dados +'</h3>');
+});
+
+server.get('/monitoriasInscritas/:id/avaliar/enviar', function(req, res){
+    const monitorias = [];
+    monitorias[0] = {assunto: 'Números complexos'}
+    monitorias[1] = {assunto: 'Células'}
+
+    const id = req.params.id;
+
+    if(monitorias[id] == undefined){
+        dados = 'Monitoria não encontrada.';
+    }else{
+        dados = monitorias[id].assunto;
+    }
+
+    res.send('<h1>Enviar a avaliação da monitoria de:</h1>'
+        + '<h3>' + dados +'</h3>');
+});
+
+server.get('/monitoriasInscritas/:id/chat', function(req, res){
+    const monitorias = [];
+    monitorias[0] = {assunto: 'Números complexos'}
+    monitorias[1] = {assunto: 'Células'}
+
+    const id = req.params.id;
+
+    if(monitorias[id] == undefined){
+        dados = 'Monitoria não encontrada.';
+    }else{
+        dados = monitorias[id].assunto;
+    }
+
+    res.send('<h1>Ir para o chat da monitoria de:</h1>'
+        + '<h3>' + dados +'</h3>');
+});
+
+server.get('/monitoriasInscritas/:id/chat/enviarMensagem', function(req, res){
+    const monitorias = [];
+    monitorias[0] = {assunto: 'Números complexos'}
+    monitorias[1] = {assunto: 'Células'}
+
+    const id = req.params.id;
+
+    if(monitorias[id] == undefined){
+        dados = 'Monitoria não encontrada.';
+    }else{
+        dados = monitorias[id].assunto;
+    }
+
+    res.send('<h1>Enviar mensagem para o chat da monitoria de:</h1>'
+        + '<h3>' + dados +'</h3>');
 });
 
 server.get('/chats', function(req, res) {
     res.send('<h1>Chats de dúvidas</h1>');
 });
 
-//Rever a questão do id
-server.get('/chats/:id', function(req, res){
+server.get('/chats/:idMonitoria/chat', function(req, res){
     const chats = [];
     chats[0] = {conteudo: 'Olá'}
     chats[1] = {conteudo: 'Oi'}
 
-    const id = req.params.id;
+    const idMonitoria = req.params.idMonitoria;
 
     let dados = '';
 
-    if(chats[id] == undefined){
+    if(chats[idMonitoria] == undefined){
         dados = 'Chat não encontrado.';
     }else{
-        dados = chats[id].conteudo;
+        dados = chats[idMonitoria].conteudo;
     }
 
     res.send('<h1>Chat</h1>'
     + '<h3>' + dados + '</h3>');
 });
 
-server.get('/chats/:id/enviarMensagem', function(req, res){
+server.get('/chats/:idMonitoria/chat/enviarMensagem', function(req, res){
     const chats = [];
     chats[0] = {conteudo: 'Olá'}
     chats[1] = {conteudo: 'Oi'}
 
-    const id = req.params.id;
+    const idMonitoria = req.params.idMonitoria;
 
     let dados = '';
 
-    if(chats[id] == undefined){
+    if(chats[idMonitoria] == undefined){
         dados = 'Chat não encontrado.';
     }else{
-        dados = chats[id].conteudo;
+        dados = chats[idMonitoria].conteudo;
     }
 
     res.send('<h1>Enviar mensagem no chat</h1>'
