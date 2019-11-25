@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Monitorando &bull; Minha Monitoria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<body onload="foco('local')">
+    <div class="bordaUsuarioMonitor">
+        <div class="nav-side-menu">
+            <div class="brand">Monitorando</div>
+            <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+            <div class="menu-list">
+
+                <ul id="menu-content" class="menu-content collapse out">
+                    <li class="active">
+                        <a href="#">
+                            <i class="fas fa-lg"></i>
+                            <span class="glyphicon glyphicon-home"></span> Início
+                        </a>
+                    </li>
+                    <br>
+
+                    <li data-toggle="collapse" data-target="#products" class="collapsed">
+                        <a href="#">
+                            <a href="#">
+                                <i class="fas fa-lg"></i>
+                                <span class="glyphicon glyphicon-user"></span> Perfil
+                            </a>
+                        </a>
+                    </li>
+
+                    <li data-toggle="collapse" data-target="#service" class="collapsed">
+                        <a href="#">
+                            <i class="fab fa-lg"></i>
+                            <span class="glyphicon glyphicon-book"></span> Monitorias inscritas
+                        </a>
+                    </li>
+
+                    <li data-toggle="collapse" data-target="#new" class="collapsed">
+                        <a href="#">
+                            <i class="fab fa-lg"></i>
+                            <span class="glyphicon glyphicon-list-alt"></span> Monitorias cadastradas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-lg"></i>
+                            <span class="glyphicon glyphicon-comment"></span> Chat de dúvidas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <nav class="navbar-inverse posiMenu">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-out"></span> Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>      
+    <div class="panel panel-default panel-perfilComum">
+        <section class="corpo-detalhes">
+            <h2 class="blocktext titulo-monitoria">Matemática - Trigonometria</h2>
+            <input type="submit" class="btn btn-chat" value="Chat">
+             <input type="submit" class="btn btn-gerenciar-monitoria" value="Editar">
+            <input type="submit" class="btn btn-gerenciar-monitoria" value="Cancelar">
+            <div class="col-md-6 minha-monitoria-info">
+                <span class="espeMU">Quantidade de vagas: </span>
+                <p class="dadoFake">20</p><br>
+                <span class="espeMU">Quantidade de inscritos: </span>
+                <p class="dadoFake">10</p><br>
+                <label class="espeMU">Monitor(a): </label>
+                <p class="dadoFake">Fellipe</p><br>
+                <label class="espeMU">Data e horário: </label>
+                <p class="dadoFake">15/08/2019 10:00:00</p><br>
+                <label class="espeMU">Bloco: </label>
+                <p class="dadoFake">A</p><br>
+                <label class="espeMU">Identificação: </label>
+                <p class="dadoFake">316</p><br>
+                <span class="espeMU">Arquivo:</span>
+                <p class="dadoFake">arquivo.pdf</p>
+                <br>
+            </div>
+            <div class="col-md-6 minha-monitoria-info">
+                <label class="espeMU">Tipo: </label>
+                <p class="dadoFake">Sala</p><br>           
+                <label class="espeMU">Descrição: </label>
+                <div class="descrif">
+                    <textarea class="hello">Nesta monitoria serão abordadas as funções trignométricas, o círculo trigonométrico, a teoria Euclidiana, a lei dos senos, cossenos e tangentes.</textarea>    
+                </div><br>
+            </div>
+        </section>
+    </div>
+
+    </body>
+</html>
