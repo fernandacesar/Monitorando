@@ -1,11 +1,12 @@
 const express = require ('express');
 const handlebars = require('express-handlebars')
-const path = require('path');
+const bodyParser = require('body-parser');
+
+const conexao = require('./conexao');
 
 const server = express();
-
-server.use(express.static(path.join(__dirname,'/public')));
-server.engine('handlebars',handlebars({defaultLayout: 'main'}));
+server.use(bodyParser());
+server.engine('handlebars', handlebars());
 server.set('view engine', 'handlebars');
 
 server.get('/', function(req, res) {
@@ -294,7 +295,16 @@ server.get('/chats/:idMonitoria/chat/enviarMensagem', function(req, res){
 });
 
 server.get('/monitorias', function(req, res) {
-    res.send('<h1>Lista de todas as monitorias cadastradas</h1>');
+    //res.send('<h1>Lista de todas as monitorias cadastradas</h1>');
+    //res.render('ListaMonitCad');
+
+    const sql = "SELECT conteudo, datahorario, numvagas, numinscritos, descricao FROM monitoria";
+    
+    conexao.query(sql, function(error, results, fields) {
+        if(error) throw error;
+        
+        res.render('ListaMonitCad', { monitorias: results });
+    });
 });
 
 server.get('/monitorias/:id/detalhesMonitoria', function(req,res){
