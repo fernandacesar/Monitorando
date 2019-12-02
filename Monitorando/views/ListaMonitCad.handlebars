@@ -1,5 +1,21 @@
-
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../public/css/main.css" />
+        <script src="js/main.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+        <script src="js/modernizr.custom.js"></script>
+</head>
+<body> 
     <div class="painel-pesquisaMonitorias">
         <div class="Titulo margem">
             <h4 class="Descrição">Encontrando Monitorias</h4>
@@ -18,7 +34,6 @@
                           <th>Data e horário</th>
                           <th>Número de vagas</th>
                           <th>Números de inscritos</th>
-                          <th>Descrição</th>
                           <th></th>
                       </tr>
                     </div>
@@ -31,7 +46,6 @@
                             <td>{{this.datahorario}}</td>
                             <td>{{this.numvagas}}</td>
                             <td>{{this.numinscritos}}</td>
-                            <td>{{this.descricao}}</td>
                             <td><button class="btn btn-ver-mais">Ver mais</button><br></td>
                         </tr>
                     {{/each}}
@@ -40,4 +54,5 @@
         </div>
     </div>
 
-
+</body>
+</html>
