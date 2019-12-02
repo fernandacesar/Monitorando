@@ -224,7 +224,7 @@ server.get('/monitoriasInscritas/:id/chat', function(req, res){
     monitorias[1] = {assunto: 'Células'}
 
     const id = req.params.id;
-
+    
     if(monitorias[id] == undefined){
         dados = 'Monitoria não encontrada.';
     }else{
@@ -254,6 +254,11 @@ server.get('/monitoriasInscritas/:id/chat/enviarMensagem', function(req, res){
 
 server.get('/chats', function(req, res) {
     res.send('<h1>Chats de dúvidas</h1>');
+    const sql = "SELECT id, datahohario, conteudo FROM mensagem"
+    conexao.query(sql, function(error, results, fields) {
+        if(error) throw error;
+        res.render('chatMonitoria', { chat: results});
+    });
 });
 
 server.get('/chats/:idMonitoria/chat', function(req, res){
