@@ -13,12 +13,21 @@ server.engine('handlebars', handlebars());
 server.set('view engine', 'handlebars');
 
 server.get('/', function(req, res) {
-    //res.send('<h1>Login</h1>');
     res.render('login');
 });
 
 server.get('/cadastro', function(req, res) {
-    res.send('<h1>Cadastro</h1>');
+    res.render('cadUsuario');
+});
+
+server.post('/cadastro', function(req, res){
+    const sql = "INSERT INTO usuario VALUES(?,?,?,?,NULL);";
+    const dados = [req.body.nome, req.body.senha, req.body.tipo, req.body.email];
+
+    conexao.query(sql, dados, function(error, results, fields) {
+        if(error) throw error;
+        res.redirect('/');
+    });
 });
 
 server.get('/cadastro/', function(req, res) {

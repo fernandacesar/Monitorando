@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Monitorando &bull; Cadastre-se</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../public/css/main.css" />
-    <script src="../public/js/index.js"></script>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head>
-
-<body onload="foco('nome')">
+</head>    
     <div>
         <div class="logoCad">
             <img id="logoCad" src="../public/img/logoTransp.png" alt="Logo">
@@ -26,16 +14,16 @@
                 <h4>Cadastre-se</h4> 
             </div>
             <div class="panel-body">
-                <form method="post" action="login.html" id="frmCadUsuario">
+                <form method="post" action="/cadastro" id="frmCadUsuario">
                     <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required="required">
                     </div>
 
                     <div class="form-group">
                         <label for="aluProf">Você é... </label>
-                        <input type="radio" class="alunProf" id="aluno" name="aluProf" value="aluno" onclick="exibirAluno('dadosAluno')"> Aluno
-                        <input type="radio" class="alunProf" id="prof" name="aluProf" value="prof" onclick="exibirProf('dadosProf')"> Professor
+                        <input type="radio" class="alunProf" id="aluno" name="tipo" value="Aluno" onclick="exibirAluno('dadosAluno')"> Aluno
+                        <input type="radio" class="alunProf" id="prof" name="tipo" value="Professor" onclick="exibirProf('dadosProf')"> Professor
                     </div>
 
                     <div class="form-group esconder" id="dadosAluno">
@@ -69,7 +57,7 @@
 
                     <div class="form-group">
                         <label for="senha">Confirme a senha</label>
-                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha novamente" required>
+                        <input type="password" class="form-control" id="senha" name="confirmarSenha" placeholder="Digite sua senha novamente" required>
                     </div>
 
                     <div class="form-group">
@@ -98,6 +86,3 @@
             </div>
         </footer>
     </div>
-</body>
-
-</html>
