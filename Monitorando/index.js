@@ -3,9 +3,26 @@ const handlebars = require('express-handlebars')
 const bodyParser = require('body-parser');
 const path = require('path');
 
+const passport = require('passport')  
+const session = require('express-session')  
+const MongoStore = require('connect-mongo')(session)
+
 const conexao = require('./conexao');
 
 const server = express();
+
+// require('./auth')(passport);
+// server.use(session({  
+//   store: new MongoStore({
+//     db: global.db,
+//     ttl: 30 * 60 // = 30 minutos de sessão
+//   }),
+//   secret: '123',//configure um segredo seu aqui
+//   resave: false,
+//   saveUninitialized: false
+// }))
+// server.use(passport.initialize());
+// server.use(passport.session());
 
 server.use(express.static(path.join(__dirname,'/public')));
 server.use(bodyParser());
@@ -16,12 +33,24 @@ server.get('/', function(req, res) {
     res.render('login');
 });
 
+server.post('/', function(req, res){
+
+    // const sql = "select email, senha from usuario where email=?", [req.body.email];
+    const dados = [req.body.email, req.body.senha]
+    
+    conexao.query("select email, senha from usuario where email=?,senha=?", [req.body.email], [req.body.senha], function(error, results, fields) {
+        if(error) throw error;       
+        
+        res.redirect('/monitorias');
+    });
+});
+
 server.get('/cadastro', function(req, res) {
     res.render('cadUsuario');
 });
 
 server.post('/cadastro', function(req, res){
-    const sql = "INSERT INTO usuario VALUES(?,?,?,?,NULL);";
+    const sql = "INSERT INTO usuario (nome, senha, tipo, email, foto) VALUES(?,?,?,?,NULL);";
     const dados = [req.body.nome, req.body.senha, req.body.tipo, req.body.email];
 
     conexao.query(sql, dados, function(error, results, fields) {
@@ -325,20 +354,13 @@ server.get('/monitorias', function(req, res) {
 });
 
 server.get('/monitorias/:id/detalhesMonitoria', function(req,res){
-    const monitorias = [];
-    monitorias[0] = {assunto: 'Números complexos'}
-    monitorias[1] = {assunto: 'Células'}
-
     const id = req.params.id;
 
-    if(monitorias[id] == undefined){
-        dados = 'Monitoria não encontrada.';
-    }else{
-        dados = monitorias[id].assunto;
-    }
-
-    res.send('<h1>Detalhes de monitoria</h1>'
-        + '<h3>' + dados +'</h3>');
+    conexao.query("select M.conteudo, M.descricao, M.numvagas, M.numinscritos, M.datahorario, U.nome, D.nome as disciplina, L.bloco, L.identificacao, L.tipo from monitoria as M inner join Local L on (M.id_local = L.id) inner join disciplina D on (M.id_disciplina = D.id) inner join Usuario U  inner join Monitor Monit on (M.Id_Monitor = Monit.Id && Monit.Id_Usuario = U.Id) where M.id=?", [id], function(error, results, fields) {
+        if(error) throw error;
+        
+        res.render('detalhes-02', { monitoria: results });
+    });
 });
 
 server.get('/monitorias/:id/pesquisar', function(req,res){
