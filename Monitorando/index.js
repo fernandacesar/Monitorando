@@ -356,7 +356,10 @@ server.get('/monitorias', function(req, res) {
 server.get('/monitorias/:id/detalhesMonitoria', function(req,res){
     const id = req.params.id;
 
-    conexao.query("select M.conteudo, M.descricao, M.numvagas, M.numinscritos, M.datahorario, U.nome, D.nome as disciplina, L.bloco, L.identificacao, L.tipo from monitoria as M inner join Local L on (M.id_local = L.id) inner join disciplina D on (M.id_disciplina = D.id) inner join Usuario U  inner join Monitor Monit on (M.Id_Monitor = Monit.Id && Monit.Id_Usuario = U.Id) where M.id=?", [id], function(error, results, fields) {
+    conexao.query("select M.conteudo, M.descricao, M.numvagas, M.numinscritos, M.datahorario, U.nome, D.nome as " +
+    "disciplina, L.bloco, L.identificacao, L.tipo from monitoria as M inner join Local L on (M.id_local = L.id) " + 
+    "inner join disciplina D on (M.id_disciplina = D.id) inner join Usuario U  inner join Monitor Monit on " + 
+    " (M.Id_Monitor = Monit.Id && Monit.Id_Usuario = U.Id) where M.id=?", [id], function(error, results, fields) {
         if(error) throw error;
         
         res.render('detalhes', { monitoria: results });
